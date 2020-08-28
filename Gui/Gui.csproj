@@ -67,6 +67,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap\css\bootstrap-grid.css" />
+    <Content Include="bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -78,10 +88,44 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="web\inicio.aspx.cs">
+      <DependentUpon>inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\inicio.aspx.designer.cs">
+      <DependentUpon>inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\principal.Master.cs">
+      <DependentUpon>principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\principal.Master.designer.cs">
+      <DependentUpon>principal.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="bootstrap\css\bootstrap.css.map" />
+    <Content Include="bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="bootstrap\js\bootstrap.js.map" />
+    <Content Include="bootstrap\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
+    <Content Include="web\inicio.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="web\principal.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -89,6 +133,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
