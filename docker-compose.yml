@@ -1,0 +1,15 @@
+version: "3.1"
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver2019
+    user: '0:0'
+    ports:
+      - 1433:1433
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: Roberp343!
+      MSSQL_PID: Express
+    volumes:
+      - ~/Docker/volumenes/sqlserver-data:/var/opt/mssql

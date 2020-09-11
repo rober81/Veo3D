@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DAL.BitacoraMapper" Collapsed="true">
+    <Position X="3" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BitacoraMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.CopiaSeguridadMapper" Collapsed="true">
+    <Position X="4.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgBAAAAAAEAQAAAAAIAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CopiaSeguridadMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.DigitoVerificadorMapper" Collapsed="true">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAEAAAEAACAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DigitoVerificadorMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.IdiomaMapper" Collapsed="true">
+    <Position X="3" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAGAAAAAAAQAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IdiomaMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.PerfilMapper" Collapsed="true">
+    <Position X="4.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABAAAAAAAAAAAAECAAAAgAAAJAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>PerfilMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.SqlHelper" Collapsed="true">
+    <Position X="6.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJAAUAAAAAAAAAAAAIBAAAAgAAQAAAAAAAAEAAE=</HashCode>
+      <FileName>SqlHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.UsuarioMapper" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAEAAAEAACAAAAAAAAIAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>UsuarioMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
