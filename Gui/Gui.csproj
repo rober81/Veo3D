@@ -99,12 +99,20 @@
     <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="controles\ImagenProducto.ascx" />
     <Content Include="produccion\indexProd.aspx" />
     <Content Include="Web.config" />
     <Content Include="web\detalle.aspx" />
     <Content Include="web\index.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controles\ImagenProducto.ascx.cs">
+      <DependentUpon>ImagenProducto.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controles\ImagenProducto.ascx.designer.cs">
+      <DependentUpon>ImagenProducto.ascx</DependentUpon>
+    </Compile>
     <Compile Include="masters\produccion.Master.cs">
       <DependentUpon>produccion.Master</DependentUpon>
     </Compile>

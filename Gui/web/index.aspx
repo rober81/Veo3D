@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/ventas.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Gui.web.index" %>
 
+<%@ Register Src="~/controles/ImagenProducto.ascx" TagPrefix="uc1" TagName="ImagenProducto" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -53,8 +56,7 @@
 
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                            <a href="#">
-                                <img class="card-img-top" src="../anteojos/1.png" alt=""></a>
+                                <asp:Image ID="Image1" runat="server" ImageUrl="../anteojos/1.png" CssClass="card-img-top"/>
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <a href="#">Item One</a>
@@ -67,6 +69,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <uc1:ImagenProducto runat="server" id="ImagenProducto" />
 
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
