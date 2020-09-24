@@ -15,7 +15,7 @@ namespace DAL
             SqlParameter[] parametros = new SqlParameter[2];
             parametros[0] = new SqlParameter("@usuario", unUsuario.Login);
             parametros[1] = new SqlParameter("@pass", unUsuario.Password);
-            DataTable tabla = SqlHelper.getInstance().leer(Tabla + "_login", parametros);
+            DataTable tabla = Acceso.getInstance().leer(Tabla + "_login", parametros);
             foreach (DataRow item in tabla.Rows) {
                 obj = new Usuario();
                 obj.Login = item["usuario"].ToString();
@@ -24,7 +24,7 @@ namespace DAL
                 obj.Apellido = item["apellido"].ToString();
                 obj.Correo = item["correo"].ToString();
                 obj.Dni = int.Parse(item["dni"].ToString());
-                obj.DVH = int.Parse(item["Dvh"].ToString());
+                obj.DVH = item["Dvh"].ToString();
             }
             return obj;
         }
@@ -33,7 +33,7 @@ namespace DAL
         {
             Usuario obj = null;
             List<Usuario> lista = new List<Usuario>();
-            DataTable tabla = SqlHelper.getInstance().leer(Tabla + "_leer", null);
+            DataTable tabla = Acceso.getInstance().leer(Tabla + "_leer", null);
             foreach (DataRow item in tabla.Rows)
             {
                 obj = new Usuario();
@@ -43,7 +43,7 @@ namespace DAL
                 obj.Apellido = item["apellido"].ToString();
                 obj.Correo = item["correo"].ToString();
                 obj.Dni = int.Parse(item["dni"].ToString());
-                obj.DVH = int.Parse(item["Dvh"].ToString());
+                obj.DVH = item["Dvh"].ToString();
                 lista.Add(obj);
             }
             return lista;
@@ -64,12 +64,12 @@ namespace DAL
 
         public static int Insertar(Usuario param)
         {
-            return SqlHelper.getInstance().escribir(Tabla + "_alta", crearParametros(param));
+            return Acceso.getInstance().escribir(Tabla + "_alta", crearParametros(param));
         }
 
         public static int Modificar(Usuario param)
         {
-            return SqlHelper.getInstance().escribir(Tabla + "_modificar", crearParametros(param));
+            return Acceso.getInstance().escribir(Tabla + "_modificar", crearParametros(param));
         }
     }
 }

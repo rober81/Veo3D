@@ -2,7 +2,7 @@
 <div class="col-lg-4 col-md-6 mb-4">
     <div class="card h-100">
         <asp:HyperLink ID="HyperLink2" runat="server">
-            <asp:Image ID="Image1" runat="server" CssClass="card-img-top" />
+            <asp:Image ID="imagenProd" runat="server" CssClass="card-img-top" />
         </asp:HyperLink>
         <div class="card-body">
             <h4 class="card-title">

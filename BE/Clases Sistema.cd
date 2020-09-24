@@ -1,96 +1,96 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="BE.Bitacora" Collapsed="true">
-    <Position X="3.25" Y="0.5" Width="1.5" />
+  <Class Name="BE.Bitacora">
+    <Position X="3" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAAEAAAAAAAAAAAAAAAAABAAEAAAAAAQ=</HashCode>
       <FileName>Bitacora.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BE.CopiaDeSeguridad" Collapsed="true">
-    <Position X="5" Y="0.5" Width="1.5" />
+  <Class Name="BE.CopiaDeSeguridad">
+    <Position X="4.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEEAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CopiaDeSeguridad.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BE.DigitoVerificador" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="6.75" Y="0.5" Width="1.5" />
+  <Class Name="BE.DigitoVerificador" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAACAAAAAAAAQAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>DigitoVerificador.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="BE.Idioma" Collapsed="true">
-    <Position X="3.25" Y="1.5" Width="1.5" />
+  <Class Name="BE.Idioma">
+    <Position X="9.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAEgAAAgAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Idioma.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BE.IdiomaDetalle" Collapsed="true">
-    <Position X="5" Y="1.5" Width="1.5" />
+  <Class Name="BE.IdiomaDetalle">
+    <Position X="9.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>IdiomaDetalle.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BE.Perfil" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="6.75" Y="1.5" Width="1.5" />
+  <Class Name="BE.Perfil" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Perfil.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="BE.Perfiles" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="3.25" Y="2.5" Width="1.5" />
+  <Class Name="BE.Perfiles" BaseTypeListCollapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAASAAAAAAAIAAAEAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Perfiles.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="BE.Persona" Collapsed="true">
+  <Class Name="BE.Persona">
     <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Persona.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BE.Rol" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5" Y="2.5" Width="1.5" />
+  <Class Name="BE.Rol" BaseTypeListCollapsed="true">
+    <Position X="5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAICAAgAAAAIAAAEAAAAhAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Rol.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="BE.Usuario" Collapsed="true">
-    <Position X="0.75" Y="1.75" Width="1.5" />
+  <Class Name="BE.Usuario">
+    <Position X="0.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACEAAAAAAAQAIAAAAACAQAQAAAAAAA=</HashCode>
       <FileName>Usuario.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="BE.iCambiarIdioma" Collapsed="true">
-    <Position X="3.25" Y="3.75" Width="1.5" />
+  <Interface Name="BE.iCambiarIdioma">
+    <Position X="3" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>iCambiarIdioma.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="BE.iDigitoVerificador" Collapsed="true">
-    <Position X="5" Y="3.75" Width="1.5" />
+  <Interface Name="BE.iDigitoVerificador">
+    <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAAAAAAAAQAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>iDigitoVerificador.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="BE.iPermisos" Collapsed="true">
-    <Position X="6.75" Y="3.75" Width="1.5" />
+  <Interface Name="BE.iPermisos">
+    <Position X="6.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>iPermisos.cs</FileName>

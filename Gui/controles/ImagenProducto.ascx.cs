@@ -16,23 +16,24 @@ namespace Gui.controles
         public string Titulo { get; set; }
         public string Texto { get; set; }
         public int Estrellas { get; set; }
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Imagen = "../anteojos/1.png";
-            Url = "~/web/detalle.aspx";
-            Estrellas = 4;
-            Titulo = "titulo personalizado";
-            Precio = 50;
-            Texto = "Este es un texto de descripcion";
+            if (!IsPostBack)
+            {
+                CompletarDatos();
+            }
+        }
 
-            Image1.ImageUrl = Imagen;
+        private void CompletarDatos()
+        {
             lblTitulo.Text = Titulo;
             lblPrecio.Text = "$" + Precio.ToString("#0.00");
             lblTexto.Text = Texto;
             lblEstrellas.Text = completarEstrellas();
             HyperLink1.NavigateUrl = Url;
             HyperLink2.NavigateUrl = Url;
+            imagenProd.ImageUrl = $"../anteojos/{Imagen}";
         }
 
         string completarEstrellas()

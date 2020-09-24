@@ -5,7 +5,7 @@ namespace BLL
 {
     public class GestionarDigitoVerificador
     {
-        public int calcularDigito(BE.iDigitoVerificador mensaje)
+        public string calcularDigito(BE.iDigitoVerificador mensaje)
         {
             return Util.DigitoVerificador.CalcularDV(mensaje.getDVH());
         }
@@ -48,7 +48,7 @@ namespace BLL
             {
                 if (item.Tabla.Equals(tabla))
                 {
-                    int dvv = CalcularDVV(lista);
+                    string dvv = CalcularDVV(lista);
                     if (! item.DVV.Equals(dvv))
                         resultado += Traducir("msgErrorRegistro") + item.getID() + Environment.NewLine;
                     else
@@ -68,7 +68,7 @@ namespace BLL
             {
                 if (item.Tabla.Equals(tabla))
                 {
-                    int dvv = CalcularDVV(lista);
+                    string dvv = CalcularDVV(lista);
                     if (!item.DVV.Equals(dvv))
                         cantidad++;
                 }
@@ -76,7 +76,7 @@ namespace BLL
             return cantidad;
         }
 
-        public static int CalcularDVV(List<BE.iDigitoVerificador> lista)
+        public static string CalcularDVV(List<BE.iDigitoVerificador> lista)
         {
             string cadena = string.Empty;
             foreach (var item in lista)

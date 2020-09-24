@@ -7,29 +7,29 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Gui.web
+namespace Gui.controles
 {
 
 
-    public partial class index
+    public partial class LabelTexto
     {
 
         /// <summary>
-        /// Control lblShop.
+        /// Control lbl.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblShop;
+        protected global::System.Web.UI.WebControls.Label lbl;
 
         /// <summary>
-        /// Control ListaProductos.
+        /// Control txt.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ListaProductos;
+        protected global::System.Web.UI.WebControls.TextBox txt;
     }
 }

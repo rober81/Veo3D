@@ -11,13 +11,13 @@ namespace DAL
         public static List<BE.DigitoVerificador> Listar()
         {
             List<BE.DigitoVerificador> lista = new List<BE.DigitoVerificador>();
-            DataTable tabla = SqlHelper.getInstance().leer(Tabla + "_leer", null);
+            DataTable tabla = Acceso.getInstance().leer(Tabla + "_leer", null);
             foreach (DataRow item in tabla.Rows)
             {
                 BE.DigitoVerificador obj = new BE.DigitoVerificador();
                 obj.Tabla = item["tabla"].ToString();
-                obj.DVH = int.Parse(item["DVH"].ToString());
-                obj.DVV = int.Parse(item["DVV"].ToString());
+                obj.DVH = item["DVH"].ToString();
+                obj.DVV = item["DVV"].ToString();
                 lista.Add(obj);
             }
             return lista;
@@ -34,12 +34,12 @@ namespace DAL
 
         public static int Insertar(BE.DigitoVerificador param)
         {
-            return SqlHelper.getInstance().escribir(Tabla + "_alta", crearParametros(param));
+            return Acceso.getInstance().escribir(Tabla + "_alta", crearParametros(param));
         }
 
         public static int Modificar(BE.DigitoVerificador param)
         {
-            return SqlHelper.getInstance().escribir(Tabla + "_modificar", crearParametros(param));
+            return Acceso.getInstance().escribir(Tabla + "_modificar", crearParametros(param));
         }
     }
 }

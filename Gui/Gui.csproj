@@ -100,10 +100,12 @@
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="controles\ImagenProducto.ascx" />
+    <Content Include="controles\LabelTexto.ascx" />
     <Content Include="produccion\indexProd.aspx" />
     <Content Include="Web.config" />
     <Content Include="web\detalle.aspx" />
     <Content Include="web\index.aspx" />
+    <Content Include="web\login.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controles\ImagenProducto.ascx.cs">
@@ -113,6 +115,14 @@
     <Compile Include="controles\ImagenProducto.ascx.designer.cs">
       <DependentUpon>ImagenProducto.ascx</DependentUpon>
     </Compile>
+    <Compile Include="controles\LabelTexto.ascx.cs">
+      <DependentUpon>LabelTexto.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controles\LabelTexto.ascx.designer.cs">
+      <DependentUpon>LabelTexto.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controles\ListaRegex.cs" />
     <Compile Include="masters\produccion.Master.cs">
       <DependentUpon>produccion.Master</DependentUpon>
     </Compile>
@@ -148,6 +158,13 @@
     <Compile Include="web\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="web\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="bootstrap\css\bootstrap-grid.css.map" />
@@ -170,7 +187,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{52755024-b989-4a19-99ac-f9f65ef6eecf}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{d4ee335f-efaa-4745-ad3c-57fce33245f0}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

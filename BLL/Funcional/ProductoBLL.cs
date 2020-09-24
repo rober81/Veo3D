@@ -13,4 +13,5 @@ namespace BLL
             ProductoMapper m = new ProductoMapper();
             return m.ListarProductos();
         }
+    }
 }

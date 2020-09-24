@@ -15,7 +15,7 @@ namespace DAL
         {
             BE.Bitacora obj = null;
             List<BE.Bitacora> lista = new List<BE.Bitacora>();
-            DataTable tabla = SqlHelper.getInstanceBitacora().leer(Tabla + "_leer", null);
+            DataTable tabla = Acceso.getInstanceBitacora().leer(Tabla + "_leer", null);
             foreach (DataRow item in tabla.Rows)
             {
                 obj = new BE.Bitacora();
@@ -39,7 +39,7 @@ namespace DAL
             parametros[3] = new SqlParameter("@dato", bitacora.Dato);
             parametros[4] = new SqlParameter("@accion", bitacora.Accion);
             parametros[5] = new SqlParameter("@dvh", "dvh");
-            return SqlHelper.getInstanceBitacora().escribir(Tabla + "_alta", parametros);
+            return Acceso.getInstanceBitacora().escribir(Tabla + "_alta", parametros);
         }
     }
 }

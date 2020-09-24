@@ -12,14 +12,14 @@ namespace Util
         {
             string fecha = DateTime.Now.ToString("dd/MM/yyyy-HH:mm:ss");
             string log = fecha + ": " + mensaje + Environment.NewLine;
-            IoHelper.Log(log);
+            ArchivoLog.Log(log);
         }
 
         public static void Debug(String mensaje)
         {
             string fecha = DateTime.Now.ToString("dd/MM/yyyy-HH:mm:ss");
             string log = fecha + ": " + mensaje + Environment.NewLine;
-            IoHelper.Log(log);
+            ArchivoLog.Log(log);
         }
     }
 }

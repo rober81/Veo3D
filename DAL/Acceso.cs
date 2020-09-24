@@ -1,34 +1,37 @@
-﻿using System.Data.SqlClient;
-using System.Data;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using Util;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace DAL
 {
-    public class SqlHelper
+    class Acceso
     {
         protected SqlConnection conexion;
-        private static SqlHelper instancia = null;
-        private static SqlHelper instanciaBitacora = null;
+        private static Acceso instancia = null;
+        private static Acceso instanciaBitacora = null;
 
-        public static SqlHelper getInstance()
+        public static Acceso getInstance()
         {
             if (instancia == null)
             {
-                instancia = new SqlHelper(Configuracion.getInstance().aplicacionDB);
+                instancia = new Acceso(Configuracion.getInstance().aplicacionDB);
             }
             return instancia;
         }
 
-        public static SqlHelper getInstanceBitacora()
+        public static Acceso getInstanceBitacora()
         {
             if (instanciaBitacora == null)
             {
-             instanciaBitacora = new SqlHelper(Configuracion.getInstance().bitacoraDB);
+                instanciaBitacora = new Acceso(Configuracion.getInstance().bitacoraDB);
             }
             return instanciaBitacora;
         }
 
-        private SqlHelper(string db)
+        private Acceso(string db)
         {
             conexion = new SqlConnection("INITIAL CATALOG = " + db + "; DATA SOURCE =.\\" + Configuracion.getInstance().servidor + "; INTEGRATED SECURITY = SSPI");
         }
@@ -78,7 +81,9 @@ namespace DAL
             catch (System.Exception e)
             {
                 Log.Error("Error al Leer " + e.ToString());
-            } finally{
+            }
+            finally
+            {
                 cerrar();
             }
             return tabla;
@@ -102,7 +107,9 @@ namespace DAL
             catch (System.Exception e)
             {
                 Log.Error("Error al Escribir " + e.ToString());
-            } finally{
+            }
+            finally
+            {
                 cerrar();
             }
             return filas;

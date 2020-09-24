@@ -7,7 +7,7 @@ namespace BE {
         public string Correo { get; set; }
         public string Password { get; set; }
         public string Login { get; set; }
-        public int DVH { get; set; }
+        public string DVH { get; set; }
 
         public Usuario()
         {

@@ -13,7 +13,7 @@ namespace DAL
         public static List<Perfiles> ListarPerfiles()
         {
             List<Perfiles> lista = new List<Perfiles>();
-            DataTable tabla = SqlHelper.getInstance().leer(Tabla + "_leer", null);
+            DataTable tabla = Acceso.getInstance().leer(Tabla + "_leer", null);
             foreach (DataRow item in tabla.Rows)
             {
                 Perfiles obj = new Perfiles();
@@ -30,7 +30,7 @@ namespace DAL
             Perfiles obj = null;
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter("@id", id);
-            DataTable tabla = SqlHelper.getInstance().leer(Tabla + "_buscar", parametros);
+            DataTable tabla = Acceso.getInstance().leer(Tabla + "_buscar", parametros);
             foreach (DataRow item in tabla.Rows)
             {
                 obj = new Perfiles();
@@ -45,7 +45,7 @@ namespace DAL
             SqlParameter[] parametros = new SqlParameter[2];
             parametros[0] = new SqlParameter("@nombre", perfil.Nombre);
             parametros[1] = new SqlParameter("@padre", perfil.Padre == null ? 0 : perfil.Padre.Id);
-            int res = SqlHelper.getInstance().escribir(Tabla + "_alta", parametros);
+            int res = Acceso.getInstance().escribir(Tabla + "_alta", parametros);
             return res;
         }
 
@@ -55,7 +55,7 @@ namespace DAL
             parametros[0] = new SqlParameter("@nombre", perfil.Nombre);
             parametros[1] = new SqlParameter("@padre", perfil.Padre==null? 0: perfil.Padre.Id);
             parametros[2] = new SqlParameter("@id", perfil.Id);
-            int res = SqlHelper.getInstance().escribir(Tabla + "_modificar", parametros);
+            int res = Acceso.getInstance().escribir(Tabla + "_modificar", parametros);
             return res;
         }
 
@@ -64,7 +64,7 @@ namespace DAL
             List<Perfiles> lista = new List<Perfiles>(); ;
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter("@usuario", param.Login);
-            DataTable tabla = SqlHelper.getInstance().leer(Tabla2 + "_leer", parametros);
+            DataTable tabla = Acceso.getInstance().leer(Tabla2 + "_leer", parametros);
             foreach (DataRow item in tabla.Rows)
             {
                 Perfiles per = new Perfiles();
@@ -81,7 +81,7 @@ namespace DAL
             SqlParameter[] parametros = new SqlParameter[2];
             parametros[0] = new SqlParameter("@usuario", param.Login);
             parametros[1] = new SqlParameter("@perfil", perfil.Id);
-            int res = SqlHelper.getInstance().escribir(Tabla2 + "_alta", parametros);
+            int res = Acceso.getInstance().escribir(Tabla2 + "_alta", parametros);
             return res;
         }
 
@@ -89,7 +89,7 @@ namespace DAL
         {
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter("@usuario", param.Login);
-            return SqlHelper.getInstance().escribir(Tabla2 + "_borrar", parametros);
+            return Acceso.getInstance().escribir(Tabla2 + "_borrar", parametros);
         }
     }
 }

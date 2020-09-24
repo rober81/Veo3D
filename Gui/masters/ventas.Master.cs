@@ -11,7 +11,19 @@ namespace Gui.masters
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                CargarIdioma();
+            }
         }
+
+        private void CargarIdioma()
+        {
+            lblLogin.Text = "Login";
+            lblHome.Text = "Inicio";
+            lblAdministracion.Text = "Administración";
+            lblContacto.Text = "Contacto";
+        }
+
     }
 }
