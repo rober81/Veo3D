@@ -42,6 +42,15 @@ namespace Gui.masters
         protected global::System.Web.UI.WebControls.Label lblHome;
 
         /// <summary>
+        /// Control linkAdministracion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink linkAdministracion;
+
+        /// <summary>
         /// Control lblAdministracion.
         /// </summary>
         /// <remarks>
@@ -60,6 +69,15 @@ namespace Gui.masters
         protected global::System.Web.UI.WebControls.Label lblContacto;
 
         /// <summary>
+        /// Control linkLogin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink linkLogin;
+
+        /// <summary>
         /// Control lblLogin.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,24 @@ namespace Gui.masters
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblLogin;
+
+        /// <summary>
+        /// Control linkCerrar2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton linkCerrar2;
+
+        /// <summary>
+        /// Control lblCerrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCerrar;
 
         /// <summary>
         /// Control ContentPlaceHolder1.

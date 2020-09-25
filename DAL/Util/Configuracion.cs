@@ -15,13 +15,18 @@ namespace Util
         {
             if (instancia == null)
             {
-                Configuracion instancia = new Configuracion();
+                instancia = new Configuracion();
                 instancia.aplicacionDB = "Veo3D";
                 instancia.bitacoraDB = "Bitacora";
                 instancia.idioma = new BE.Idioma("Español");
                 instancia.servidor = "SQLEXPRESS";
             }
             return instancia;
+        }
+
+        private Configuracion()
+        {
+
         }
     }
 }

@@ -15,7 +15,7 @@ namespace BLL
         {
             usr.Password = GestionarEncriptacion.Encriptar(usr.Password);
             int res = UsuarioMapper.Insertar(usr);
-            CalcularDVV();
+            //CalcularDVV();
             Bitacora("Insertar", usr);
             return res;
         }
@@ -26,7 +26,7 @@ namespace BLL
                 usr.Password = GestionarEncriptacion.Encriptar(usr.Password);
             int res = UsuarioMapper.Modificar(usr);
             Bitacora("Modificar", usr);
-            CalcularDVV();
+            //CalcularDVV();
             return res;
         }
 

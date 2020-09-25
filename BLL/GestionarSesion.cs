@@ -42,8 +42,8 @@ namespace BLL
                 bitacora.Usuario = this.usuario;
                 bitacora.Accion = "Inicia Sesion";
                 GestionarBitacora.Insertar(bitacora);
-                GestionarRolesPerfiles roles = new GestionarRolesPerfiles();
-                permisos = roles.ListarUsuarioPerfil(this.usuario);
+                //GestionarRolesPerfiles roles = new GestionarRolesPerfiles();
+                //permisos = roles.ListarUsuarioPerfil(this.usuario);
                 return true;
             } else
             {

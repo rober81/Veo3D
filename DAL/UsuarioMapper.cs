@@ -9,12 +9,12 @@ namespace DAL
     {
         public static string Tabla = "Usuario";
 
-        public static Usuario Login(Usuario unUsuario)
+        public static Usuario Login(Usuario param)
         {
             Usuario obj = null;
             SqlParameter[] parametros = new SqlParameter[2];
-            parametros[0] = new SqlParameter("@usuario", unUsuario.Login);
-            parametros[1] = new SqlParameter("@pass", unUsuario.Password);
+            parametros[0] = new SqlParameter("@usuario", param.Login);
+            parametros[1] = new SqlParameter("@pass", param.Password);
             DataTable tabla = Acceso.getInstance().leer(Tabla + "_login", parametros);
             foreach (DataRow item in tabla.Rows) {
                 obj = new Usuario();

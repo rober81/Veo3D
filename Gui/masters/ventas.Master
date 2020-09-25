@@ -14,6 +14,7 @@
     <script src="../bootstrap/js/bootstrap.bundle.js" rel="stylesheet"></script>
     <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="../bootstrap/css/shop-homepage.css" rel="stylesheet" />
+    <link href="../bootstrap/css/estilos.css" rel="stylesheet" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -31,19 +32,26 @@
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#"><asp:Label ID="lblHome" runat="server" Text="Label"></asp:Label>
+                                <a class="nav-link" href="../web/index.aspx"><asp:Label ID="lblHome" runat="server" Text="Label"></asp:Label>
                              
                                     <span class="sr-only">(current)</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../produccion/indexProd.aspx"><asp:Label ID="lblAdministracion" runat="server" Text="Label"></asp:Label></a>
+                                <asp:HyperLink ID="linkAdministracion" NavigateUrl="../produccion/indexProd.aspx" runat="server" CssClass="nav-link">
+                                    <asp:Label ID="lblAdministracion" runat="server" Text="Label"></asp:Label>
+                                </asp:HyperLink>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><asp:Label ID="lblContacto" runat="server" Text="Label"></asp:Label></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../web/login.aspx"><asp:Label ID="lblLogin" runat="server" Text="Label"></asp:Label></a>
+                                <asp:HyperLink ID="linkLogin" NavigateUrl="../web/login.aspx" runat="server" CssClass="nav-link">
+                                    <asp:Label ID="lblLogin" runat="server" Text="Label"></asp:Label>
+                                </asp:HyperLink>
+                            </li>
+                            <li class="nav-item">
+                                <asp:LinkButton ID="linkCerrar2" OnClick="linkCerrar_Click" runat="server"><asp:Label ID="lblCerrar" runat="server" Text="Label" CssClass="nav-link"></asp:Label></asp:LinkButton>     
                             </li>
                         </ul>
                     </div>
@@ -54,7 +62,7 @@
             </asp:ContentPlaceHolder>
 
             <!-- Footer -->
-            <footer class="py-5 bg-dark">
+            <footer class="footer py-3 bg-dark ">
                 <div class="container">
                     <p class="m-0 text-center text-white">Copyright &copy; Veo3D 2020 Trademark &reg; Roberto Piombi</p>
                 </div>

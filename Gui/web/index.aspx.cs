@@ -14,10 +14,11 @@ namespace Gui.web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            CargarIdioma();
+            CargarProductos();
             if (!IsPostBack)
             {
-                CargarIdioma();
-                CargarProductos();
+
             }
         }
 

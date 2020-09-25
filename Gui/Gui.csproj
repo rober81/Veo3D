@@ -86,12 +86,16 @@
     <Content Include="anteojos\7.png" />
     <Content Include="anteojos\8.png" />
     <Content Include="anteojos\9.png" />
+    <Content Include="anteojos\cabecera1.png" />
+    <Content Include="anteojos\cabecera2.png" />
+    <Content Include="anteojos\cabecera3.png" />
     <Content Include="bootstrap\css\bootstrap-grid.css" />
     <Content Include="bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="bootstrap\css\bootstrap-reboot.css" />
     <Content Include="bootstrap\css\bootstrap-reboot.min.css" />
     <Content Include="bootstrap\css\bootstrap.css" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\css\estilos.css" />
     <Content Include="bootstrap\css\sb-admin-2.css" />
     <Content Include="bootstrap\css\shop-homepage.css" />
     <Content Include="bootstrap\css\shop-item.css" />
@@ -101,6 +105,7 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="controles\ImagenProducto.ascx" />
     <Content Include="controles\LabelTexto.ascx" />
+    <Content Include="produccion\Bitacora.aspx" />
     <Content Include="produccion\indexProd.aspx" />
     <Content Include="Web.config" />
     <Content Include="web\detalle.aspx" />
@@ -125,6 +130,7 @@
     <Compile Include="controles\ListaRegex.cs" />
     <Compile Include="masters\produccion.Master.cs">
       <DependentUpon>produccion.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="masters\produccion.Master.designer.cs">
       <DependentUpon>produccion.Master</DependentUpon>
@@ -135,6 +141,13 @@
     </Compile>
     <Compile Include="masters\ventas.Master.designer.cs">
       <DependentUpon>ventas.Master</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\Bitacora.aspx.cs">
+      <DependentUpon>Bitacora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="produccion\Bitacora.aspx.designer.cs">
+      <DependentUpon>Bitacora.aspx</DependentUpon>
     </Compile>
     <Compile Include="produccion\indexProd.aspx.cs">
       <DependentUpon>indexProd.aspx</DependentUpon>
