@@ -15,6 +15,7 @@ namespace Gui.produccion
         {
             if (!IsPostBack)
             {
+                TxtFechaDesde.Text = "hola";
             }
                 cargarTabla();
         }

@@ -4,3 +4,7 @@
     bottom: 0 !important;
     width: 100%;
 }
+
+.body{
+    top: 0;
+}

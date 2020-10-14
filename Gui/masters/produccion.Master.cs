@@ -1,8 +1,12 @@
 ﻿using BE;
+using BLL;
+using Gui.controles;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -18,19 +22,40 @@ namespace Gui.masters
             {
                 CargarDatos();
             }
+            Idioma unIdioma = new Idioma("Español");
+            GestionarIdioma.getInstance().CambiarIdioma(unIdioma);
+            CargarIdioma(this.Controls);
+        }
+
+        private void CargarIdioma(ControlCollection controles)
+        {
+            foreach (Control control in controles)
+            {
+                if (control.HasControls())
+                {
+                    CargarIdioma(control.Controls);
+                } else
+                {
+                    IdiomaHelper.Traducir(control);
+                }
+            }
         }
 
         private void CargarDatos()
         {
             usuario = (Usuario)Session["Usuario"];
-            lblUsuario.Text = "Usuario";
+
             if (usuario != null)
             {
-                lblUsuario.Text = $"{usuario.Nombre} {usuario.Apellido}";
+                LblUsuario.Text = $"{usuario.Nombre} {usuario.Apellido}";
             }
-
-            lblTituloTablero.Text = "VEO3D Admin";
-
+        }
+        protected void LinkCerrar_Click(object sender, EventArgs e)
+        {
+            Session["Usuario"] = null;
+            GestionarSesion.getInstance().cerrarSesion();
+            FormsAuthentication.SignOut();
+            Response.Redirect("/index.aspx");
         }
     }
 }

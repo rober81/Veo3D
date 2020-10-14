@@ -38,3 +38,45 @@ Error Number:201,State:4,Class:16
    en DAL.Acceso.leer(String nombre, SqlParameter[] parametros) en C:\UAI\TFI\Veo3D\DAL\Acceso.cs:línea 79
 ClientConnectionId:6be3d288-e7be-4bfa-ba93-ec25a5a5a6eb
 Error Number:201,State:4,Class:16
+14/10/2020-03:34:17: Falta traducir idioma:Español clave:form1
+14/10/2020-03:37:17: Falta traducir idioma:Español clave:ctl13
+14/10/2020-03:38:13: Falta traducir idioma:Español clave:form1
+14/10/2020-03:39:34: Falta traducir idioma:Español clave:ctl12
+14/10/2020-03:39:44: Falta traducir idioma:Español clave:form1
+14/10/2020-03:42:37: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:42:42: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:42:45: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:42:46: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:42:48: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:42:49: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:42:50: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:42:51: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:42:52: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:42:53: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:42:54: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:42:56: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:42:57: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:43:00: Falta traducir idioma:Español clave:ctl00
+14/10/2020-03:43:01: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:02: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:03: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:04: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:05: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:05: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:06: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:07: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:08: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:11: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:15: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:16: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:18: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:20: Falta traducir idioma:Español clave:form1
+14/10/2020-03:43:23: Falta traducir idioma:Español clave:form1
+14/10/2020-03:44:04: Falta traducir idioma:Español clave:head
+14/10/2020-03:44:05: Falta traducir idioma:Español clave:form1
+14/10/2020-03:44:42: Falta traducir idioma:Español clave:TituloPagina2
+14/10/2020-03:44:42: Falta traducir idioma:Español clave:ContentPlaceHolder1
+14/10/2020-03:52:11: Falta traducir idioma:Español clave:Label1
+14/10/2020-03:52:11: Falta traducir idioma:Español clave:lblCerrar
+14/10/2020-03:56:07: Falta traducir idioma:Español clave:Label1
+14/10/2020-03:56:07: Falta traducir idioma:Español clave:lblCerrar
