@@ -15,13 +15,13 @@ namespace Gui.web
     {
 
         /// <summary>
-        /// Control lblShop.
+        /// Control LblShop.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblShop;
+        protected global::System.Web.UI.WebControls.Label LblShop;
 
         /// <summary>
         /// Control ListaProductos.

@@ -14,7 +14,7 @@
             <div class="col-lg-3">
 
                 <h1 class="my-4">
-                    <asp:Label ID="lblShop" runat="server" Text="Label"></asp:Label></h1>
+                    <asp:Label ID="LblShop" runat="server" Text="Label"></asp:Label></h1>
                 <div class="list-group">
                     <a href="#" class="list-group-item">Anteojos de Receta</a>
                     <a href="#" class="list-group-item">Anteojos de Sol</a>

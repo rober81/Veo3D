@@ -3,10 +3,6 @@ using BLL;
 using Gui.controles;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Gui.web
 {
@@ -14,18 +10,11 @@ namespace Gui.web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CargarIdioma();
-            CargarProductos();
             if (!IsPostBack)
             {
 
             }
-        }
-
-        private void CargarIdioma()
-        {
-            lblShop.Text = "Fabrica de anteojos 3D";
-
+            CargarProductos();
         }
 
         private void CargarProductos()
@@ -35,9 +24,9 @@ namespace Gui.web
             Random aleatorio = new Random();
             foreach (Producto item in lista)
             {
-                ImagenProducto prod = (ImagenProducto) this.LoadControl("~/controles/ImagenProducto.ascx");
+                ImagenProducto prod = (ImagenProducto) this.LoadControl("/controles/ImagenProducto.ascx");
                 prod.Imagen = item.Archivo;
-                prod.Url = "~/web/detalle.aspx";
+                prod.Url = "/web/detalle.aspx";
                 prod.Estrellas = aleatorio.Next(1, 6);
                 prod.Titulo = item.Nombre;
                 prod.Precio = aleatorio.Next(1500, 3500); ;
