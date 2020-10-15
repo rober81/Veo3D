@@ -123,15 +123,6 @@ namespace Gui.masters
         protected global::System.Web.UI.WebControls.HyperLink LinkRealizar;
 
         /// <summary>
-        /// Control LinkRestaurar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LinkRestaurar;
-
-        /// <summary>
         /// Control LblRegistros.
         /// </summary>
         /// <remarks>

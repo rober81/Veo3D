@@ -3578,3 +3578,50 @@ Error Number:201,State:4,Class:16
 15/10/2020-00:43:18: Falta traducir idioma:Español clave:lblCerrar
 15/10/2020-00:43:20: Falta traducir idioma:Español clave:lbl
 15/10/2020-00:43:20: Falta traducir idioma:Español clave:lblCerrar
+15/10/2020-05:44:10: Error al Escribir System.Data.SqlClient.SqlException (0x80131904): Cannot open backup device 'c:\Veo3DBack\Veo3D_DB_15-10-2020-054204.BAK'. Operating system error 3(El sistema no puede encontrar la ruta especificada.).
+BACKUP DATABASE is terminating abnormally.
+Changed database context to 'master'.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en DAL.Acceso.ejecutarSQL(String nombre, SqlParameter[] parametros) en C:\UAI\TFI\Veo3D\DAL\Acceso.cs:línea 129
+ClientConnectionId:bb22843f-972c-4842-9472-50038fd47fb1
+Error Number:3201,State:1,Class:16
+15/10/2020-05:46:10: Error al Escribir System.Data.SqlClient.SqlException (0x80131904): Cannot open backup device 'c:\Veo3DBack\Veo3D_DB_15-10-2020-054204.BAK'. Operating system error 3(El sistema no puede encontrar la ruta especificada.).
+BACKUP DATABASE is terminating abnormally.
+Changed database context to 'master'.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en DAL.Acceso.ejecutarSQL(String nombre, SqlParameter[] parametros) en C:\UAI\TFI\Veo3D\DAL\Acceso.cs:línea 129
+ClientConnectionId:bb22843f-972c-4842-9472-50038fd47fb1
+Error Number:3201,State:1,Class:16
+15/10/2020-12:14:57: Error al Escribir System.Data.SqlClient.SqlException (0x80131904): Cannot open backup device 'c:\Veo3DBackVeo3D_DB_15-10-2020-121427.BAK'. Operating system error 5(Acceso denegado.).
+BACKUP DATABASE is terminating abnormally.
+Changed database context to 'master'.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en DAL.Acceso.ejecutarSQL(String nombre, SqlParameter[] parametros) en C:\UAI\TFI\Veo3D\DAL\Acceso.cs:línea 129
+ClientConnectionId:5a15b4f7-5162-4b2f-a2e0-4e5c4989b535
+Error Number:3201,State:1,Class:16
+15/10/2020-14:12:37: System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en Gui.produccion.CopiaSeguridad.BtnRestaurar_Click(Object sender, EventArgs e) en C:\UAI\TFI\Veo3D\Gui\produccion\CopiaSeguridad.aspx.cs:línea 77

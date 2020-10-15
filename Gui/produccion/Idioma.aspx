@@ -18,7 +18,7 @@
                     <div class="form-group w-75 mx-auto">
                                 <uc1:LabelTexto runat="server" ID="LtNombre" />
                                 <uc1:LabelTexto runat="server" ID="LtCodigoIdioma" />
-                                <asp:Button ID="BtnAgregarIdioma" runat="server" CssClass="btn btn-primary align-middle" OnClick="CrearIdioma_Click"/>
+                                <asp:Button ID="BtnAgregarIdioma" runat="server" CssClass="btn btn-primary" OnClick="CrearIdioma_Click"/>
                     </div>
        
                 <div class="table-responsive w-75 mx-auto">

@@ -11,7 +11,11 @@ namespace BLL
         public static void loguear(String mensaje)
         {
             BE.Usuario usuario = GestionarSesion.getInstance().Usuario;
-            string log = "Usuario: " + usuario.ToString() + mensaje;
+            string log;
+            if (usuario != null)
+                log = "Usuario: " + usuario + mensaje;
+            else
+                log = mensaje;
             Util.Log.Error(log);
         }
     }

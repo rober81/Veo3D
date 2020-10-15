@@ -69,7 +69,6 @@
                                 <asp:Label ID="LblCopiaSeguridad" runat="server" Text="lblCopiaSeguridad"></asp:Label>
                             </h6>
                             <asp:HyperLink ID="LinkRealizar" CssClass="collapse-item" NavigateUrl="/produccion/CopiaSeguridad.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkRestaurar" CssClass="collapse-item" NavigateUrl="/produccion/CopiaSeguridad.aspx" runat="server"></asp:HyperLink>
                            
                             <h6 class="collapse-header">
                                 <asp:Label ID="LblRegistros" runat="server"></asp:Label>

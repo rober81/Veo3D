@@ -19,7 +19,6 @@ namespace Gui.produccion
                 CargarDatos();
             }
         }
-
         private void CargarDatos()
         {
             GrillaIdiomas.DataSource = null;

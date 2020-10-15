@@ -19,7 +19,7 @@
                 <uc1:labeltexto runat="server" id="LblUsuario" />
                 <uc1:labeltexto runat="server" id="LtFechaDesde" />
                 <uc1:labeltexto runat="server" id="LtFechaHasta" />
-                <asp:Button ID="BtnBuscar" runat="server" CssClass="btn btn-primary align-middle" OnClick="Btn_Click" />
+                <asp:Button ID="BtnBuscar" runat="server" CssClass="btn btn-primary" OnClick="Btn_Click" />
             </div>
             <div class="table-responsive w-75 mx-auto">
                 <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered" AutoGenerateColumns="true">
@@ -27,5 +27,4 @@
             </div>
         </div>
     </div>
-
 </asp:Content>
