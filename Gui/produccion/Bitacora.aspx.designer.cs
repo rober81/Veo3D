@@ -15,49 +15,49 @@ namespace Gui.produccion
     {
 
         /// <summary>
-        /// Control TxtFechaDesde.
+        /// Control LblListarBitacora.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtFechaDesde;
+        protected global::System.Web.UI.WebControls.Label LblListarBitacora;
 
         /// <summary>
-        /// Control Label1.
+        /// Control LblUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::Gui.controles.LabelTexto LblUsuario;
 
         /// <summary>
-        /// Control DropDownList1.
+        /// Control LtFechaDesde.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::Gui.controles.LabelTexto LtFechaDesde;
 
         /// <summary>
-        /// Control Label2.
+        /// Control LtFechaHasta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::Gui.controles.LabelTexto LtFechaHasta;
 
         /// <summary>
-        /// Control Label3.
+        /// Control BtnBuscar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Button BtnBuscar;
 
         /// <summary>
         /// Control GridView1.

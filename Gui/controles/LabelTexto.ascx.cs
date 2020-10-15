@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace Gui.controles
 {
-    public partial class LabelTexto : System.Web.UI.UserControl
+    public partial class LabelTexto : UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -101,7 +102,7 @@ namespace Gui.controles
         {
             if (string.IsNullOrWhiteSpace(txt.Text))
             {
-                txt.ToolTip = "Error el campo es obligatorio";
+                txt.ToolTip = GestionarIdioma.getInstance().GetTexto("MsgObligatorio");
                 return NoValido();
             }
             else
@@ -119,7 +120,7 @@ namespace Gui.controles
             }
             else
             {
-                txt.ToolTip = "Error no es número";
+                txt.ToolTip = GestionarIdioma.getInstance().GetTexto("MsgErrorNumero");
                 return NoValido();
             }
         }
@@ -133,7 +134,7 @@ namespace Gui.controles
             }
             catch
             {
-                txt.ToolTip = "Error no es fecha";
+                txt.ToolTip = GestionarIdioma.getInstance().GetTexto("MsgErrorFecha");
                 return NoValido();
             }
         }
@@ -146,7 +147,7 @@ namespace Gui.controles
             }
             else
             {
-                txt.ToolTip = "Error no cumple el formato";
+                txt.ToolTip = GestionarIdioma.getInstance().GetTexto("MsgErrorFormato");
                 return NoValido();
             }
         }
@@ -182,7 +183,7 @@ namespace Gui.controles
             return resultado;
         }
 
-        public DateTime getTextoDate()
+        public DateTime GetTextoDate()
         {
             return Convert.ToDateTime(txt.Text);
         }

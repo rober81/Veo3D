@@ -12,9 +12,8 @@ namespace Gui.web
         {
             if (!IsPostBack)
             {
-
+                CargarProductos();
             }
-            CargarProductos();
         }
 
         private void CargarProductos()

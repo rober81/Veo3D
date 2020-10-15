@@ -18,7 +18,6 @@ namespace Gui.masters
         HttpCookie cookieIdioma;
         protected void Page_Load(object sender, EventArgs e)
         {
-            CargarDatos();
             usuario = (Usuario)Session["Usuario"];
             if (usuario == null)
             {
@@ -35,17 +34,21 @@ namespace Gui.masters
 
             if (!IsPostBack)
             {
-            }
-            string defaultIdioma = "Español";
-            if (Request.Cookies["Idioma"] == null)
-                GrabarCookieIdioma("Español");
-            else
-                defaultIdioma = Server.UrlDecode(Request.Cookies["Idioma"].Value);
+                CargarDatos();
+                string defaultIdioma = "Español";
+                if (Request.Cookies["Idioma"] == null)
+                    GrabarCookieIdioma("Español");
+                else
+                {
+                    defaultIdioma = Server.UrlDecode(Request.Cookies["Idioma"].Value);
+                    ComboIdioma.SelectedValue = defaultIdioma;
+                    CambiarIdioma(defaultIdioma);
 
-            CambiarIdioma(defaultIdioma);
+                }
+            }
 
             //PRUEBA
-            LinkAdministracion.Visible = true;
+            //LinkAdministracion.Visible = true;
         }
 
         private void GrabarCookieIdioma(string idioma)

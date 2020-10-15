@@ -8,7 +8,13 @@ namespace BE
         {
             this.Nombre = nombre;
         }
+        public Idioma(string nombre, string codigo)
+        {
+            this.Nombre = nombre;
+            this.Codigo = codigo;
+        }
         public string Nombre { get; set; }
+        public string Codigo { get; set; }
         public Dictionary<string, string> Detalle { get; set; }
 
         public override string ToString()
@@ -26,7 +32,7 @@ namespace BE
 
         public override int GetHashCode()
         {
-            return GetHashCode();
+            return 289764928 + EqualityComparer<string>.Default.GetHashCode(Nombre);
         }
     }
 }

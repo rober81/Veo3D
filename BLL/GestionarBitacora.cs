@@ -27,20 +27,20 @@ namespace BLL
             return temp.ToList<BE.Bitacora>();
         }
 
-        public List<BE.Bitacora> ListarUsuario(BE.Usuario usr)
+        public List<BE.Bitacora> ListarUsuario(string usr)
         {
             IEnumerable<BE.Bitacora> temp = from bitacora in lista
-                                            where bitacora.Usuario.Login.Equals(usr.Login)
+                                            where bitacora.Usuario.Login.ToLower().Contains(usr.ToLower())
                                             select bitacora;
             return temp.ToList<BE.Bitacora>();
         }
 
-        public List<BE.Bitacora> ListarFechaUsuario(DateTime desde, DateTime hasta, BE.Usuario usr)
+        public List<BE.Bitacora> ListarFechaUsuario(DateTime desde, DateTime hasta, string usr)
         {
             IEnumerable<BE.Bitacora> temp = from bitacora in lista
                                             where bitacora.Fecha > desde
                                             && bitacora.Fecha < hasta
-                                            && bitacora.Usuario.Login.Equals(usr.Login)
+                                            && bitacora.Usuario.Login.ToLower().Contains(usr.ToLower())
                                             select bitacora;
             return temp.ToList<BE.Bitacora>();
         }

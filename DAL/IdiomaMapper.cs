@@ -15,7 +15,7 @@ namespace DAL
             DataTable tabla = Acceso.getInstance().leer(Tabla + "_leer", null);
             foreach (DataRow item in tabla.Rows)
             {
-                lista.Add(new BE.Idioma(item["nombre"].ToString()));
+                lista.Add(new BE.Idioma(item["nombre"].ToString(), item["codigo"].ToString()));
             }
             return lista;
         }
@@ -35,8 +35,9 @@ namespace DAL
 
         public static int Insertar(BE.Idioma param)
         {
-            SqlParameter[] parametros = new SqlParameter[1];
+            SqlParameter[] parametros = new SqlParameter[2];
             parametros[0] = new SqlParameter("@idioma", param.Nombre);
+            parametros[1] = new SqlParameter("@codigo", param.Codigo);
             return Acceso.getInstance().escribir(Tabla + "_alta", parametros);
         }
 

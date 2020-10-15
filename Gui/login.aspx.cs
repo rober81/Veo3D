@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace Gui.web
 {
-    public partial class login : System.Web.UI.Page
+    public partial class Login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,10 +22,7 @@ namespace Gui.web
 
         private void CargarDatos()
         {
-            lblUsuario.Text = "Usuario";
-            lblContrasenia.Text = "Contraseña";
-            btnAceptar.Text = "Aceptar";
-            lblRecordarPass.Text = "Recordar Contraseña";
+
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -35,15 +32,15 @@ namespace Gui.web
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            txtUsuario.Text = "administrador";
-            txtContrasenia.Text = "administrador";
-            if (!string.IsNullOrWhiteSpace(txtUsuario.Text) && !string.IsNullOrWhiteSpace(txtContrasenia.Text)){
-                GestionarSesion.getInstance().iniciarSesion(txtUsuario.Text, txtContrasenia.Text);
+            TxtUsuario.Text = "administrador";
+            TxtContrasenia.Text = "administrador";
+            if (!string.IsNullOrWhiteSpace(TxtUsuario.Text) && !string.IsNullOrWhiteSpace(TxtContrasenia.Text)){
+                GestionarSesion.getInstance().iniciarSesion(TxtUsuario.Text, TxtContrasenia.Text);
                 Usuario logueado = GestionarSesion.getInstance().Usuario;
                 if (logueado != null)
                 {
                     Session["Usuario"] = logueado;
-                    FormsAuthentication.SetAuthCookie(logueado.Login, chkPAss.Checked);
+                    FormsAuthentication.SetAuthCookie(logueado.Login, ChkPass.Checked);
                     Response.Redirect("~/index.aspx",true);
                 }
             }

@@ -11,70 +11,70 @@ namespace Gui.web
 {
 
 
-    public partial class login
+    public partial class Login
     {
 
         /// <summary>
-        /// Control lblUsuario.
+        /// Control LblUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUsuario;
+        protected global::System.Web.UI.WebControls.Label LblUsuario;
 
         /// <summary>
-        /// Control txtUsuario.
+        /// Control TxtUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsuario;
+        protected global::System.Web.UI.WebControls.TextBox TxtUsuario;
 
         /// <summary>
-        /// Control lblContrasenia.
+        /// Control LblContrasenia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblContrasenia;
+        protected global::System.Web.UI.WebControls.Label LblContrasenia;
 
         /// <summary>
-        /// Control txtContrasenia.
+        /// Control TxtContrasenia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContrasenia;
+        protected global::System.Web.UI.WebControls.TextBox TxtContrasenia;
 
         /// <summary>
-        /// Control chkPAss.
+        /// Control ChkPass.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkPAss;
+        protected global::System.Web.UI.WebControls.CheckBox ChkPass;
 
         /// <summary>
-        /// Control lblRecordarPass.
+        /// Control LblRecordarPass.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRecordarPass;
+        protected global::System.Web.UI.WebControls.Label LblRecordarPass;
 
         /// <summary>
-        /// Control btnAceptar.
+        /// Control BtnAceptar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAceptar;
+        protected global::System.Web.UI.WebControls.Button BtnAceptar;
     }
 }

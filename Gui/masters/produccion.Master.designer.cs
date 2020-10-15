@@ -348,13 +348,13 @@ namespace Gui.masters
         protected global::System.Web.UI.WebControls.DropDownList ComboIdioma;
 
         /// <summary>
-        /// Control LblUsuario.
+        /// Control LblUsuarioNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblUsuario;
+        protected global::System.Web.UI.WebControls.Label LblUsuarioNombre;
 
         /// <summary>
         /// Control TituloPagina2.

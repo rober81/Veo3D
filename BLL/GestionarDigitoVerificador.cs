@@ -88,7 +88,7 @@ namespace BLL
 
         protected string Traducir(string texto)
         {
-            return BLL.GestionarIdioma.getInstance().getTexto(texto);
+            return BLL.GestionarIdioma.getInstance().GetTexto(texto);
         }
 
     }

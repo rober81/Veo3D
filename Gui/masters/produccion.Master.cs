@@ -14,22 +14,25 @@ namespace Gui.masters
 {
     public partial class produccion : System.Web.UI.MasterPage
     {
-        Usuario usuario;
-        HttpCookie cookieIdioma;
+        private Usuario usuario;
+        private HttpCookie cookieIdioma;
+        private string defaultIdioma = "Español";
         protected void Page_Load(object sender, EventArgs e)
         {
             usuario = (Usuario)Session["Usuario"];
             if (!IsPostBack)
             {
+                CargarDatos();
+                if (Request.Cookies["Idioma"] == null)
+                    GrabarCookieIdioma("Español");
+                else
+                {
+                    defaultIdioma = Server.UrlDecode(Request.Cookies["Idioma"].Value);
+                    ComboIdioma.SelectedValue = defaultIdioma;
+                    CambiarIdioma(defaultIdioma);
+                }
             }
-            CargarDatos();
-            string defaultIdioma = "Español";
-            if (Request.Cookies["Idioma"] == null)
-                GrabarCookieIdioma("Español");
-            else
-                defaultIdioma = Server.UrlDecode(Request.Cookies["Idioma"].Value);
-
-            CambiarIdioma(defaultIdioma);
+            
         }
 
         private void CargarIdioma(ControlCollection controles)
@@ -51,7 +54,7 @@ namespace Gui.masters
             usuario = (Usuario)Session["Usuario"];
             if (usuario != null)
             {
-                LblUsuario.Text = $"{usuario.Nombre} {usuario.Apellido}";
+                LblUsuarioNombre.Text = $"{usuario.Nombre} {usuario.Apellido}";
             }
             ComboIdioma.DataSource = null;
             ComboIdioma.DataSource = GestionarIdioma.getInstance().Listar();

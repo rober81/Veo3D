@@ -13,7 +13,7 @@ namespace DAL
 
         public static List<BE.Bitacora> Listar()
         {
-            BE.Bitacora obj = null;
+            BE.Bitacora obj;
             List<BE.Bitacora> lista = new List<BE.Bitacora>();
             DataTable tabla = Acceso.getInstanceBitacora().leer(Tabla + "_leer", null);
             foreach (DataRow item in tabla.Rows)
