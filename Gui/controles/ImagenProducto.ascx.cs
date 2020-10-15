@@ -19,24 +19,24 @@ namespace Gui.controles
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            CompletarDatos();
             if (!IsPostBack)
             {
-                CompletarDatos();
             }
         }
 
         private void CompletarDatos()
         {
-            lblTitulo.Text = Titulo;
-            lblPrecio.Text = "$" + Precio.ToString("#0.00");
-            lblTexto.Text = Texto;
-            lblEstrellas.Text = completarEstrellas();
-            HyperLink1.NavigateUrl = Url;
-            HyperLink2.NavigateUrl = Url;
-            imagenProd.ImageUrl = $"../anteojos/{Imagen}";
+            IPLblTitulo.Text = Titulo;
+            IPLblPrecio.Text = "$" + Precio.ToString("#0.00");
+            IPLblTexto.Text = Texto;
+            IPLblEstrellas.Text = CompletarEstrellas();
+            IPLinkDetalle.NavigateUrl = Url;
+            IPLinkDetalle2.NavigateUrl = Url;
+            IPImagenProd.ImageUrl = Imagen;
         }
 
-        string completarEstrellas()
+        string CompletarEstrellas()
         {
             string resultado = "";
             for (int i = 0; i < 5; i++)

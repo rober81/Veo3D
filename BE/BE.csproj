@@ -45,11 +45,12 @@
     <Compile Include="CopiaDeSeguridad.cs" />
     <Compile Include="DigitoVerificador.cs" />
     <Compile Include="Funcional\Producto.cs" />
-    <Compile Include="iCambiarIdioma.cs" />
     <Compile Include="iDigitoVerificador.cs" />
     <Compile Include="Idioma.cs" />
     <Compile Include="IdiomaDetalle.cs" />
+    <Compile Include="Funcional\Impresora.cs" />
     <Compile Include="iPermisos.cs" />
+    <Compile Include="Funcional\Material.cs" />
     <Compile Include="Perfil.cs" />
     <Compile Include="Perfiles.cs" />
     <Compile Include="Persona.cs" />

@@ -12,26 +12,45 @@ namespace Gui.web
         {
             if (!IsPostBack)
             {
-                CargarProductos();
+                CargarProductos(TipoAnteojos.Receta);
             }
         }
 
-        private void CargarProductos()
+        private void CargarProductos(string tipo)
         {
             ProductoBLL productos = new ProductoBLL();
-            List<Producto> lista = productos.ListarProductos();
+            ListaProductos.Controls.Clear();
+            List<Producto> lista = productos.Listar(tipo); //productos.ListarProductos();
             Random aleatorio = new Random();
             foreach (Producto item in lista)
             {
                 ImagenProducto prod = (ImagenProducto) this.LoadControl("/controles/ImagenProducto.ascx");
-                prod.Imagen = item.Archivo;
+                prod.ID = item.Id.ToString();
+                prod.Imagen = $"/anteojos/{item.Imagen}";
                 prod.Url = "/web/detalle.aspx";
-                prod.Estrellas = aleatorio.Next(1, 6);
+                prod.Estrellas = item.Calificacion;
                 prod.Titulo = item.Nombre;
-                prod.Precio = aleatorio.Next(1500, 3500); ;
-                prod.Texto = "Este es un texto de descripcion";
+                prod.Precio = aleatorio.Next(1500, 3500);
+                prod.Texto = item.Descripcion;
                 ListaProductos.Controls.Add(prod);
             }
+        }
+
+        protected void LinkReceta_Click(object sender, EventArgs e)
+        {
+            CargarProductos(TipoAnteojos.Receta);
+        }
+        protected void LinkSol_Click(object sender, EventArgs e)
+        {
+            CargarProductos(TipoAnteojos.Sol);
+        }
+        protected void LinkDeportivo_Click(object sender, EventArgs e)
+        {
+            CargarProductos(TipoAnteojos.Depoprtivo);
+        }
+        protected void LinkRetro_Click(object sender, EventArgs e)
+        {
+            CargarProductos(TipoAnteojos.Retro);
         }
     }
 }

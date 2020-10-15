@@ -1798,6 +1798,7 @@
     <Content Include="produccion\PanelPedidos.aspx" />
     <Content Include="produccion\Pedidos.aspx" />
     <Content Include="produccion\Permisos.aspx" />
+    <Content Include="produccion\Precios.aspx" />
     <Content Include="produccion\Presupuesto.aspx" />
     <Content Include="produccion\Prioridad.aspx" />
     <Content Include="produccion\Priorizacion.aspx" />
@@ -1941,6 +1942,13 @@
     </Compile>
     <Compile Include="produccion\Permisos.aspx.designer.cs">
       <DependentUpon>Permisos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\Precios.aspx.cs">
+      <DependentUpon>Precios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="produccion\Precios.aspx.designer.cs">
+      <DependentUpon>Precios.aspx</DependentUpon>
     </Compile>
     <Compile Include="produccion\Presupuesto.aspx.cs">
       <DependentUpon>Presupuesto.aspx</DependentUpon>

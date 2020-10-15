@@ -14,11 +14,12 @@
             <div class="col-lg-3">
 
                 <h1 class="my-4">
-                    <asp:Label ID="LblShop" runat="server" Text="Label"></asp:Label></h1>
+                    <asp:Label ID="LblShop" runat="server"></asp:Label></h1>
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Anteojos de Receta</a>
-                    <a href="#" class="list-group-item">Anteojos de Sol</a>
-                    <a href="#" class="list-group-item">Anteojos Retro</a>
+                    <asp:LinkButton ID="LinkAnteojosReceta" runat="server" CssClass="list-group-item" OnClick="LinkReceta_Click"></asp:LinkButton>
+                    <asp:LinkButton ID="LinkAnteojosSol" runat="server" CssClass="list-group-item" OnClick="LinkSol_Click"></asp:LinkButton>
+                    <asp:LinkButton ID="LinkAnteojosDeportivos" runat="server" CssClass="list-group-item" OnClick="LinkDeportivo_Click"></asp:LinkButton>
+                    <asp:LinkButton ID="LinkAnteojosRetro" runat="server" CssClass="list-group-item" OnClick="LinkRetro_Click"></asp:LinkButton>
                 </div>
 
             </div>
@@ -34,13 +35,13 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <img class="d-block img-fluid" src="../anteojos/cabecera1.png" alt="First slide">
+                            <img class="d-block img-fluid" src="/anteojos/cabecera1.png" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" src="../anteojos/cabecera2.png" alt="Second slide">
+                            <img class="d-block img-fluid" src="/anteojos/cabecera2.png" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" src="../anteojos/cabecera3.png" alt="Third slide">
+                            <img class="d-block img-fluid" src="/anteojos/cabecera3.png" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

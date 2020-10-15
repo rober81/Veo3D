@@ -80,7 +80,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Funcional\ImpresoraBLL.cs" />
+    <Compile Include="Funcional\MaterialBLL.cs" />
     <Compile Include="Funcional\ProductoBLL.cs" />
+    <Compile Include="Funcional\TipoAnteojos.cs" />
     <Compile Include="GestionarBitacora.cs" />
     <Compile Include="GestionarCopiaDeSeguridad.cs" />
     <Compile Include="GestionarDigitoVerificador.cs" />

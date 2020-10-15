@@ -15,66 +15,66 @@ namespace Gui.controles
     {
 
         /// <summary>
-        /// Control HyperLink2.
+        /// Control IPLinkDetalle.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.WebControls.HyperLink IPLinkDetalle;
 
         /// <summary>
-        /// Control imagenProd.
+        /// Control IPImagenProd.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imagenProd;
+        protected global::System.Web.UI.WebControls.Image IPImagenProd;
 
         /// <summary>
-        /// Control HyperLink1.
+        /// Control IPLinkDetalle2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.HyperLink IPLinkDetalle2;
 
         /// <summary>
-        /// Control lblTitulo.
+        /// Control IPLblTitulo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTitulo;
+        protected global::System.Web.UI.WebControls.Label IPLblTitulo;
 
         /// <summary>
-        /// Control lblPrecio.
+        /// Control IPLblPrecio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrecio;
+        protected global::System.Web.UI.WebControls.Label IPLblPrecio;
 
         /// <summary>
-        /// Control lblTexto.
+        /// Control IPLblTexto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTexto;
+        protected global::System.Web.UI.WebControls.Label IPLblTexto;
 
         /// <summary>
-        /// Control lblEstrellas.
+        /// Control IPLblEstrellas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEstrellas;
+        protected global::System.Web.UI.WebControls.Label IPLblEstrellas;
     }
 }

@@ -25,6 +25,8 @@ namespace Gui.controles
                 _lbl.Text = tradu;
             if (control is HyperLink _link)
                 _link.Text = tradu;
+            if (control is LinkButton _link2)
+                _link2.Text = tradu;
             if (control is Button _btn)
                 _btn.Text = tradu;
         }
