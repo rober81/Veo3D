@@ -76,7 +76,7 @@
                             </h6>
                             <asp:HyperLink ID="LinkBitacora" CssClass="collapse-item" NavigateUrl="/produccion/Bitacora.aspx" runat="server"></asp:HyperLink>
                             <asp:HyperLink ID="LinkDigitoVerificador" CssClass="collapse-item" NavigateUrl="/produccion/DigitoVerificador.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkLogErrores" CssClass="collapse-item" NavigateUrl="/produccion/LogError.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkLogErrores" CssClass="collapse-item" NavigateUrl="/produccion/LogError.aspx" runat="server" Visible="false"></asp:HyperLink>
                            
                         </div>
                     </div>
