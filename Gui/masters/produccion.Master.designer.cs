@@ -402,12 +402,12 @@ namespace Gui.masters
         protected global::System.Web.UI.WebControls.LinkButton LinkCerrarSesion;
 
         /// <summary>
-        /// Control lblCerrar.
+        /// Control LblCerrar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCerrar;
+        protected global::System.Web.UI.WebControls.Label LblCerrar;
     }
 }

@@ -18,8 +18,8 @@ namespace Gui.masters
         HttpCookie cookieIdioma;
         protected void Page_Load(object sender, EventArgs e)
         {
-            usuario = (Usuario)Session["Usuario"];
-            if (usuario == null)
+            
+            if (Session["Usuario"] == null)
             {
                 LinkAdministracion.Visible = false;
                 LinkCerrar2.Visible = false;
@@ -27,6 +27,7 @@ namespace Gui.masters
             }
             else
             {
+                usuario = (Usuario)Session["Usuario"];
                 LinkAdministracion.Visible = true;
                 LinkCerrar2.Visible = true;
                 LinkLogin.Visible = false;

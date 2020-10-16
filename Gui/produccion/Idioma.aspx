@@ -32,6 +32,7 @@
                         OnRowCancelingEdit="CancelarIdioma_Click">
                         <SelectedRowStyle CssClass="table-success"/>
                     </asp:GridView>
+                     <asp:Button ID="BtnModificar" runat="server" CssClass="btn btn-secondary" OnClick="Modificar_Click"/>
                     <asp:Button ID="BtnAgregarDetalleIdioma" runat="server" CssClass="btn btn-primary" OnClick="AgregarDetalleIdioma_Click"/>
                 </div>
             </div> 

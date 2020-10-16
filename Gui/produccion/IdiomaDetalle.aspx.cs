@@ -46,7 +46,7 @@ namespace Gui.produccion
                         Clave = item.Key,
                         Texto = item.Value
                     };
-                    GestionarIdioma.getInstance().insertarDetalle(detalle);
+                    //GestionarIdioma.getInstance().insertarDetalle(detalle);
                 }
             }
         }
@@ -61,10 +61,14 @@ namespace Gui.produccion
         }
         protected void ActualizarIdioma_Click(Object sender, GridViewUpdateEventArgs e)
         {
+            GridViewRow row = GrillaIdiomas.Rows[e.RowIndex];
+            string clave = row.Cells[1].Text;
+            string texto = row.Cells[2].Text;
             Debug.WriteLine("actualizar");
         }
         protected void CancelarIdioma_Click(Object sender, GridViewCancelEditEventArgs e)
         {
+            e.Cancel = true;
             Debug.WriteLine("cancelar");
         }
     }

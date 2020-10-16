@@ -55,6 +55,19 @@ namespace Gui.produccion
             }
         }
 
+        protected void Modificar_Click(object sender, EventArgs e)
+        {
+            if (GrillaIdiomas.SelectedRow != null)
+            {
+                var idioma = GrillaIdiomas.SelectedRow.Cells[1].Text;
+                var codigo = GrillaIdiomas.SelectedRow.Cells[2].Text;
+                BE.Idioma seleccionado = new BE.Idioma(idioma);
+                GestionarIdioma.getInstance().Cargar(seleccionado);
+                Session["IdiomaNuevo"] = seleccionado;
+                Response.Redirect("/produccion/IdiomaDetalle.aspx");
+            }
+        }
+
         protected void AgregarDetalleIdioma_Click(object sender, EventArgs e)
         {
             if (GrillaIdiomas.SelectedRow != null)

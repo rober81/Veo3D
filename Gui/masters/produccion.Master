@@ -402,7 +402,7 @@
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">
                             <asp:Label ID="LblCancelar" runat="server" Text="Label"></asp:Label>
                         </button>
-                        <asp:LinkButton ID="LinkCerrarSesion" OnClick="LinkCerrar_Click" CssClass="btn btn-primary" runat="server"><asp:Label ID="lblCerrar" runat="server" Text="Label" CssClass="btn btn-primary"></asp:Label></asp:LinkButton>     
+                        <asp:LinkButton ID="LinkCerrarSesion" OnClick="LinkCerrar_Click" CssClass="btn btn-primary" runat="server"><asp:Label ID="LblCerrar" runat="server" Text="Label" CssClass="btn btn-primary"></asp:Label></asp:LinkButton>     
 
                     </div>
                 </div>
