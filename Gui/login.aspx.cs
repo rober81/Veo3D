@@ -32,8 +32,8 @@ namespace Gui.web
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            TxtUsuario.Text = "administrador";
-            TxtContrasenia.Text = "administrador";
+            //TxtUsuario.Text = "administrador";
+            //TxtContrasenia.Text = "administrador";
             if (!string.IsNullOrWhiteSpace(TxtUsuario.Text) && !string.IsNullOrWhiteSpace(TxtContrasenia.Text)){
                 GestionarSesion.getInstance().iniciarSesion(TxtUsuario.Text, TxtContrasenia.Text);
                 Usuario logueado = GestionarSesion.getInstance().Usuario;
@@ -41,7 +41,7 @@ namespace Gui.web
                 {
                     Session["Usuario"] = logueado;
                     FormsAuthentication.SetAuthCookie(logueado.Login, ChkPass.Checked);
-                    Response.Redirect("~/index.aspx",true);
+                    Response.Redirect("/index.aspx",true);
                 }
             }
         }

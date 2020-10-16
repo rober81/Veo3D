@@ -1791,9 +1791,11 @@
     <Content Include="produccion\Idioma.aspx" />
     <Content Include="produccion\IdiomaDetalle.aspx" />
     <Content Include="produccion\Impresora.aspx" />
+    <Content Include="produccion\ImpresoraAbm.aspx" />
     <Content Include="produccion\indexProd.aspx" />
     <Content Include="produccion\LogError.aspx" />
     <Content Include="produccion\Material.aspx" />
+    <Content Include="produccion\MaterialAbm.aspx" />
     <Content Include="produccion\PanelCompras.aspx" />
     <Content Include="produccion\PanelPedidos.aspx" />
     <Content Include="produccion\Pedidos.aspx" />
@@ -1803,6 +1805,7 @@
     <Content Include="produccion\Prioridad.aspx" />
     <Content Include="produccion\Priorizacion.aspx" />
     <Content Include="produccion\Producto.aspx" />
+    <Content Include="produccion\ProductoAbm.aspx" />
     <Content Include="produccion\RegistrarOrden.aspx" />
     <Content Include="produccion\ReporteOrden.aspx" />
     <Content Include="produccion\ReportePresupuesto.aspx" />
@@ -1894,6 +1897,13 @@
     <Compile Include="produccion\Impresora.aspx.designer.cs">
       <DependentUpon>Impresora.aspx</DependentUpon>
     </Compile>
+    <Compile Include="produccion\ImpresoraAbm.aspx.cs">
+      <DependentUpon>ImpresoraAbm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="produccion\ImpresoraAbm.aspx.designer.cs">
+      <DependentUpon>ImpresoraAbm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="produccion\indexProd.aspx.cs">
       <DependentUpon>indexProd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1914,6 +1924,13 @@
     </Compile>
     <Compile Include="produccion\Material.aspx.designer.cs">
       <DependentUpon>Material.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\MaterialAbm.aspx.cs">
+      <DependentUpon>MaterialAbm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="produccion\MaterialAbm.aspx.designer.cs">
+      <DependentUpon>MaterialAbm.aspx</DependentUpon>
     </Compile>
     <Compile Include="produccion\PanelCompras.aspx.cs">
       <DependentUpon>PanelCompras.aspx</DependentUpon>
@@ -1977,6 +1994,13 @@
     </Compile>
     <Compile Include="produccion\Producto.aspx.designer.cs">
       <DependentUpon>Producto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="produccion\ProductoAbm.aspx.cs">
+      <DependentUpon>ProductoAbm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="produccion\ProductoAbm.aspx.designer.cs">
+      <DependentUpon>ProductoAbm.aspx</DependentUpon>
     </Compile>
     <Compile Include="produccion\RegistrarOrden.aspx.cs">
       <DependentUpon>RegistrarOrden.aspx</DependentUpon>

@@ -20,6 +20,10 @@ namespace Gui.masters
         protected void Page_Load(object sender, EventArgs e)
         {
             usuario = (Usuario)Session["Usuario"];
+            if (usuario == null)
+            {
+                Response.Redirect("/index.aspx");
+            }
             if (!IsPostBack)
             {
                 CargarDatos();

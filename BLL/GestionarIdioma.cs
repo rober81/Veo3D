@@ -110,7 +110,7 @@ namespace BLL
             Cargar(original);
             foreach (var item in original.Detalle)
             {
-                nuevo.Detalle.Add(item.Key, string.Empty);
+                nuevo.Detalle.Add(item.Key, item.Value);
             }
             return nuevo;
         }

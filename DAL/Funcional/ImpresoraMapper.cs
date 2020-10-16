@@ -49,12 +49,11 @@ namespace DAL
 
         private static SqlParameter[] crearParametros(Impresora param)
         {
-            SqlParameter[] parametros = new SqlParameter[5];
+            SqlParameter[] parametros = new SqlParameter[4];
             parametros[0] = new SqlParameter("@id", param.Id);
             parametros[1] = new SqlParameter("@nombre", param.Nombre);
             parametros[2] = new SqlParameter("@marca", param.Marca);
             parametros[3] = new SqlParameter("@modelo", param.Modelo);
-            parametros[4] = new SqlParameter("@estado", 0);
             return parametros;
         }
 
@@ -70,9 +69,9 @@ namespace DAL
 
         public static int Baja(Impresora param)
         {
-            SqlParameter[] parametros = crearParametros(param);
-            parametros[4] = new SqlParameter("@estado", 1);
-            return Acceso.getInstance().escribir(Tabla + "_modificar", parametros);
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter("@id", param.Id);
+            return Acceso.getInstance().escribir(Tabla + "_baja", parametros);
         }
     }
 }

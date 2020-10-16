@@ -46,7 +46,7 @@ namespace Gui.web
         }
         protected void LinkDeportivo_Click(object sender, EventArgs e)
         {
-            CargarProductos(TipoAnteojos.Depoprtivo);
+            CargarProductos(TipoAnteojos.Deportivo);
         }
         protected void LinkRetro_Click(object sender, EventArgs e)
         {

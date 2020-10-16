@@ -56,7 +56,7 @@ namespace DAL
 
         private static SqlParameter[] crearParametros(Producto param)
         {
-            SqlParameter[] parametros = new SqlParameter[10];
+            SqlParameter[] parametros = new SqlParameter[9];
             parametros[0] = new SqlParameter("@id", param.Id);
             parametros[1] = new SqlParameter("@nombre", param.Nombre);
             parametros[2] = new SqlParameter("@archivo", param.Archivo);
@@ -66,7 +66,6 @@ namespace DAL
             parametros[6] = new SqlParameter("@descripcion", param.Descripcion);
             parametros[7] = new SqlParameter("@tipo", param.Tipo);
             parametros[8] = new SqlParameter("@calificacion", param.Calificacion);
-            parametros[9] = new SqlParameter("@estado", 0);
             return parametros;
         }
 
@@ -82,9 +81,9 @@ namespace DAL
 
         public static int Baja(Producto param)
         {
-            SqlParameter[] parametros = crearParametros(param);
-            parametros[9] = new SqlParameter("@estado", 1);
-            return Acceso.getInstance().escribir(Tabla + "_modificar", parametros);
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter("@id", param.Id);
+            return Acceso.getInstance().escribir(Tabla + "_baja", parametros);
         }
         public List<Producto> ListarProductos()
         {

@@ -53,14 +53,13 @@ namespace DAL
 
         private static SqlParameter[] crearParametros(Material param)
         {
-            SqlParameter[] parametros = new SqlParameter[7];
+            SqlParameter[] parametros = new SqlParameter[6];
             parametros[0] = new SqlParameter("@id", param.Id);
             parametros[1] = new SqlParameter("@marca", param.Marca);
             parametros[2] = new SqlParameter("@color", param.Color);
             parametros[3] = new SqlParameter("@tipo", param.Tipo);
             parametros[4] = new SqlParameter("@peso", param.Peso);
             parametros[5] = new SqlParameter("@metros", param.Metros);
-            parametros[6] = new SqlParameter("@estado", 0);
             return parametros;
         }
 
@@ -76,9 +75,9 @@ namespace DAL
 
         public static int Baja(Material param)
         {
-            SqlParameter[] parametros = crearParametros(param);
-            parametros[6] = new SqlParameter("@estado", 1);
-            return Acceso.getInstance().escribir(Tabla + "_modificar", parametros);
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter("@id", param.Id);
+            return Acceso.getInstance().escribir(Tabla + "_baja", parametros);
         }
     }
 }
