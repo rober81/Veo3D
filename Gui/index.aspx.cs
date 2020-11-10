@@ -3,6 +3,7 @@ using BLL;
 using Gui.controles;
 using System;
 using System.Collections.Generic;
+using System.Web.UI.HtmlControls;
 
 namespace Gui.web
 {
@@ -12,8 +13,14 @@ namespace Gui.web
         {
             if (!IsPostBack)
             {
+                
                 CargarProductos(TipoAnteojos.Receta);
             }
+        }
+
+        protected string GetVideoLink()
+        {
+            return "anteojos/video.mp4";
         }
 
         private void CargarProductos(string tipo)
