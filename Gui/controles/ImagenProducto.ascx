@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ImagenProducto.ascx.cs" Inherits="Gui.controles.ImagenProducto" %>
 <div class="col-lg-4 col-md-6 mb-4">
-    <div class="card h-100">
+    <div class="card shadow h-100">
         <asp:HyperLink ID="IPLinkDetalle" runat="server">
             <asp:Image ID="IPImagenProd" runat="server" CssClass="card-img-top" />
         </asp:HyperLink>

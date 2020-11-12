@@ -32,7 +32,7 @@ namespace DAL
         public static int Insertar(BE.Bitacora bitacora)
         {
             SqlParameter[] parametros = new SqlParameter[6];
-            parametros[0] = new SqlParameter("@usuario", bitacora.Usuario.ToString());
+            parametros[0] = new SqlParameter("@usuario", bitacora.Usuario!= null ? bitacora.Usuario.ToString():"Sin Usuario");
             parametros[1] = new SqlParameter("@fecha", bitacora.Fecha);
             parametros[1].DbType = DbType.DateTime;
             parametros[2] = new SqlParameter("@tabla", bitacora.Tabla);

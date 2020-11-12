@@ -126,6 +126,7 @@
     <Content Include="anteojos\cabecera1.png" />
     <Content Include="anteojos\cabecera2.png" />
     <Content Include="anteojos\cabecera3.png" />
+    <Content Include="Registro.aspx" />
     <Content Include="Resumen.aspx" />
     <Content Include="img\mercadopago.png" />
     <Content Include="img\medidas.png" />
@@ -1806,6 +1807,7 @@
     <Content Include="produccion\Impresora.aspx" />
     <Content Include="produccion\ImpresoraAbm.aspx" />
     <Content Include="produccion\indexProd.aspx" />
+    <Content Include="sistema\ListaUsuarios.aspx" />
     <Content Include="sistema\LogError.aspx" />
     <Content Include="produccion\Material.aspx" />
     <Content Include="produccion\MaterialAbm.aspx" />
@@ -1831,6 +1833,13 @@
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Resumen.aspx.cs">
       <DependentUpon>Resumen.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1937,6 +1946,13 @@
     </Compile>
     <Compile Include="produccion\indexProd.aspx.designer.cs">
       <DependentUpon>indexProd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sistema\ListaUsuarios.aspx.cs">
+      <DependentUpon>ListaUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sistema\ListaUsuarios.aspx.designer.cs">
+      <DependentUpon>ListaUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="sistema\LogError.aspx.cs">
       <DependentUpon>LogError.aspx</DependentUpon>

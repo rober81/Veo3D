@@ -11,12 +11,12 @@ namespace BLL
             return DAL.UsuarioMapper.Login(usr);
         }
 
-        public static int Insertar(Usuario usr)
+        public static int Guardar(Usuario usr)
         {
             usr.Password = GestionarEncriptacion.Encriptar(usr.Password);
             int res = UsuarioMapper.Insertar(usr);
             //CalcularDVV();
-            Bitacora("Insertar", usr);
+            Bitacora("Guardar", usr);
             return res;
         }
 

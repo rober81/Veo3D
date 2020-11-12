@@ -24,6 +24,7 @@ namespace Gui.masters
                 LinkAdministracion.Visible = false;
                 LinkCerrar2.Visible = false;
                 LinkLogin.Visible = true;
+                LinkRegistro.Visible = true;
             }
             else
             {
@@ -31,6 +32,7 @@ namespace Gui.masters
                 LinkAdministracion.Visible = true;
                 LinkCerrar2.Visible = true;
                 LinkLogin.Visible = false;
+                LinkRegistro.Visible = false;
             }
 
             if (!IsPostBack)
@@ -47,9 +49,6 @@ namespace Gui.masters
 
                 }
             }
-
-            //PRUEBA
-            //LinkAdministracion.Visible = true;
         }
 
         private void GrabarCookieIdioma(string idioma)

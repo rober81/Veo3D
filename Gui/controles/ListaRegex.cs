@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Parcial1.controles
+namespace Gui.controles
 {
     public class ListaRegex
     {

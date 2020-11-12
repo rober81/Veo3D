@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-                <div class="card mt-4">
+                <div class="card shadow mt-4">
                     <div class="card-body">
                         <h3 class="card-title">
                             <asp:Label ID="LblResumen" runat="server" Text="Label"></asp:Label>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
 
-                <div class="card card-outline-secondary my-4">
+                <div class="card shadow card-outline-secondary my-4">
                     <div class="card-header">
                         <asp:Label ID="LblDireccion" runat="server" Text="Label"></asp:Label>
                     </div>

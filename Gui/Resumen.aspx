@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-                <div class="card mt-4">
+                <div class="card shadow mt-4">
                     <div class="card-body">
                         <h2 class="card-title">
                             <asp:Label ID="LblFinalizadoExitosamente" runat="server" Text="Label"></asp:Label>

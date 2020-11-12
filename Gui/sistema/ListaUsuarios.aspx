@@ -1,14 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/produccion.Master" AutoEventWireup="true" CodeBehind="Impresora.aspx.cs" Inherits="Gui.produccion.Impresora" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/produccion.Master" AutoEventWireup="true" CodeBehind="ListaUsuarios.aspx.cs" Inherits="Gui.sistema.ListaUsuarios" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="TituloPagina2" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="card shadow w-75 mx-auto my-auto">
+        <div class="card shadow w-75 mx-auto my-auto">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">
-                <asp:Label ID="LblAdminImpresora" runat="server"></asp:Label>
+                <asp:Label ID="LblUsuariosAdmin" runat="server"></asp:Label>
             </h6>
         </div>
         <div class="card-body">

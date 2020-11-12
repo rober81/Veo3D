@@ -7,137 +7,110 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Gui.masters
+namespace Gui
 {
 
 
-    public partial class ventas
+    public partial class Registro
     {
 
         /// <summary>
-        /// Control head.
+        /// Control LblRegistroUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label LblRegistroUsuario;
 
         /// <summary>
-        /// Control form1.
+        /// Control LblUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::Gui.controles.LabelTexto LblUsuario;
 
         /// <summary>
-        /// Control LblHome.
+        /// Control LblContrasenia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblHome;
+        protected global::Gui.controles.LabelTexto LblContrasenia;
 
         /// <summary>
-        /// Control LinkAdministracion.
+        /// Control LblContraseniaRepetir.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LinkAdministracion;
+        protected global::Gui.controles.LabelTexto LblContraseniaRepetir;
 
         /// <summary>
-        /// Control LblAdministracion.
+        /// Control LblCorreo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblAdministracion;
+        protected global::Gui.controles.LabelTexto LblCorreo;
 
         /// <summary>
-        /// Control LblContacto.
+        /// Control INombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblContacto;
+        protected global::Gui.controles.LabelTexto INombre;
 
         /// <summary>
-        /// Control LinkLogin.
+        /// Control LblApellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LinkLogin;
+        protected global::Gui.controles.LabelTexto LblApellido;
 
         /// <summary>
-        /// Control LblLogin.
+        /// Control LblDni.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblLogin;
+        protected global::Gui.controles.LabelTexto LblDni;
 
         /// <summary>
-        /// Control LinkRegistro.
+        /// Control BtnCancelar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LinkRegistro;
+        protected global::System.Web.UI.WebControls.Button BtnCancelar;
 
         /// <summary>
-        /// Control LblRegistrar.
+        /// Control BtnAceptar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblRegistrar;
+        protected global::System.Web.UI.WebControls.Button BtnAceptar;
 
         /// <summary>
-        /// Control LinkCerrar2.
+        /// Control toast.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkCerrar2;
-
-        /// <summary>
-        /// Control LblCerrar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblCerrar;
-
-        /// <summary>
-        /// Control ComboIdioma.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ComboIdioma;
-
-        /// <summary>
-        /// Control ContentPlaceHolder1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Label toast;
     }
 }
