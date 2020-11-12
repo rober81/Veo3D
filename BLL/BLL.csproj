@@ -92,7 +92,7 @@
     <Compile Include="GestionarEncriptacion.cs" />
     <Compile Include="GestionarError.cs" />
     <Compile Include="GestionarIdioma.cs" />
-    <Compile Include="GestionarRolesPerfiles.cs" />
+    <Compile Include="GestionarPermisos.cs" />
     <Compile Include="GestionarSesion.cs" />
     <Compile Include="GestionarUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

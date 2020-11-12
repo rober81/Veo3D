@@ -17,6 +17,8 @@ namespace Gui.masters
         private Usuario usuario;
         private HttpCookie cookieIdioma;
         private string defaultIdioma = "Español";
+        GestionarPermisos permisosbll;
+        List<iPermisos> permisos;
         protected void Page_Load(object sender, EventArgs e)
         {
             usuario = (Usuario)Session["Usuario"];
@@ -27,6 +29,7 @@ namespace Gui.masters
             if (!IsPostBack)
             {
                 CargarDatos();
+                PermisosMenu();
                 if (Request.Cookies["Idioma"] == null)
                     GrabarCookieIdioma("Español");
                 else
@@ -89,6 +92,48 @@ namespace Gui.masters
             GestionarSesion.getInstance().cerrarSesion();
             FormsAuthentication.SignOut();
             Response.Redirect("/index.aspx");
+        }
+
+        protected void PermisosMenu()
+        {
+            permisosbll = new GestionarPermisos();
+            permisos = permisosbll.ListarUsuarioPermiso(GestionarSesion.getInstance().Usuario);
+            VerificarPermisos(this.Controls);
+        }
+
+        private void VerificarPermiso(Control control)
+        {
+            if (control == null || control.ID == null)
+                return;
+            if (control is HyperLink _link)
+            {
+                foreach (var item in permisos)
+                {
+                    foreach (var itemHijo in item.Hijos)
+                    {
+                        if (itemHijo.Nombre.Equals(control.ID))
+                        {
+                            control.Visible = true;
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void VerificarPermisos(ControlCollection controles)
+        {
+            foreach (Control control in controles)
+            {
+                if (control.HasControls())
+                {
+                    VerificarPermisos(control.Controls);
+                }
+                else
+                {
+                    VerificarPermiso(control);
+                }
+            }
         }
     }
 }

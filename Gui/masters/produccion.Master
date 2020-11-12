@@ -57,24 +57,24 @@
                     </a>
                     <div id="sistemaMenu" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <asp:HyperLink ID="LinkUsuario" CssClass="collapse-item" NavigateUrl="/sistema/Usuario.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkIdioma" CssClass="collapse-item" NavigateUrl="/sistema/Idioma.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkUsuario" Visible="false" CssClass="collapse-item" NavigateUrl="/sistema/ListaUsuarios.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkIdioma" Visible="false" CssClass="collapse-item" NavigateUrl="/sistema/Idioma.aspx" runat="server"></asp:HyperLink>
                             <h6 class="collapse-header">
                                 <asp:Label ID="LblPermisos" runat="server"></asp:Label>
                             </h6>
-                            <asp:HyperLink ID="LinkRol" CssClass="collapse-item" NavigateUrl="/sistema/Rol.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkPermisos" CssClass="collapse-item" NavigateUrl="/sistema/Permisos.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkRol" Visible="false" CssClass="collapse-item" NavigateUrl="/sistema/Rol.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkPermisos" Visible="false" CssClass="collapse-item" NavigateUrl="/sistema/Permisos.aspx" runat="server"></asp:HyperLink>
                             <h6 class="collapse-header">
                                 <asp:Label ID="LblCopiaSeguridad" runat="server" Text="lblCopiaSeguridad"></asp:Label>
                             </h6>
-                            <asp:HyperLink ID="LinkRealizar" CssClass="collapse-item" NavigateUrl="/sistema/CopiaSeguridad.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkRealizar" Visible="false" CssClass="collapse-item" NavigateUrl="/sistema/CopiaSeguridad.aspx" runat="server"></asp:HyperLink>
                            
                             <h6 class="collapse-header">
                                 <asp:Label ID="LblRegistros" runat="server"></asp:Label>
                             </h6>
-                            <asp:HyperLink ID="LinkBitacora" CssClass="collapse-item" NavigateUrl="/sistema/Bitacora.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkDigitoVerificador" CssClass="collapse-item" NavigateUrl="/sistema/DigitoVerificador.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkLogErrores" CssClass="collapse-item" NavigateUrl="/sistema/LogError.aspx" runat="server" Visible="false"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkBitacora" Visible="false" CssClass="collapse-item" NavigateUrl="/sistema/Bitacora.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkDigitoVerificador" Visible="false" CssClass="collapse-item" NavigateUrl="/sistema/DigitoVerificador.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkLogErrores" Visible="false" CssClass="collapse-item" NavigateUrl="/sistema/LogError.aspx" runat="server"></asp:HyperLink>
                            
                         </div>
                     </div>
@@ -88,11 +88,11 @@
                     </a>
                     <div id="abmMenu" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <asp:HyperLink ID="LinkProductos" CssClass="collapse-item" NavigateUrl="/produccion/Producto.aspx" runat="server"></asp:HyperLink>     
-                            <asp:HyperLink ID="LinkPrecios" CssClass="collapse-item" NavigateUrl="/produccion/Precios.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkImpresoras" CssClass="collapse-item" NavigateUrl="/produccion/Impresora.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkMateriales" CssClass="collapse-item" NavigateUrl="/produccion/Material.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkReportes" CssClass="collapse-item" NavigateUrl="/produccion/Reportes.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkProductos" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Producto.aspx" runat="server"></asp:HyperLink>     
+                            <asp:HyperLink ID="LinkPrecios" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Precios.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkImpresoras" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Impresora.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkMateriales" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Material.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkReportes" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Reportes.aspx" runat="server"></asp:HyperLink>
                         </div>
                     </div>
                 </li>
@@ -113,8 +113,8 @@
                     </a>
                     <div id="ventasMenu" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <asp:HyperLink ID="LinkPedidos" CssClass="collapse-item" NavigateUrl="/produccion/Pedidos.aspx" runat="server"></asp:HyperLink>   
-                            <asp:HyperLink ID="LinkEnvios" CssClass="collapse-item" NavigateUrl="/produccion/Envios.aspx" runat="server"></asp:HyperLink>   
+                            <asp:HyperLink ID="LinkPedidos" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Pedidos.aspx" runat="server"></asp:HyperLink>   
+                            <asp:HyperLink ID="LinkEnvios" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Envios.aspx" runat="server"></asp:HyperLink>   
                         </div>
                     </div>
                 </li>
@@ -127,9 +127,9 @@
                     </a>
                     <div id="comprasMenu" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <asp:HyperLink ID="LinkPanelCompras" CssClass="collapse-item" NavigateUrl="/produccion/PanelCompras.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkRegistrarOrden" CssClass="collapse-item" NavigateUrl="/produccion/RegistrarOrden.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkReporteOrden" CssClass="collapse-item" NavigateUrl="/produccion/ReporteOrden.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkPanelCompras" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/PanelCompras.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkRegistrarOrden" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/RegistrarOrden.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkReporteOrden" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/ReporteOrden.aspx" runat="server"></asp:HyperLink>
                         </div>
                     </div>
                 </li>
@@ -142,11 +142,11 @@
                     </a>
                     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <asp:HyperLink ID="LinkPrioridad" CssClass="collapse-item" NavigateUrl="/produccion/Prioridad.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkPresupuesto" CssClass="collapse-item" NavigateUrl="/produccion/Presupuesto.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkReportePresupuesto" CssClass="collapse-item" NavigateUrl="/produccion/ReportePresupuesto.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkPriorizacion" CssClass="collapse-item" NavigateUrl="/produccion/Priorizacion.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkPanelPedidos" CssClass="collapse-item" NavigateUrl="/produccion/PanelPedidos.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkPrioridad" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Prioridad.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkPresupuesto" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Presupuesto.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkReportePresupuesto" Visible="false"  CssClass="collapse-item" NavigateUrl="/produccion/ReportePresupuesto.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkPriorizacion" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Priorizacion.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkPanelPedidos" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/PanelPedidos.aspx" runat="server"></asp:HyperLink>
                         </div>
                     </div>
                 </li>

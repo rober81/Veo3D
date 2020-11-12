@@ -5,12 +5,12 @@ using System.Linq;
 
 namespace BLL
 {
-    public class GestionarRolesPerfiles
+    public class GestionarPermisos
     {
         public List<iPermisos> arbol { get; set; }
-        List<Perfiles> lista = PerfilMapper.ListarPerfiles();
+        List<Permisos> lista = PermisoMapper.ListarPermisos();
 
-        public GestionarRolesPerfiles()
+        public GestionarPermisos()
         {
             arbol = new List<iPermisos>();
             armarArbol();
@@ -18,7 +18,7 @@ namespace BLL
 
         private void armarArbol()
         {
-            foreach (Perfiles item in lista)
+            foreach (Permisos item in lista)
             {
                 if (item.Padre == null || item.Padre.Id == 0)
                 {
@@ -33,11 +33,11 @@ namespace BLL
 
         private void Buscar(Rol punto)
         {
-            foreach (Perfiles item in lista)
+            foreach (Permisos item in lista)
             {
                 if (item.Padre == null || item.Padre.Id == punto.Id)
                 {
-                    Perfil perfil = new Perfil();
+                    Permiso perfil = new Permiso();
                     perfil.Id = item.Id;
                     perfil.Nombre = item.Nombre;
                     punto.Add(perfil);
@@ -46,39 +46,39 @@ namespace BLL
             }
         }
 
-        public List<Perfiles> ListarPerfiles()
+        public List<Permisos> ListarPerfiles()
         {
-            lista = PerfilMapper.ListarPerfiles();
+            lista = PermisoMapper.ListarPermisos();
             return lista;
         }
 
-        public List<Perfiles> ListarPerfilesPadres()
+        public List<Permisos> ListarPerfilesPadres()
         {
             var filtro = from item in lista
                          where item.Padre == null
                          select item;
-            return filtro.ToList<Perfiles>();
+            return filtro.ToList<Permisos>();
         }
 
-        public int Insertar(Perfiles param)
+        public int Insertar(Permisos param)
         {
-            int res = PerfilMapper.Insertar(param);
+            int res = PermisoMapper.Insertar(param);
             Bitacora("Insertar", param);
             return res;
         }
 
-        public int Modificar(Perfiles param)
+        public int Modificar(Permisos param)
         {
-            int res = PerfilMapper.Modificar(param);
+            int res = PermisoMapper.Modificar(param);
             Bitacora("Modificar", param);
             return res;
         }
 
-        public List<iPermisos> ListarUsuarioPerfil(Usuario param)
+        public List<iPermisos> ListarUsuarioPermiso(Usuario param)
         {
-            List<Perfiles> lista = PerfilMapper.ListarUsuarioPerfil(param);
+            List<Permisos> lista = PermisoMapper.ListarUsuarioPermiso(param);
             List<iPermisos> permisosDelUsuario = new List<iPermisos>();
-            foreach (Perfiles item in lista)
+            foreach (Permisos item in lista)
             {
                 foreach (iPermisos item2 in arbol)
                 {
@@ -91,21 +91,21 @@ namespace BLL
 
         public int InsertarUsuarioPerfil(Usuario param, List<iPermisos> perfiles)
         {
-            PerfilMapper.BorrarUsuarioPerfil(param);
+            PermisoMapper.BorrarUsuarioPermiso(param);
             int res = 0;
             foreach ( var item in perfiles)
             {
-                res += PerfilMapper.InsertarUsuarioPerfil(param, item);
+                res += PermisoMapper.InsertarUsuarioPermiso(param, item);
             }
             Bitacora("Insertar", param);
             return res;
         }
 
-        private void Bitacora(string accion, Perfiles param)
+        private void Bitacora(string accion, Permisos param)
         {
             BE.Bitacora bitacora = new BE.Bitacora();
             bitacora.Accion = accion;
-            bitacora.Tabla = "Perfil";
+            bitacora.Tabla = "Permiso";
             bitacora.Dato = param.ToString();
             BLL.GestionarBitacora.Insertar(bitacora);
         }
@@ -114,7 +114,7 @@ namespace BLL
         {
             BE.Bitacora bitacora = new BE.Bitacora();
             bitacora.Accion = accion;
-            bitacora.Tabla = "UsuarioPerfil";
+            bitacora.Tabla = "UsuarioPermiso";
             bitacora.Dato = param.ToString();
             BLL.GestionarBitacora.Insertar(bitacora);
         }
@@ -122,23 +122,29 @@ namespace BLL
         public List<string> ListarPermisos()
         {
             List<string> lista = new List<string>();
-            lista.Add("MenuPacienteAlta");
-            lista.Add("MenuPacienteModificar");
-            lista.Add("MenuConsulta");
-            lista.Add("MenuEntrenamientos");
-            lista.Add("MenuEjercicios");
-            lista.Add("MenuEntrenamientos");
-            lista.Add("MenuPatologias");
-            lista.Add("MenuTratamientos");
-            lista.Add("MenuUsuarios");
-            lista.Add("MenuRoles");
-            lista.Add("MenuPerfiles");
-            lista.Add("MenuIdioma");
-            lista.Add("MenuBitacora");
-            lista.Add("MenuCopiaSeguridad");
-            lista.Add("MenuDigitoVerificador");
-            lista.Add("MenuPacienteAlta");
-            lista.Add("MenuPacienteModificar");
+            lista.Add("LinkUsuario");
+            lista.Add("LinkIdioma");
+            lista.Add("LinkRol");
+            lista.Add("LinkPermisos");
+            lista.Add("LinkRealizar");
+            lista.Add("LinkBitacora");
+            lista.Add("LinkDigitoVerificador");
+            lista.Add("LinkLogErrores");
+            lista.Add("LinkProductos");
+            lista.Add("LinkPrecios");
+            lista.Add("LinkImpresoras");
+            lista.Add("LinkMateriales");
+            lista.Add("LinkReportes");
+            lista.Add("LinkPedidos");
+            lista.Add("LinkEnvios");
+            lista.Add("LinkPanelCompras");
+            lista.Add("LinkRegistrarOrden");
+            lista.Add("LinkReporteOrden");
+            lista.Add("LinkPrioridad");
+            lista.Add("LinkPresupuesto");
+            lista.Add("LinkReportePresupuesto");
+            lista.Add("LinkPriorizacion");
+            lista.Add("LinkPanelPedidos");
             return lista;
         }
     }

@@ -52,8 +52,8 @@
     <Compile Include="Funcional\Impresora.cs" />
     <Compile Include="iPermisos.cs" />
     <Compile Include="Funcional\Material.cs" />
-    <Compile Include="Perfil.cs" />
-    <Compile Include="Perfiles.cs" />
+    <Compile Include="Permiso.cs" />
+    <Compile Include="Permisos.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="ProductoPersonalizado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
