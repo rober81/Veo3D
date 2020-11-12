@@ -81,6 +81,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Funcional\CompraBLL.cs" />
     <Compile Include="Funcional\ImpresoraBLL.cs" />
     <Compile Include="Funcional\MaterialBLL.cs" />
     <Compile Include="Funcional\ProductoBLL.cs" />

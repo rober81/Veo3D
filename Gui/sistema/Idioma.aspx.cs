@@ -64,7 +64,7 @@ namespace Gui.produccion
                 BE.Idioma seleccionado = new BE.Idioma(idioma);
                 GestionarIdioma.getInstance().Cargar(seleccionado);
                 Session["IdiomaNuevo"] = seleccionado;
-                Response.Redirect("/produccion/IdiomaDetalle.aspx");
+                Response.Redirect("/sistema/IdiomaDetalle.aspx");
             }
         }
 
@@ -76,7 +76,7 @@ namespace Gui.produccion
                 var codigo = GrillaIdiomas.SelectedRow.Cells[2].Text;
                 BE.Idioma nuevo = GestionarIdioma.getInstance().CrearIdioma(idioma, codigo);
                 Session["IdiomaNuevo"] = nuevo;
-                Response.Redirect("/produccion/IdiomaDetalle.aspx");
+                Response.Redirect("/sistema/IdiomaDetalle.aspx");
             }
         }
     }

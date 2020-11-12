@@ -24,6 +24,13 @@ namespace BLL
             return ProductoMapper.Buscar(prod);
         }
 
+        public Producto Buscar(int prod)
+        {
+            Producto p = new Producto();
+            p.Id = prod;
+            return ProductoMapper.Buscar(p);
+        }
+
         public int Guardar(Producto prod)
         {
             return ProductoMapper.Insertar(prod);

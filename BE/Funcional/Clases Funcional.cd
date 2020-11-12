@@ -3,7 +3,7 @@
   <Class Name="BE.Producto">
     <Position X="1" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACgAAAAAAAAAAAAAABggARAAAAABAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAACgAAAAAAAAAAAAAABggARAAAAABAAAAAAAAAAIAQ=</HashCode>
       <FileName>Funcional\Producto.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -19,6 +19,20 @@
     <TypeIdentifier>
       <HashCode>AAACABAAAABAAAAIAAAAAAAAAAAAAAAAAAAAgAAAAAQ=</HashCode>
       <FileName>Funcional\Material.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.Compra">
+    <Position X="9" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAIAAAABEACAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Compra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.ProductoPersonalizado">
+    <Position X="7" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAFAAAAAAAIAQAAAAAAAQAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>ProductoPersonalizado.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

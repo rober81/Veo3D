@@ -27,6 +27,7 @@ namespace DAL
                 obj.Descripcion = item["descripcion"].ToString();
                 obj.Tipo = item["tipo"].ToString();
                 obj.Calificacion = int.Parse(item["calificacion"].ToString());
+                obj.Precio = decimal.Parse(item["precio"].ToString());
                 lista.Add(obj);
             }
             return lista;
@@ -50,6 +51,7 @@ namespace DAL
                 buscado.Descripcion = item["descripcion"].ToString();
                 buscado.Tipo = item["tipo"].ToString();
                 buscado.Calificacion = int.Parse(item["calificacion"].ToString());
+                buscado.Precio = decimal.Parse(item["precio"].ToString());
             }
             return buscado;
         }

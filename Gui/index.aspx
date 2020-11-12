@@ -54,11 +54,7 @@
                     </a>
                 </div>
 
-                    <video id="videoCurso" src='<%= GetVideoLink() %>' controls="controls" />
-
                 <div class="row"> <!-- Lista de Productos -->
-
-
 
                     <asp:PlaceHolder ID="ListaProductos" runat="server"></asp:PlaceHolder>
 

@@ -7,66 +7,48 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Gui.web
+namespace Gui
 {
 
 
-    public partial class detalle
+    public partial class Resumen
     {
 
         /// <summary>
-        /// Control LblPersonalizacion.
+        /// Control LblFinalizadoExitosamente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblPersonalizacion;
+        protected global::System.Web.UI.WebControls.Label LblFinalizadoExitosamente;
 
         /// <summary>
-        /// Control IPImagenProd.
+        /// Control LblTitulo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image IPImagenProd;
+        protected global::System.Web.UI.WebControls.Label LblTitulo;
 
         /// <summary>
-        /// Control IPLblTitulo.
+        /// Control LblTexto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label IPLblTitulo;
+        protected global::System.Web.UI.WebControls.Label LblTexto;
 
         /// <summary>
-        /// Control IPLblPrecio.
+        /// Control LblPrecio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label IPLblPrecio;
-
-        /// <summary>
-        /// Control IPLblTexto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label IPLblTexto;
-
-        /// <summary>
-        /// Control IPLblEstrellas.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label IPLblEstrellas;
+        protected global::System.Web.UI.WebControls.Label LblPrecio;
 
         /// <summary>
         /// Control LblAnchoMontura.
@@ -87,6 +69,15 @@ namespace Gui.web
         protected global::Gui.controles.LabelTexto LblPuente;
 
         /// <summary>
+        /// Control LblLongitudPatillas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto LblLongitudPatillas;
+
+        /// <summary>
         /// Control LblAnchoCristales.
         /// </summary>
         /// <remarks>
@@ -105,21 +96,57 @@ namespace Gui.web
         protected global::Gui.controles.LabelTexto LblAlturaCristales;
 
         /// <summary>
-        /// Control LblLongitudPatillas.
+        /// Control LblCalle.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::Gui.controles.LabelTexto LblLongitudPatillas;
+        protected global::Gui.controles.LabelTexto LblCalle;
 
         /// <summary>
-        /// Control BtnSiguiente.
+        /// Control LblPuerta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSiguiente;
+        protected global::Gui.controles.LabelTexto LblPuerta;
+
+        /// <summary>
+        /// Control LblDepto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto LblDepto;
+
+        /// <summary>
+        /// Control LblProvincia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto LblProvincia;
+
+        /// <summary>
+        /// Control LblLocalidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto LblLocalidad;
+
+        /// <summary>
+        /// Control BtnVolver.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnVolver;
     }
 }

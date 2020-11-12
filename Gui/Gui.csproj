@@ -126,7 +126,9 @@
     <Content Include="anteojos\cabecera1.png" />
     <Content Include="anteojos\cabecera2.png" />
     <Content Include="anteojos\cabecera3.png" />
-    <Content Include="anteojos\video.mp4" />
+    <Content Include="Resumen.aspx" />
+    <Content Include="img\mercadopago.png" />
+    <Content Include="img\medidas.png" />
     <Content Include="bootstrap\css\bootstrap-grid.css" />
     <Content Include="bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="bootstrap\css\bootstrap-reboot.css" />
@@ -1792,24 +1794,25 @@
     <Content Include="bootstrap\js\jquery\jquery.slim.min.js" />
     <Content Include="bootstrap\js\sb-admin-2.js" />
     <Content Include="bootstrap\js\sb-admin-2.min.js" />
+    <Content Include="Compra.aspx" />
     <Content Include="controles\ImagenProducto.ascx" />
     <Content Include="controles\LabelTexto.ascx" />
-    <Content Include="produccion\Bitacora.aspx" />
-    <Content Include="produccion\CopiaSeguridad.aspx" />
-    <Content Include="produccion\DigitoVerificador.aspx" />
+    <Content Include="sistema\Bitacora.aspx" />
+    <Content Include="sistema\CopiaSeguridad.aspx" />
+    <Content Include="sistema\DigitoVerificador.aspx" />
     <Content Include="produccion\Envios.aspx" />
-    <Content Include="produccion\Idioma.aspx" />
-    <Content Include="produccion\IdiomaDetalle.aspx" />
+    <Content Include="sistema\Idioma.aspx" />
+    <Content Include="sistema\IdiomaDetalle.aspx" />
     <Content Include="produccion\Impresora.aspx" />
     <Content Include="produccion\ImpresoraAbm.aspx" />
     <Content Include="produccion\indexProd.aspx" />
-    <Content Include="produccion\LogError.aspx" />
+    <Content Include="sistema\LogError.aspx" />
     <Content Include="produccion\Material.aspx" />
     <Content Include="produccion\MaterialAbm.aspx" />
     <Content Include="produccion\PanelCompras.aspx" />
     <Content Include="produccion\PanelPedidos.aspx" />
     <Content Include="produccion\Pedidos.aspx" />
-    <Content Include="produccion\Permisos.aspx" />
+    <Content Include="sistema\Permisos.aspx" />
     <Content Include="produccion\Precios.aspx" />
     <Content Include="produccion\Presupuesto.aspx" />
     <Content Include="produccion\Prioridad.aspx" />
@@ -1820,14 +1823,28 @@
     <Content Include="produccion\ReporteOrden.aspx" />
     <Content Include="produccion\ReportePresupuesto.aspx" />
     <Content Include="produccion\Reportes.aspx" />
-    <Content Include="produccion\Rol.aspx" />
-    <Content Include="produccion\Usuario.aspx" />
+    <Content Include="sistema\Rol.aspx" />
+    <Content Include="sistema\Usuario.aspx" />
     <Content Include="Web.config" />
     <Content Include="detalle.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Resumen.aspx.cs">
+      <DependentUpon>Resumen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resumen.aspx.designer.cs">
+      <DependentUpon>Resumen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compra.aspx.cs">
+      <DependentUpon>Compra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compra.aspx.designer.cs">
+      <DependentUpon>Compra.aspx</DependentUpon>
+    </Compile>
     <Compile Include="controles\IdiomaHelper.cs" />
     <Compile Include="controles\ImagenProducto.ascx.cs">
       <DependentUpon>ImagenProducto.ascx</DependentUpon>
@@ -1858,25 +1875,25 @@
     <Compile Include="masters\ventas.Master.designer.cs">
       <DependentUpon>ventas.Master</DependentUpon>
     </Compile>
-    <Compile Include="produccion\Bitacora.aspx.cs">
+    <Compile Include="sistema\Bitacora.aspx.cs">
       <DependentUpon>Bitacora.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="produccion\Bitacora.aspx.designer.cs">
+    <Compile Include="sistema\Bitacora.aspx.designer.cs">
       <DependentUpon>Bitacora.aspx</DependentUpon>
     </Compile>
-    <Compile Include="produccion\CopiaSeguridad.aspx.cs">
+    <Compile Include="sistema\CopiaSeguridad.aspx.cs">
       <DependentUpon>CopiaSeguridad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="produccion\CopiaSeguridad.aspx.designer.cs">
+    <Compile Include="sistema\CopiaSeguridad.aspx.designer.cs">
       <DependentUpon>CopiaSeguridad.aspx</DependentUpon>
     </Compile>
-    <Compile Include="produccion\DigitoVerificador.aspx.cs">
+    <Compile Include="sistema\DigitoVerificador.aspx.cs">
       <DependentUpon>DigitoVerificador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="produccion\DigitoVerificador.aspx.designer.cs">
+    <Compile Include="sistema\DigitoVerificador.aspx.designer.cs">
       <DependentUpon>DigitoVerificador.aspx</DependentUpon>
     </Compile>
     <Compile Include="produccion\Envios.aspx.cs">
@@ -1886,18 +1903,18 @@
     <Compile Include="produccion\Envios.aspx.designer.cs">
       <DependentUpon>Envios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="produccion\Idioma.aspx.cs">
+    <Compile Include="sistema\Idioma.aspx.cs">
       <DependentUpon>Idioma.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="produccion\Idioma.aspx.designer.cs">
+    <Compile Include="sistema\Idioma.aspx.designer.cs">
       <DependentUpon>Idioma.aspx</DependentUpon>
     </Compile>
-    <Compile Include="produccion\IdiomaDetalle.aspx.cs">
+    <Compile Include="sistema\IdiomaDetalle.aspx.cs">
       <DependentUpon>IdiomaDetalle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="produccion\IdiomaDetalle.aspx.designer.cs">
+    <Compile Include="sistema\IdiomaDetalle.aspx.designer.cs">
       <DependentUpon>IdiomaDetalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="produccion\Impresora.aspx.cs">
@@ -1921,11 +1938,11 @@
     <Compile Include="produccion\indexProd.aspx.designer.cs">
       <DependentUpon>indexProd.aspx</DependentUpon>
     </Compile>
-    <Compile Include="produccion\LogError.aspx.cs">
+    <Compile Include="sistema\LogError.aspx.cs">
       <DependentUpon>LogError.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="produccion\LogError.aspx.designer.cs">
+    <Compile Include="sistema\LogError.aspx.designer.cs">
       <DependentUpon>LogError.aspx</DependentUpon>
     </Compile>
     <Compile Include="produccion\Material.aspx.cs">
@@ -1963,11 +1980,11 @@
     <Compile Include="produccion\Pedidos.aspx.designer.cs">
       <DependentUpon>Pedidos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="produccion\Permisos.aspx.cs">
+    <Compile Include="sistema\Permisos.aspx.cs">
       <DependentUpon>Permisos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="produccion\Permisos.aspx.designer.cs">
+    <Compile Include="sistema\Permisos.aspx.designer.cs">
       <DependentUpon>Permisos.aspx</DependentUpon>
     </Compile>
     <Compile Include="produccion\Precios.aspx.cs">
@@ -2040,18 +2057,18 @@
     <Compile Include="produccion\Reportes.aspx.designer.cs">
       <DependentUpon>Reportes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="produccion\Rol.aspx.cs">
+    <Compile Include="sistema\Rol.aspx.cs">
       <DependentUpon>Rol.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="produccion\Rol.aspx.designer.cs">
+    <Compile Include="sistema\Rol.aspx.designer.cs">
       <DependentUpon>Rol.aspx</DependentUpon>
     </Compile>
-    <Compile Include="produccion\Usuario.aspx.cs">
+    <Compile Include="sistema\Usuario.aspx.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="produccion\Usuario.aspx.designer.cs">
+    <Compile Include="sistema\Usuario.aspx.designer.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2164,9 +2181,7 @@
       <Name>BLL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="web\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

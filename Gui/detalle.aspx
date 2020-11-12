@@ -1,66 +1,58 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/ventas.Master" AutoEventWireup="true" CodeBehind="detalle.aspx.cs" Inherits="Gui.web.detalle" %>
 
+<%@ Register Src="~/controles/LabelTexto.ascx" TagPrefix="uc1" TagName="LabelTexto" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <link href="../bootstrap/css/shop-item.css" rel="stylesheet" />
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!-- Page Content -->
     <div class="container">
-
         <div class="row">
-
-            <div class="col-lg-3">
-                <h1 class="my-4">Shop Name</h1>
-                <div class="list-group">
-                    <a href="#" class="list-group-item active">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
-                </div>
-            </div>
-            <!-- /.col-lg-3 -->
-
             <div class="col-lg-9">
-
-                <div class="card mt-4">
-                    <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
-                    <div class="card-body">
-                        <h3 class="card-title">Product Name</h3>
-                        <h4>$24.99</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                        <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-                        4.0 stars
-         
-                    </div>
-                </div>
-                <!-- /.card -->
-
                 <div class="card card-outline-secondary my-4">
                     <div class="card-header">
-                        Product Reviews
-         
+                        <asp:Label ID="LblPersonalizacion" runat="server" Text="Label"></asp:Label>
                     </div>
                     <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                        <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                        <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                        <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                        <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                        <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                        <hr>
-                        <a href="#" class="btn btn-success">Leave a Review</a>
+                                                <div class="row">
+                            <div class="col">
+                                <asp:Image ID="IPImagenProd" runat="server" CssClass="card-img-top img-fluid mx-auto" />
+                            </div>
+                            <div class="col">
+                                <h3 class="card-title">
+                                    <asp:Label ID="IPLblTitulo" runat="server" Text="Label"></asp:Label>
+                                </h3>
+                                <h4>
+                                    <asp:Label ID="IPLblPrecio" runat="server" Text="Label"></asp:Label>
+                                </h4>
+                                <p class="card-text">
+                                    <asp:Label ID="IPLblTexto" runat="server" Text="Label"></asp:Label>
+                                </p>
+                                <span class="text-warning">
+                                    <asp:Label ID="IPLblEstrellas" runat="server" Text="Label"></asp:Label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <img src="img/medidas.png" height="505" width="311" />
+                            </div>
+                            <div class="col w-25">
+                                <uc1:LabelTexto runat="server" ID="LblAnchoMontura" EsNumero="true" />
+                                <uc1:LabelTexto runat="server" ID="LblPuente" EsNumero="true" />
+                                <uc1:LabelTexto runat="server" ID="LblAnchoCristales" EsNumero="true" />
+                                <uc1:LabelTexto runat="server" ID="LblAlturaCristales" EsNumero="true" />
+                                <uc1:LabelTexto runat="server" ID="LblLongitudPatillas" EsNumero="true" />
+                                <asp:Button ID="BtnSiguiente" runat="server" OnClick="Siguiente_Click" CssClass="btn btn-success fa-align-right" />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- /.card -->
-
             </div>
-            <!-- /.col-lg-9 -->
-
         </div>
 
     </div>
-    <!-- /.container -->
 </asp:Content>

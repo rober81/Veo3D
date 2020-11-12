@@ -152,26 +152,26 @@ namespace Gui.controles
             }
         }
 
-        private bool NoValido()
+        public bool NoValido()
         {
             txt.BorderColor = Color.Red;
             txt.BorderWidth = 3;
             return false;
         }
 
-        private bool Valido()
+        public bool Valido()
         {
             txt.BorderColor = ColorTranslator.FromHtml("#CED4DA");
             txt.BorderWidth = 1;
             return true;
         }
 
-        private void DesHabilitar()
+        public void DesHabilitar()
         {
             txt.Enabled = false;
         }
 
-        private void Habilitar()
+        public void Habilitar()
         {
             txt.Enabled = true;
         }

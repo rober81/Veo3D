@@ -13,14 +13,8 @@ namespace Gui.web
         {
             if (!IsPostBack)
             {
-                
                 CargarProductos(TipoAnteojos.Receta);
             }
-        }
-
-        protected string GetVideoLink()
-        {
-            return "anteojos/video.mp4";
         }
 
         private void CargarProductos(string tipo)
@@ -34,10 +28,9 @@ namespace Gui.web
                 ImagenProducto prod = (ImagenProducto) this.LoadControl("/controles/ImagenProducto.ascx");
                 prod.ID = item.Id.ToString();
                 prod.Imagen = $"/anteojos/{item.Imagen}";
-                prod.Url = "/web/detalle.aspx";
                 prod.Estrellas = item.Calificacion;
                 prod.Titulo = item.Nombre;
-                prod.Precio = aleatorio.Next(1500, 3500);
+                prod.Precio = item.Precio;
                 prod.Texto = item.Descripcion;
                 ListaProductos.Controls.Add(prod);
             }

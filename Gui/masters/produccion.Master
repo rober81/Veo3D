@@ -57,24 +57,24 @@
                     </a>
                     <div id="sistemaMenu" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <asp:HyperLink ID="LinkUsuario" CssClass="collapse-item" NavigateUrl="/produccion/Usuario.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkIdioma" CssClass="collapse-item" NavigateUrl="/produccion/Idioma.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkUsuario" CssClass="collapse-item" NavigateUrl="/sistema/Usuario.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkIdioma" CssClass="collapse-item" NavigateUrl="/sistema/Idioma.aspx" runat="server"></asp:HyperLink>
                             <h6 class="collapse-header">
                                 <asp:Label ID="LblPermisos" runat="server"></asp:Label>
                             </h6>
-                            <asp:HyperLink ID="LinkRol" CssClass="collapse-item" NavigateUrl="/produccion/Rol.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkPermisos" CssClass="collapse-item" NavigateUrl="/produccion/Permisos.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkRol" CssClass="collapse-item" NavigateUrl="/sistema/Rol.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkPermisos" CssClass="collapse-item" NavigateUrl="/sistema/Permisos.aspx" runat="server"></asp:HyperLink>
                             <h6 class="collapse-header">
                                 <asp:Label ID="LblCopiaSeguridad" runat="server" Text="lblCopiaSeguridad"></asp:Label>
                             </h6>
-                            <asp:HyperLink ID="LinkRealizar" CssClass="collapse-item" NavigateUrl="/produccion/CopiaSeguridad.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkRealizar" CssClass="collapse-item" NavigateUrl="/sistema/CopiaSeguridad.aspx" runat="server"></asp:HyperLink>
                            
                             <h6 class="collapse-header">
                                 <asp:Label ID="LblRegistros" runat="server"></asp:Label>
                             </h6>
-                            <asp:HyperLink ID="LinkBitacora" CssClass="collapse-item" NavigateUrl="/produccion/Bitacora.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkDigitoVerificador" CssClass="collapse-item" NavigateUrl="/produccion/DigitoVerificador.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkLogErrores" CssClass="collapse-item" NavigateUrl="/produccion/LogError.aspx" runat="server" Visible="false"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkBitacora" CssClass="collapse-item" NavigateUrl="/sistema/Bitacora.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkDigitoVerificador" CssClass="collapse-item" NavigateUrl="/sistema/DigitoVerificador.aspx" runat="server"></asp:HyperLink>
+                            <asp:HyperLink ID="LinkLogErrores" CssClass="collapse-item" NavigateUrl="/sistema/LogError.aspx" runat="server" Visible="false"></asp:HyperLink>
                            
                         </div>
                     </div>

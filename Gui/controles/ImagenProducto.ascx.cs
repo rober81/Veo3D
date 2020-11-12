@@ -28,9 +28,10 @@ namespace Gui.controles
         private void CompletarDatos()
         {
             IPLblTitulo.Text = Titulo;
-            IPLblPrecio.Text = "$" + Precio.ToString("#0.00");
+            IPLblPrecio.Text = Precio.ToString("$#0.00");
             IPLblTexto.Text = Texto;
             IPLblEstrellas.Text = CompletarEstrellas();
+            Url = "/detalle.aspx?prod=" + this.ID;
             IPLinkDetalle.NavigateUrl = Url;
             IPLinkDetalle2.NavigateUrl = Url;
             IPImagenProd.ImageUrl = Imagen;
