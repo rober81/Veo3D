@@ -8,10 +8,10 @@ namespace BE
     public class ProductoPersonalizado
     {
         public Producto Producto { get; set; }
-        public int AnchoMontura { get; set; }
-        public int Puente { get; set; }
-        public int AnchoCristales { get; set; }
-        public int AlturaCristales { get; set; }
-        public int LongitudPatillas { get; set; }
+        public string AnchoMontura { get; set; }
+        public string Puente { get; set; }
+        public string AnchoCristales { get; set; }
+        public string AlturaCristales { get; set; }
+        public string LongitudPatillas { get; set; }
     }
 }

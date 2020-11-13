@@ -1,4 +1,5 @@
 ﻿using BE;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace BLL
     {
         public List<Compra> Listar()
         {
-            return null;
+            return CompraMapper.Listar();
         }
 
         public Compra Buscar(Compra com)
@@ -20,12 +21,13 @@ namespace BLL
 
         public int Guardar(Compra com)
         {
-            return 0;
+            com.Estado = "Nuevo";
+            return CompraMapper.Guardar(com);
         }
 
         public int Modificar(Compra com)
         {
-            return 0;
+            return CompraMapper.Modificar(com);
         }
 
     }

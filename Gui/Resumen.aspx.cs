@@ -28,11 +28,11 @@ namespace Gui
             LblTitulo.Text = parametro.Personalizado.Producto.Nombre;
             LblTexto.Text = parametro.Personalizado.Producto.Descripcion;
             LblPrecio.Text = parametro.Personalizado.Producto.Precio.ToString("$#0.00");
-            LblAnchoMontura.Texto = parametro.Personalizado.AnchoMontura.ToString("#0 mm");
-            LblPuente.Texto = parametro.Personalizado.Puente.ToString("#0 mm");
-            LblAnchoCristales.Texto = parametro.Personalizado.AnchoCristales.ToString("#0 mm");
-            LblAlturaCristales.Texto = parametro.Personalizado.AlturaCristales.ToString("#0 mm");
-            LblLongitudPatillas.Texto = parametro.Personalizado.LongitudPatillas.ToString("#0 mm");
+            LblAnchoMontura.Texto = parametro.Personalizado.AnchoMontura;
+            LblPuente.Texto = parametro.Personalizado.Puente;
+            LblAnchoCristales.Texto = parametro.Personalizado.AnchoCristales;
+            LblAlturaCristales.Texto = parametro.Personalizado.AlturaCristales;
+            LblLongitudPatillas.Texto = parametro.Personalizado.LongitudPatillas;
             LblCalle.Texto = parametro.Calle;
             LblPuerta.Texto = parametro.Puerta;
             LblDepto.Texto = parametro.Depto;

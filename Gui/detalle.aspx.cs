@@ -50,11 +50,11 @@ namespace Gui.web
         {
             ProductoPersonalizado personal = new ProductoPersonalizado();
             personal.Producto = (Producto)Session["Producto"];
-            personal.AnchoMontura = LblAnchoMontura.getTextoInt();
-            personal.Puente = LblPuente.getTextoInt(); ;
-            personal.AnchoCristales = LblAnchoCristales.getTextoInt(); ;
-            personal.AlturaCristales = LblAlturaCristales.getTextoInt(); ;
-            personal.LongitudPatillas = LblLongitudPatillas.getTextoInt(); ;
+            personal.AnchoMontura = LblAnchoMontura.Texto;
+            personal.Puente = LblPuente.Texto;
+            personal.AnchoCristales = LblAnchoCristales.Texto;
+            personal.AlturaCristales = LblAlturaCristales.Texto;
+            personal.LongitudPatillas = LblLongitudPatillas.Texto;
             Session["ProductoPersonalizado"] = personal;
             Response.Redirect("/Compra.aspx");
         }

@@ -13,9 +13,16 @@
         </div>
         <div class="card-body">
             <div class="table-responsive mx-auto">
-                <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="true"
+                <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false"
                     AutoGenerateSelectButton="true">
                     <SelectedRowStyle CssClass="table-success" />
+                    <Columns>
+                        <asp:BoundField HeaderText="Usuario" DataField="Login" />
+                        <asp:BoundField HeaderText="Correo" DataField="Correo" />
+                        <asp:BoundField HeaderText="Apellido" DataField="Apellido" />
+                        <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
+                        <asp:BoundField HeaderText="Dni" DataField="Dni" />
+                    </Columns>
                 </asp:GridView>
                 <asp:Button ID="BtnModificar" runat="server" CssClass="btn btn-secondary" OnClick="Modificar_Click" />
                 <asp:Button ID="BtnNuevo" runat="server" CssClass="btn btn-primary" OnClick="Nuevo_Click" />

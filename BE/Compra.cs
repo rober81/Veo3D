@@ -7,11 +7,13 @@ namespace BE
 {
     public class Compra
     {
+        public int Id { get; set; }
         public ProductoPersonalizado Personalizado { get; set; }
         public string Calle { get; set; }
         public string Puerta { get; set; }
         public string Depto { get; set; }
         public string Localidad { get; set; }
         public string Provincia { get; set; }
+        public string Estado { get; set; }
     }
 }

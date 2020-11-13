@@ -16,9 +16,11 @@ namespace Gui.masters
     {
         Usuario usuario;
         HttpCookie cookieIdioma;
+        List<iPermisos> permisos;
+        GestionarPermisos permisosbll;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            PermisosMenu();
             if (Session["Usuario"] == null)
             {
                 LinkAdministracion.Visible = false;
@@ -29,7 +31,7 @@ namespace Gui.masters
             else
             {
                 usuario = (Usuario)Session["Usuario"];
-                LinkAdministracion.Visible = true;
+                //LinkAdministracion.Visible = true;
                 LinkCerrar2.Visible = true;
                 LinkLogin.Visible = false;
                 LinkRegistro.Visible = false;
@@ -102,5 +104,24 @@ namespace Gui.masters
             FormsAuthentication.SignOut();
             Response.Redirect("/index.aspx");
         }
+
+        protected void PermisosMenu()
+        {
+            permisosbll = new GestionarPermisos();
+            BE.Usuario usr = GestionarSesion.getInstance().Usuario;
+            if (usr != null){
+                permisos = permisosbll.ListarUsuarioPermiso(usr);
+                LinkAdministracion.Visible = false;
+                foreach (var item in permisos)
+                {
+                    if (! item.Nombre.Equals("Cliente"))
+                        {
+                            LinkAdministracion.Visible = true;
+                        }
+                }
+            }
+        }
+
+
     }
 }

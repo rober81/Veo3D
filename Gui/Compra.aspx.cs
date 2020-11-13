@@ -21,7 +21,11 @@ namespace Gui
                     ProductoPersonalizado item = (ProductoPersonalizado)Session["ProductoPersonalizado"];
                     CargarDatos(item);
                 }
+
             }
+            bool logueado = Session["Usuario"] == null;
+            LblNoLogueado.Visible = logueado;
+            BtnMercadopago.Visible = !logueado;
         }
 
         private void CargarDatos(ProductoPersonalizado prod)
@@ -29,11 +33,11 @@ namespace Gui
             LblTitulo.Text = prod.Producto.Nombre;
             LblTexto.Text = prod.Producto.Descripcion;
             LblPrecio.Text = prod.Producto.Precio.ToString("$#0.00");
-            LblAnchoMontura.Texto = prod.AnchoMontura.ToString("#0 mm");
-            LblPuente.Texto = prod.Puente.ToString("#0 mm");
-            LblAnchoCristales.Texto = prod.AnchoCristales.ToString("#0 mm");
-            LblAlturaCristales.Texto = prod.AlturaCristales.ToString("#0 mm");
-            LblLongitudPatillas.Texto = prod.LongitudPatillas.ToString("#0 mm");
+            LblAnchoMontura.Texto = prod.AnchoMontura;
+            LblPuente.Texto = prod.Puente;
+            LblAnchoCristales.Texto = prod.AnchoCristales;
+            LblAlturaCristales.Texto = prod.AlturaCristales;
+            LblLongitudPatillas.Texto = prod.LongitudPatillas;
         }
 
         protected void Cancelar_Click(object sender, EventArgs e)
