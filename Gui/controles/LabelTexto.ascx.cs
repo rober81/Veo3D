@@ -70,6 +70,13 @@ namespace Gui.controles
             set { _esNumero = value; }
         }
 
+        private bool _esDecimal = false;
+        public bool EsDecimal
+        {
+            get { return _esDecimal; }
+            set { _esDecimal = value; }
+        }
+
         private bool _esFecha = false;
         public bool EsFecha
         {
@@ -92,6 +99,8 @@ namespace Gui.controles
                 return true;
             else if (EsNumero)
                 return ValidarNumero();
+            else if (EsDecimal)
+                return ValidarDecimal();
             else if (EsFecha)
                 return ValidarFecha();
             else
@@ -100,10 +109,11 @@ namespace Gui.controles
 
         public bool ValidarTexto()
         {
-            if (string.IsNullOrWhiteSpace(txt.Text))
+            if (string.IsNullOrWhiteSpace(Texto))
             {
+                bool retorno = NoValido();
                 txt.ToolTip = GestionarIdioma.getInstance().GetTexto("MsgObligatorio");
-                return NoValido();
+                return retorno;
             }
             else
             {
@@ -115,6 +125,20 @@ namespace Gui.controles
         {
             int resultado;
             if (int.TryParse(txt.Text, out resultado))
+            {
+                return Valido();
+            }
+            else
+            {
+                txt.ToolTip = GestionarIdioma.getInstance().GetTexto("MsgErrorNumero");
+                return NoValido();
+            }
+        }
+
+        public bool ValidarDecimal()
+        {
+            decimal resultado;
+            if (decimal.TryParse(txt.Text, out resultado))
             {
                 return Valido();
             }

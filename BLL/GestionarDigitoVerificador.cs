@@ -1,94 +1,179 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using BE;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using DAL;
+using System.Linq;
 
 namespace BLL
 {
     public class GestionarDigitoVerificador
     {
-        public string calcularDigito(BE.iDigitoVerificador mensaje)
+        public List<DigitoVerificador> Listar()
         {
-            return Util.DigitoVerificador.CalcularDV(mensaje.getDVH());
-        }
-
-        protected string VerificarDVHLog(List<BE.iDigitoVerificador> lista, string tabla)
-        {
-            string resultado = Traducir("msgComprobando") + tabla + Environment.NewLine;
-            int cantidad = 0;
-            foreach (BE.iDigitoVerificador item in lista)
-            {
-                if (! calcularDigito(item).Equals(item.DVH))
-                {
-                    resultado += Traducir("msgErrorRegistro") + item.getID() + Environment.NewLine;
-                }
-                cantidad++;
-            }
-            resultado += Traducir("msgRegistrosComprobados") + cantidad + Environment.NewLine + Environment.NewLine;
-            return resultado;
-        }
-
-        protected int VerificarDVH(List<BE.iDigitoVerificador> lista, string tabla)
-        {
-            int cantidad = 0;
-            foreach (BE.iDigitoVerificador item in lista)
-            {
-                if (!calcularDigito(item).Equals(item.DVH))
-                {
-                    cantidad++;
-                }
-            }
-            return cantidad;
-        }
-
-        public string VerificarDVVLog(List<BE.iDigitoVerificador> lista, string tabla)
-        {
-            string resultado = string.Empty;
-            int cantidad = 0;
-            List <BE.DigitoVerificador> listaDv = DAL.DigitoVerificadorMapper.Listar();
-            foreach (BE.DigitoVerificador item in listaDv)
-            {
-                if (item.Tabla.Equals(tabla))
-                {
-                    string dvv = CalcularDVV(lista);
-                    if (! item.DVV.Equals(dvv))
-                        resultado += Traducir("msgErrorRegistro") + item.getID() + Environment.NewLine;
-                    else
-                        resultado += Traducir("msgRegistro") + item.getID() + " Ok" + Environment.NewLine;
-                }
-                cantidad++;
-            }
-            resultado += Traducir("msgRegistrosComprobados") + cantidad + Environment.NewLine + Environment.NewLine;
-            return resultado;
-        }
-
-        public int VerificarDVV(List<BE.iDigitoVerificador> lista, string tabla)
-        {
-            int cantidad = 0;
-            List<BE.DigitoVerificador> listaDv = DAL.DigitoVerificadorMapper.Listar();
-            foreach (BE.DigitoVerificador item in listaDv)
-            {
-                if (item.Tabla.Equals(tabla))
-                {
-                    string dvv = CalcularDVV(lista);
-                    if (!item.DVV.Equals(dvv))
-                        cantidad++;
-                }
-            }
-            return cantidad;
-        }
-
-        public static string CalcularDVV(List<BE.iDigitoVerificador> lista)
-        {
-            string cadena = string.Empty;
+            DigitoVerificadorMapper maper = new DigitoVerificadorMapper();
+            List<DigitoVerificador> lista = maper.Listar();
             foreach (var item in lista)
             {
-                cadena += item.DVH;
+                item.Estado = VerificarDigitoVerificador(item.Tabla) ? "Correcto" : "Error";
             }
-            return Util.DigitoVerificador.CalcularDV(cadena);
+            return lista;
         }
 
-        protected string Traducir(string texto)
+        public List<string> ListarTablas()
         {
-            return BLL.GestionarIdioma.getInstance().GetTexto(texto);
+            List<string> lista = new List<string>();
+            lista.Add("Compra");
+            lista.Add("Producto");
+            lista.Add("Usuario");
+            lista.Add("Impresora");
+            return lista;
+        }
+
+        public string CalcularDigito(Object obj)
+        {
+            string jsonString;
+            jsonString = JsonConvert.SerializeObject(obj);
+            return getSHA1(jsonString);
+        }
+
+        public static string getSHA1(string param)
+        {
+            SHA1CryptoServiceProvider sha1Obj = new SHA1CryptoServiceProvider();
+            byte[] hacerHash = System.Text.Encoding.ASCII.GetBytes(param);
+            hacerHash = sha1Obj.ComputeHash(hacerHash);
+            string resultado = "";
+            foreach (byte b in hacerHash)
+                resultado += b.ToString("x2");
+            return resultado;
+        }
+
+        public DigitoVerificador GenerarDigitoVerificador(string tabla)
+        {
+            List<iDigitoVerificador> lista = null;
+            if ("Compra".Equals(tabla))
+            {
+                CompraBLL cbll = new CompraBLL();
+                lista = cbll.Listar().ToList<iDigitoVerificador>();
+            }
+            if ("Producto".Equals(tabla))
+            {
+                ProductoBLL pbll = new ProductoBLL();
+                lista = pbll.Listar().ToList<iDigitoVerificador>();
+            }
+            if ("Usuario".Equals(tabla))
+            {
+                lista = GestionarUsuario.Listar().ToList<iDigitoVerificador>();            }
+            if ("Impresora".Equals(tabla))
+            {
+                ImpresoraBLL ibll = new ImpresoraBLL();
+                lista = ibll.Listar().ToList<iDigitoVerificador>();
+            }
+
+            DigitoVerificador dv = new DigitoVerificador();
+            dv.Tabla = tabla;
+            dv.DVV = CalcularDigito(lista);
+            dv.Detalle = new List<DigitoVerificadorDetalle>();
+            foreach (var item in lista)
+            {
+                DigitoVerificadorDetalle dvd = new DigitoVerificadorDetalle();
+                dvd.Tabla = tabla;
+                dvd.IdTabla = item.Identificador;
+                dvd.DVH = CalcularDigito(item);
+                dv.Detalle.Add(dvd);
+            }
+            return dv;
+        }
+
+        public int GuardarDigitoVerificador(string tabla)
+        {
+            DigitoVerificador dv = GenerarDigitoVerificador(tabla);
+            DigitoVerificadorMapper mapper = new DigitoVerificadorMapper();
+            return mapper.Guardar(dv);
+        }
+
+        public bool VerificarDigitoVerificador(string tabla)
+        {
+            DigitoVerificador calculado = GenerarDigitoVerificador(tabla);
+            DigitoVerificadorMapper mapper = new DigitoVerificadorMapper();
+            bool respuesta = true;
+            try
+            {
+                DigitoVerificador leido = mapper.Buscar(tabla);
+                if (!calculado.DVV.Equals(leido.DVV))
+                {
+                    respuesta = false;
+                }
+                foreach (var itemCalculado in calculado.Detalle)
+                {
+                    foreach (var itemLeido in leido.Detalle)
+                    {
+                        if (itemCalculado.Tabla.Equals(itemLeido.Tabla) && itemCalculado.IdTabla.Equals(itemLeido.IdTabla))
+                        {
+                            if (!itemCalculado.DVH.Equals(itemLeido.DVH))
+                            {
+                                respuesta = false;
+                            }
+                        }
+                    }
+                }
+                return respuesta;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+
+        public string VerificarDigitoVerificadorLog(string tabla)
+        {
+                DigitoVerificador calculado = GenerarDigitoVerificador(tabla);
+                DigitoVerificadorMapper mapper = new DigitoVerificadorMapper();
+                string respuesta = "Comenzando Verificación:\n";
+            try
+            {
+                DigitoVerificador leido = mapper.Buscar(tabla);
+                respuesta += $"    Controlando Tabla: {tabla}\n";
+                if (!calculado.DVV.Equals(leido.DVV))
+                {
+                    respuesta += "        ERROR Digito Verificador Vertical Distinto\n";
+                    respuesta += $"            Calculado={calculado.DVV} Cantidad Registros:{calculado.Detalle.Count}\n";
+                    respuesta += $"            Guardado={leido.DVV} Cantidad Registros:{leido.Detalle.Count}\n";
+                }
+                else
+                {
+                    respuesta += "    Digito Verificador Vertical Ok\n";
+                }
+                respuesta += "    Verificando Digito Horizontal:\n";
+                foreach (var itemLeido in leido.Detalle) 
+                {
+                    foreach  (var itemCalculado in calculado.Detalle)
+                        {
+                        if (itemCalculado.Tabla.Equals(itemLeido.Tabla) && itemCalculado.IdTabla.Equals(itemLeido.IdTabla))
+                        {
+                            respuesta += $"        Controlando registro:{itemCalculado.IdTabla}";
+                            if (! itemCalculado.DVH.Equals(itemLeido.DVH))
+                            {
+                                respuesta += $"\n            ERROR DVH Calculado: {itemCalculado.DVH}\n";
+                                respuesta += $"            ERROR DVH Guardado: {itemCalculado.DVH}\n";
+                            } else
+                            {
+                                respuesta += $" Ok.\n";
+                            }
+                        }
+                    }
+                }
+                respuesta += "Finalizado.";
+                return respuesta;
+
+            }
+            catch (Exception)
+            {
+                respuesta += "\nSe produjo un error en el proceso.";
+                return respuesta;
+            }
         }
 
     }

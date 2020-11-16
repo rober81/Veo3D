@@ -42,7 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bitacora.cs" />
-    <Compile Include="Compra.cs" />
+    <Compile Include="DigitoVerificadorDetalle.cs" />
+    <Compile Include="Funcional\Compra.cs" />
     <Compile Include="CopiaDeSeguridad.cs" />
     <Compile Include="DigitoVerificador.cs" />
     <Compile Include="Funcional\Producto.cs" />
@@ -55,7 +56,7 @@
     <Compile Include="Permiso.cs" />
     <Compile Include="Permisos.cs" />
     <Compile Include="Persona.cs" />
-    <Compile Include="ProductoPersonalizado.cs" />
+    <Compile Include="Funcional\ProductoPersonalizado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />

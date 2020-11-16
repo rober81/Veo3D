@@ -18,5 +18,7 @@ namespace BE
                 return null;
             }
         }
+
+        public string Identificador => Id.ToString();
     }
 }

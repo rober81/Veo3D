@@ -49,7 +49,7 @@ namespace Gui.produccion
 
         protected void Cancelar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/ListaUsuarios.aspx");
+            Response.Redirect("/sistema/ListaUsuarios.aspx");
         }
 
         protected void Aceptar_Click(object sender, EventArgs e)

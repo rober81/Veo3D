@@ -58,7 +58,7 @@ namespace DAL
 
         private static SqlParameter[] crearParametros(Producto param)
         {
-            SqlParameter[] parametros = new SqlParameter[9];
+            SqlParameter[] parametros = new SqlParameter[10];
             parametros[0] = new SqlParameter("@id", param.Id);
             parametros[1] = new SqlParameter("@nombre", param.Nombre);
             parametros[2] = new SqlParameter("@archivo", param.Archivo);
@@ -68,6 +68,7 @@ namespace DAL
             parametros[6] = new SqlParameter("@descripcion", param.Descripcion);
             parametros[7] = new SqlParameter("@tipo", param.Tipo);
             parametros[8] = new SqlParameter("@calificacion", param.Calificacion);
+            parametros[9] = new SqlParameter("@precio", param.Precio);
             return parametros;
         }
 

@@ -18,6 +18,7 @@
                 <uc1:LabelTexto runat="server" ID="PID" EsValidado="false" />
                 <uc1:LabelTexto runat="server" ID="PNombre" />
                 <uc1:LabelTexto runat="server" ID="PArchivo" />
+                <uc1:LabelTexto runat="server" ID="PPrecio" EsDecimal="true" />
                 <uc1:LabelTexto runat="server" ID="PCantidadMaterial" EsNumero="true" />
                 <uc1:LabelTexto runat="server" ID="PTiempoImpresion" EsNumero="true" />
                 <uc1:LabelTexto runat="server" ID="PImagen" />

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BE
 {
-    public class Compra
+    public class Compra : iDigitoVerificador
     {
         public int Id { get; set; }
         public ProductoPersonalizado Personalizado { get; set; }
@@ -15,5 +15,8 @@ namespace BE
         public string Localidad { get; set; }
         public string Provincia { get; set; }
         public string Estado { get; set; }
+        public Usuario Usuario { get; set; }
+
+        public string Identificador => Id.ToString();
     }
 }

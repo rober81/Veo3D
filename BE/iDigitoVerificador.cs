@@ -1,9 +1,12 @@
-﻿namespace BE
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace BE
 {
     public interface iDigitoVerificador
     {
-        string DVH { get; set; }
-        string getID();
-        string getDVH();
+        string Identificador { get;}
     }
 }

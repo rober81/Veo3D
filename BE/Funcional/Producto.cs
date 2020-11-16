@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BE
 {
-    public class Producto
+    public class Producto : iDigitoVerificador
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
@@ -16,5 +16,7 @@ namespace BE
         public string Tipo { get; set; }
         public int Calificacion { get; set; }
         public Decimal Precio { get; set; }
+
+        public string Identificador => Id.ToString();
     }
 }

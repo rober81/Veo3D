@@ -38,6 +38,7 @@ namespace Gui.produccion
             PDescripcion.Texto = dato.Descripcion;
             PTipo.Texto = dato.Tipo;
             PCalificacion.Texto = dato.Calificacion.ToString();
+            PPrecio.Texto = dato.Precio.ToString("#.00");
         }
 
         protected void Cancelar_Click(object sender, EventArgs e)
@@ -65,6 +66,7 @@ namespace Gui.produccion
             valido = valido && PDescripcion.Validar();
             valido = valido && PTipo.Validar();
             valido = valido && PCalificacion.Validar();
+            valido = valido && PPrecio.Validar();
             if (valido)
             {
                 ProductoBLL bll = new ProductoBLL();
@@ -77,6 +79,7 @@ namespace Gui.produccion
                 nuevo.Descripcion = PDescripcion.Texto;
                 nuevo.Tipo = PTipo.Texto;
                 nuevo.Calificacion = PCalificacion.getTextoInt();
+                nuevo.Precio = Convert.ToDecimal(PPrecio.Texto);
                 if (string.IsNullOrEmpty(PID.Texto))
                 {
                     nuevo.Id = 0;

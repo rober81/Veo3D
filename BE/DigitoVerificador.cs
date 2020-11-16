@@ -1,21 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BE
 {
-    public class DigitoVerificador : iDigitoVerificador
+    public class DigitoVerificador
     {
         public string Tabla { get; set; }
-        public string DVH { get; set; }
         public string DVV { get; set; }
-
-        public string getDVH()
-        {
-            return Tabla + DVV;
-        }
-
-        public string getID()
-        {
-            return Tabla;
-        }
+        public string Estado { get; set; }
+        public List<DigitoVerificadorDetalle> Detalle { get; set; }
     }
 }

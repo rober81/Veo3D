@@ -14,7 +14,7 @@ namespace Gui.masters
 {
     public partial class ventas : System.Web.UI.MasterPage
     {
-        Usuario usuario;
+        protected Usuario usuario;
         HttpCookie cookieIdioma;
         List<iPermisos> permisos;
         GestionarPermisos permisosbll;

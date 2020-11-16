@@ -49,6 +49,26 @@ namespace DAL
             return lista;
         }
 
+        public static Usuario Buscar(string usr)
+        {
+            Usuario obj = null;
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter("@usuario", usr);
+            DataTable tabla = Acceso.getInstance().leer(Tabla + "_buscar", parametros);
+            foreach (DataRow item in tabla.Rows)
+            {
+                obj = new Usuario();
+                obj.Login = item["usuario"].ToString();
+                obj.Password = item["password"].ToString();
+                obj.Nombre = item["nombre"].ToString();
+                obj.Apellido = item["apellido"].ToString();
+                obj.Correo = item["correo"].ToString();
+                obj.Dni = int.Parse(item["dni"].ToString());
+                obj.DVH = item["Dvh"].ToString();
+            }
+            return obj;
+        }
+
         private static SqlParameter[] crearParametros(Usuario param)
         {
             SqlParameter[] parametros = new SqlParameter[7];
@@ -58,7 +78,7 @@ namespace DAL
             parametros[3] = new SqlParameter("@apellido", param.Apellido);
             parametros[4] = new SqlParameter("@correo", param.Correo);
             parametros[5] = new SqlParameter("@dni", param.Dni);
-            parametros[6] = new SqlParameter("@dvh", Util.DigitoVerificador.CalcularDV(param.getDVH()));
+            parametros[6] = new SqlParameter("@dvh", "");
             return parametros;
         }
 

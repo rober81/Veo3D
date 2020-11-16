@@ -1,39 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="BE.Producto">
-    <Position X="1" Y="1" Width="1.5" />
+    <Position X="1.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACgAAAAAAAAAAAAAABggARAAAAABAAAAAAAAAAIAQ=</HashCode>
+      <HashCode>AAACgAAAAAAAAAAAAAABggARAAAAgBAAAAAAAAAAIAQ=</HashCode>
       <FileName>Funcional\Producto.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="BE.Impresora">
-    <Position X="3" Y="1" Width="1.5" />
+    <Position X="3.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACABAAAAAAAAAAAAAAgAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <HashCode>AAACABAAAAAAAAAAAAAAgAAAAAAAgAAAAAgAAAAAAAA=</HashCode>
       <FileName>Funcional\Impresora.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="BE.Material">
-    <Position X="5" Y="1" Width="1.5" />
+    <Position X="5.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACABAAAABAAAAIAAAAAAAAAAAAAAAAAAAAgAAAAAQ=</HashCode>
       <FileName>Funcional\Material.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BE.Compra">
-    <Position X="9" Y="1" Width="1.5" />
+    <Position X="9.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAgAAAAAAIAAAABEACAAAAAAAAAAAAAAAAgA=</HashCode>
-      <FileName>Compra.cs</FileName>
+      <HashCode>AAACAAAAAgAAAAAAIAAAABEACAAAgAAAAAAEAAAAAgg=</HashCode>
+      <FileName>Funcional\Compra.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="BE.ProductoPersonalizado">
-    <Position X="7" Y="1" Width="1.5" />
+    <Position X="7.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAFAAAAAAAIAQAAAAAAAQAAAAAAAAAAAAAAAAAg=</HashCode>
-      <FileName>ProductoPersonalizado.cs</FileName>
+      <FileName>Funcional\ProductoPersonalizado.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Interface Name="BE.iDigitoVerificador">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>iDigitoVerificador.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

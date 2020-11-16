@@ -84,7 +84,7 @@ namespace Gui
             compra.Localidad = LblLocalidad.Texto;
             compra.Provincia = LblProvincia.Texto;
             compra.Personalizado = (ProductoPersonalizado)Session["ProductoPersonalizado"];
-
+            compra.Usuario = (Usuario)Session["Usuario"];
             CompraBLL compraBll = new CompraBLL();
             compraBll.Guardar(compra);
             Session["CompraFinalizada"] = compra;

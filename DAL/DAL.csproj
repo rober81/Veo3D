@@ -54,7 +54,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioMapper.cs" />
     <Compile Include="Util\Configuracion.cs" />
-    <Compile Include="Util\DigitoVerificador.cs" />
     <Compile Include="Util\ArchivoLog.cs" />
     <Compile Include="Util\Log.cs" />
   </ItemGroup>

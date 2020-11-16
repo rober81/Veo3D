@@ -43,15 +43,5 @@ namespace BLL
             bitacora.Dato = param.ToString();
             BLL.GestionarBitacora.Insertar(bitacora);
         }
-
-        private static void CalcularDVV()
-        {
-            BE.DigitoVerificador digito = new BE.DigitoVerificador();
-            digito.Tabla = "Usuario";
-            List<BE.iDigitoVerificador> lista = new List<BE.iDigitoVerificador>();
-            lista.AddRange(Listar());
-            digito.DVV = GestionarDigitoVerificador.CalcularDVV(lista);
-            DigitoVerificadorMapper.Modificar(digito);
-        }
     }
 }

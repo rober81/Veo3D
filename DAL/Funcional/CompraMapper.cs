@@ -34,6 +34,7 @@ namespace DAL
                 obj.Localidad = item["localidad"].ToString();
                 obj.Provincia = item["provincia"].ToString();
                 obj.Estado = item["estado"].ToString();
+                obj.Usuario = UsuarioMapper.Buscar(item["usuario"].ToString());
                 Producto param = new Producto();
                 param.Id = int.Parse(item["producto"].ToString());
                 obj.Personalizado.Producto = ProductoMapper.Buscar(param);
@@ -64,6 +65,7 @@ namespace DAL
                 obj.Localidad = item["localidad"].ToString();
                 obj.Provincia = item["provincia"].ToString();
                 obj.Estado = item["estado"].ToString();
+                obj.Usuario = UsuarioMapper.Buscar(item["usuario"].ToString());
                 Producto paramp = new Producto();
                 paramp.Id = int.Parse(item["producto"].ToString());
                 obj.Personalizado.Producto = ProductoMapper.Buscar(paramp);
@@ -73,7 +75,7 @@ namespace DAL
 
         private static SqlParameter[] crearParametros(Compra param)
         {
-            SqlParameter[] parametros = new SqlParameter[13];
+            SqlParameter[] parametros = new SqlParameter[14];
             parametros[0] = new SqlParameter("@id", param.Id);
             parametros[1] = new SqlParameter("@producto", param.Personalizado.Producto.Id);
             parametros[2] = new SqlParameter("@anchomontura", param.Personalizado.AnchoMontura);
@@ -87,6 +89,7 @@ namespace DAL
             parametros[10] = new SqlParameter("@localidad", param.Localidad);
             parametros[11] = new SqlParameter("@provincia", param.Provincia);
             parametros[12] = new SqlParameter("@estado", param.Estado);
+            parametros[13] = new SqlParameter("@estado", param.Usuario.Login);
             return parametros;
         }
 
@@ -97,7 +100,10 @@ namespace DAL
 
         public static int Modificar(Compra param)
         {
-            return Acceso.getInstance().escribir(Tabla + "_modificar", crearParametros(param));
+            SqlParameter[] parametros = new SqlParameter[2];
+            parametros[0] = new SqlParameter("@id", param.Id);
+            parametros[1] = new SqlParameter("@estado", param.Estado);
+            return Acceso.getInstance().escribir(Tabla + "_modificar", parametros);
         }
 
         public static int Baja(Compra param)
