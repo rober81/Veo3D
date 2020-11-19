@@ -25,6 +25,7 @@
                         <asp:BoundField HeaderText="Estado" DataField="Estado"/>
                     </Columns>
                 </asp:GridView>
+                <asp:Button ID="BtnEnviarDomicilio" runat="server" CssClass="btn btn-primary" OnClick="Aceptar_Click" />
             </div>
         </div>
     </div>

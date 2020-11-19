@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Bitacora.cs" />
     <Compile Include="DigitoVerificadorDetalle.cs" />
+    <Compile Include="Funcional\Impresion.cs" />
     <Compile Include="Funcional\Venta.cs" />
     <Compile Include="CopiaDeSeguridad.cs" />
     <Compile Include="DigitoVerificador.cs" />

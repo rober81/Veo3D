@@ -45,9 +45,14 @@ namespace DAL
 
         public static Venta Buscar(Venta param)
         {
+            return Buscar(param.Id);
+        }
+
+        public static Venta Buscar(int param)
+        {
             Venta obj = null;
             SqlParameter[] parametros = new SqlParameter[1];
-            parametros[0] = new SqlParameter("@id", param.Id);
+            parametros[0] = new SqlParameter("@id", param);
             DataTable tabla = Acceso.getInstance().leer(Tabla + "_buscar", parametros);
             foreach (DataRow item in tabla.Rows)
             {
@@ -89,7 +94,7 @@ namespace DAL
             parametros[10] = new SqlParameter("@localidad", param.Localidad);
             parametros[11] = new SqlParameter("@provincia", param.Provincia);
             parametros[12] = new SqlParameter("@estado", param.Estado);
-            parametros[13] = new SqlParameter("@estado", param.Usuario.Login);
+            parametros[13] = new SqlParameter("@usuario", param.Usuario.Login);
             return parametros;
         }
 

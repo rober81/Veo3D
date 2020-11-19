@@ -25,6 +25,7 @@ namespace DAL
                 obj.Nombre = item["nombre"].ToString();
                 obj.Marca = item["marca"].ToString();
                 obj.Modelo = item["modelo"].ToString();
+                obj.Estado = Convert.ToInt32(item["estado"].ToString());
                 lista.Add(obj);
             }
             return lista;
@@ -32,9 +33,14 @@ namespace DAL
 
         public static Impresora Buscar(Impresora param)
         {
+            return Buscar(param.Id);
+        }
+
+        public static Impresora Buscar(int param)
+        {
             Impresora buscado = null;
             SqlParameter[] parametros = new SqlParameter[1];
-            parametros[0] = new SqlParameter("@id", param.Id);
+            parametros[0] = new SqlParameter("@id", param);
             DataTable tabla = Acceso.getInstance().leer(Tabla + "_buscar", parametros);
             foreach (DataRow item in tabla.Rows)
             {
@@ -43,17 +49,19 @@ namespace DAL
                 buscado.Nombre = item["nombre"].ToString();
                 buscado.Marca = item["marca"].ToString();
                 buscado.Modelo = item["modelo"].ToString();
+                buscado.Estado = Convert.ToInt32(item["estado"].ToString());
             }
             return buscado;
         }
 
         private static SqlParameter[] crearParametros(Impresora param)
         {
-            SqlParameter[] parametros = new SqlParameter[4];
+            SqlParameter[] parametros = new SqlParameter[5];
             parametros[0] = new SqlParameter("@id", param.Id);
             parametros[1] = new SqlParameter("@nombre", param.Nombre);
             parametros[2] = new SqlParameter("@marca", param.Marca);
             parametros[3] = new SqlParameter("@modelo", param.Modelo);
+            parametros[4] = new SqlParameter("@estado", param.Estado);
             return parametros;
         }
 

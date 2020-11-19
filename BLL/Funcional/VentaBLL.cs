@@ -16,7 +16,12 @@ namespace BLL
 
         public Venta Buscar(Venta ven)
         {
-            return null;
+            return VentaMapper.Buscar(ven);
+        }
+
+        public Venta Buscar(int ven)
+        {
+            return VentaMapper.Buscar(ven);
         }
 
         public int Guardar(Venta ven)

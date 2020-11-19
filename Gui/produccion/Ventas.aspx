@@ -28,6 +28,7 @@
                         <asp:BoundField HeaderText="Estado" DataField="Estado"/>
                     </Columns>
                 </asp:GridView>
+                <asp:Button ID="BtnEnviarImprimir" runat="server" CssClass="btn btn-primary" OnClick="Imprimir_Click" />
             </div>
         </div>
     </div>

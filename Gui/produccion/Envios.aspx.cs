@@ -1,4 +1,5 @@
-﻿using BLL;
+﻿using BE;
+using BLL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,22 @@ namespace Gui.produccion
             Grilla.DataSource = null;
             Grilla.DataSource = bll.Listar();
             Grilla.DataBind();
+        }
+
+        protected void Aceptar_Click(object sender, EventArgs e)
+        {
+            VentaBLL ventaBll = new VentaBLL();
+            ImpresionBLL impBll = new ImpresionBLL();
+
+            if (Grilla.SelectedRow != null)
+            {
+                string id = Grilla.SelectedRow.Cells[1].Text;
+                Venta venta = ventaBll.Buscar(Convert.ToInt32(id));
+                if (!venta.Estado.Equals(Estados.Finalizado))
+                    return;
+                impBll.EnviarADomicilio(venta);
+                CargarDatos();
+            }
         }
     }
 }
