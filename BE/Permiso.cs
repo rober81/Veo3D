@@ -5,20 +5,14 @@ using System.Text;
 
 namespace BE
 {
-    public class Permiso : iPermisos
+    public class Permiso : iPermiso
     {
-
         public int Id { get; set; }
         public string Nombre { get; set; }
 
-        public List<iPermisos> Hijos
-        {
-            get
-            {
-                return null;
-            }
-        }
 
+        public List<iPermiso> Hijos { get; set; }
+        
         public string Identificador => Id.ToString();
     }
 }

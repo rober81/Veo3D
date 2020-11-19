@@ -7,145 +7,125 @@ namespace BLL
 {
     public class GestionarPermisos
     {
-        public List<iPermisos> arbol { get; set; }
-        List<Permisos> lista = PermisoMapper.ListarPermisos();
+        readonly PermisoMapper mapper = new PermisoMapper();
+        List<string> listaDefinida = null;
 
         public GestionarPermisos()
         {
-            arbol = new List<iPermisos>();
-            armarArbol();
+            GenerarListarPermisos();
         }
 
-        private void armarArbol()
+
+        public List<Permiso> ListarPerfiles()
         {
-            foreach (Permisos item in lista)
-            {
-                if (item.Padre == null || item.Padre.Id == 0)
-                {
-                    Rol rol = new Rol();
-                    rol.Id = item.Id;
-                    rol.Nombre = item.Nombre;
-                    arbol.Add(rol);
-                    Buscar(rol);
-                }
-            }
+            return mapper.ListarPermiso(); ;
         }
 
-        private void Buscar(Rol punto)
+        public int Insertar(Permiso per)
         {
-            foreach (Permisos item in lista)
-            {
-                if (item.Padre == null || item.Padre.Id == punto.Id)
-                {
-                    Permiso perfil = new Permiso();
-                    perfil.Id = item.Id;
-                    perfil.Nombre = item.Nombre;
-                    punto.Add(perfil);
-                }
-
-            }
+            int res = mapper.Guardar(per, 0);
+            Bitacora("Insertar", per);
+            return res;
         }
 
-        public List<Permisos> ListarPerfiles()
+        public int Modificar(Permiso per)
         {
-            lista = PermisoMapper.ListarPermisos();
+            int res = mapper.Modificar(per, 0);
+            Bitacora("Modificar", per);
+            return res;
+        }
+
+        public List<iPermiso> ListarUsuarioPermiso(Usuario usr)
+        {
+            List<iPermiso> lista = mapper.ListarUsuarioPermiso(usr);
             return lista;
         }
 
-        public List<Permisos> ListarPerfilesPadres()
+        public bool Buscar(List<iPermiso> permisos, string nombre)
         {
-            var filtro = from item in lista
-                         where item.Padre == null
-                         select item;
-            return filtro.ToList<Permisos>();
-        }
-
-        public int Insertar(Permisos param)
-        {
-            int res = PermisoMapper.Insertar(param);
-            Bitacora("Insertar", param);
-            return res;
-        }
-
-        public int Modificar(Permisos param)
-        {
-            int res = PermisoMapper.Modificar(param);
-            Bitacora("Modificar", param);
-            return res;
-        }
-
-        public List<iPermisos> ListarUsuarioPermiso(Usuario param)
-        {
-            List<Permisos> lista = PermisoMapper.ListarUsuarioPermiso(param);
-            List<iPermisos> permisosDelUsuario = new List<iPermisos>();
-            foreach (Permisos item in lista)
+            foreach (var item in permisos)
             {
-                foreach (iPermisos item2 in arbol)
-                {
-                    if (item.Id == item2.Id)
-                        permisosDelUsuario.Add(item2);
-                }
+                if (item.Nombre == nombre)
+                    return true;
+                if (Buscar(item, nombre) != null)
+                    return true;
             }
-            return permisosDelUsuario;
+            return false;
         }
 
-        public int InsertarUsuarioPerfil(Usuario param, List<iPermisos> perfiles)
+        public iPermiso Buscar(iPermiso padre, string nombre)
         {
-            PermisoMapper.BorrarUsuarioPermiso(param);
+            if (padre == null)
+                return null;
+
+            if (padre.Nombre == nombre)
+                return padre;
+
+            foreach (var hijo in padre.Hijos)
+            {
+                var encontrado = Buscar(hijo, nombre);
+                if (encontrado != null)
+                    return encontrado;
+            }
+            return null;
+        }
+
+        public int InsertarUsuarioPerfil(Usuario usr, List<iPermiso> perfiles)
+        {
+            mapper.BorrarUsuarioPermiso(usr);
             int res = 0;
-            foreach ( var item in perfiles)
+            foreach (var item in perfiles)
             {
-                res += PermisoMapper.InsertarUsuarioPermiso(param, item);
+                res += mapper.GuardarUsuarioPermiso(usr, item);
             }
-            Bitacora("Insertar", param);
+            Bitacora("Insertar", usr);
             return res;
         }
 
-        private void Bitacora(string accion, Permisos param)
+        private void Bitacora(string accion, Permiso per)
         {
             BE.Bitacora bitacora = new BE.Bitacora();
             bitacora.Accion = accion;
             bitacora.Tabla = "Permiso";
-            bitacora.Dato = param.ToString();
+            bitacora.Dato = per.ToString();
             BLL.GestionarBitacora.Insertar(bitacora);
         }
 
-        private void Bitacora(string accion, Usuario param)
+        private void Bitacora(string accion, Usuario per)
         {
             BE.Bitacora bitacora = new BE.Bitacora();
             bitacora.Accion = accion;
             bitacora.Tabla = "UsuarioPermiso";
-            bitacora.Dato = param.ToString();
+            bitacora.Dato = per.ToString();
             BLL.GestionarBitacora.Insertar(bitacora);
         }
 
-        public List<string> ListarPermisos()
+        public List<string> GenerarListarPermisos()
         {
-            List<string> lista = new List<string>();
-            lista.Add("LinkUsuario");
-            lista.Add("LinkIdioma");
-            lista.Add("LinkRol");
-            lista.Add("LinkPermisos");
-            lista.Add("LinkRealizar");
-            lista.Add("LinkBitacora");
-            lista.Add("LinkDigitoVerificador");
-            lista.Add("LinkLogErrores");
-            lista.Add("LinkProductos");
-            lista.Add("LinkPrecios");
-            lista.Add("LinkImpresoras");
-            lista.Add("LinkMateriales");
-            lista.Add("LinkReportes");
-            lista.Add("LinkPedidos");
-            lista.Add("LinkEnvios");
-            lista.Add("LinkPanelCompras");
-            lista.Add("LinkRegistrarOrden");
-            lista.Add("LinkReporteOrden");
-            lista.Add("LinkPrioridad");
-            lista.Add("LinkPresupuesto");
-            lista.Add("LinkReportePresupuesto");
-            lista.Add("LinkPriorizacion");
-            lista.Add("LinkPanelPedidos");
-            return lista;
+            listaDefinida = new List<string>();
+            listaDefinida.Add("LinkUsuario");
+            listaDefinida.Add("LinkIdioma");
+            listaDefinida.Add("LinkRol");
+            listaDefinida.Add("LinkPermisos");
+            listaDefinida.Add("LinkRealizar");
+            listaDefinida.Add("LinkBitacora");
+            listaDefinida.Add("LinkDigitoVerificador");
+            listaDefinida.Add("LinkProductos");
+            listaDefinida.Add("LinkPrecios");
+            listaDefinida.Add("LinkImpresoras");
+            listaDefinida.Add("LinkMateriales");
+            listaDefinida.Add("LinkReportes");
+            listaDefinida.Add("LinkPedidos");
+            listaDefinida.Add("LinkEnvios");
+            listaDefinida.Add("LinkPanelCompras");
+            listaDefinida.Add("LinkRegistrarOrden");
+            listaDefinida.Add("LinkReporteOrden");
+            listaDefinida.Add("LinkPrioridad");
+            listaDefinida.Add("LinkPresupuesto");
+            listaDefinida.Add("LinkPriorizacion");
+            listaDefinida.Add("LinkPanelPedidos");
+            listaDefinida.Add("LinkReportePresupuesto");
+            return listaDefinida;
         }
     }
 }

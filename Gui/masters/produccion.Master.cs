@@ -18,7 +18,7 @@ namespace Gui.masters
         private HttpCookie cookieIdioma;
         private string defaultIdioma = "Español";
         GestionarPermisos permisosbll;
-        List<iPermisos> permisos;
+        List<iPermiso> permisos;
         protected void Page_Load(object sender, EventArgs e)
         {
             usuario = (Usuario)Session["Usuario"];
@@ -107,16 +107,9 @@ namespace Gui.masters
                 return;
             if (control is HyperLink _link)
             {
-                foreach (var item in permisos)
+                if (permisosbll.Buscar(permisos, control.ID))
                 {
-                    foreach (var itemHijo in item.Hijos)
-                    {
-                        if (itemHijo.Nombre.Equals(control.ID))
-                        {
-                            control.Visible = true;
-                            return;
-                        }
-                    }
+                    control.Visible = true;
                 }
             }
         }

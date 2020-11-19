@@ -16,7 +16,7 @@ namespace Gui.masters
     {
         protected Usuario usuario;
         HttpCookie cookieIdioma;
-        List<iPermisos> permisos;
+        List<iPermiso> permisos;
         GestionarPermisos permisosbll;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -109,15 +109,13 @@ namespace Gui.masters
         {
             permisosbll = new GestionarPermisos();
             BE.Usuario usr = GestionarSesion.getInstance().Usuario;
-            if (usr != null){
+            if (usr != null)
+            {
                 permisos = permisosbll.ListarUsuarioPermiso(usr);
                 LinkAdministracion.Visible = false;
-                foreach (var item in permisos)
+                if (!permisosbll.Buscar(permisos, "Cliente"))
                 {
-                    if (! item.Nombre.Equals("Cliente"))
-                        {
-                            LinkAdministracion.Visible = true;
-                        }
+                    LinkAdministracion.Visible = true;
                 }
             }
         }

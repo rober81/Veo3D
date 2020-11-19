@@ -40,5 +40,16 @@ namespace Gui.produccion
         {
             textboxlog.Text = bll.VerificarDigitoVerificadorLog(ComboTabla.SelectedValue);
         }
+
+        protected void Grilla_OnRowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.Cells[2].Text.Equals("Correcto"))
+            {
+                e.Row.CssClass = "table-success";
+            } else
+            {
+                e.Row.CssClass = "table-danger";
+            }
+        }
     }
 }

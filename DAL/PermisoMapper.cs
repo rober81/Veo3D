@@ -10,82 +10,100 @@ namespace DAL
         public static string Tabla = "Permiso";
         public static string Tabla2 = "UsuarioPermiso";
 
-        public static List<Permisos> ListarPermisos()
+        public List<iPermiso> ListarUsuarioPermiso(Usuario param)
         {
-            List<Permisos> lista = new List<Permisos>();
-            DataTable tabla = Acceso.getInstance().leer(Tabla + "_leer", null);
+            List<iPermiso> lista = new List<iPermiso>(); ;
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter("@usuario", param.Login);
+            DataTable tabla = Acceso.getInstance().leer(Tabla2 + "_leer", parametros);
             foreach (DataRow item in tabla.Rows)
             {
-                Permisos obj = new Permisos();
-                obj.Id = int.Parse(item["id"].ToString());
-                obj.Nombre = item["nombre"].ToString();
-                obj.Padre = Buscar(int.Parse(item["padre"].ToString()));
-                lista.Add(obj);
+                Permiso per = new Permiso();
+                per.Id = int.Parse(item["id"].ToString());
+                per.Nombre = item["nombre"].ToString();
+                per.Hijos = BuscarHijos(per.Id);
+                lista.Add(per);
+            }
+            return lista;
+        }
+        public List<iPermiso> BuscarHijos(int id)
+        {
+            List<iPermiso> lista = new List<iPermiso>();
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter("@padre", id);
+            DataTable tabla = Acceso.getInstance().leer(Tabla + "_buscar", parametros);
+            foreach (DataRow item in tabla.Rows)
+            {
+                Permiso per = new Permiso();
+                per.Id = int.Parse(item["id"].ToString());
+                per.Nombre = item["nombre"].ToString();
+                per.Hijos = BuscarHijos(per.Id);
+                lista.Add(per);
             }
             return lista;
         }
 
-        public static Permisos Buscar(int id)
+        public List<Permiso> ListarPermiso()
         {
-            Permisos obj = null;
+            List<Permiso> lista = new List<Permiso>();
+            DataTable tabla = Acceso.getInstance().leer(Tabla + "_leer", null);
+            foreach (DataRow item in tabla.Rows)
+            {
+                Permiso per = new Permiso();
+                per.Id = int.Parse(item["id"].ToString());
+                per.Nombre = item["nombre"].ToString();
+                per.Hijos = BuscarHijos(per.Id);
+                lista.Add(per);
+            }
+            return lista;
+        }
+
+        public Permiso Buscar(int id)
+        {
+            Permiso obj = null;
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter("@id", id);
             DataTable tabla = Acceso.getInstance().leer(Tabla + "_buscar", parametros);
             foreach (DataRow item in tabla.Rows)
             {
-                obj = new Permisos();
+                obj = new Permiso();
                 obj.Id = int.Parse(item["id"].ToString());
                 obj.Nombre = item["nombre"].ToString();
             }
             return obj;
         }
 
-        public static int Insertar(Permisos per)
+        public int Guardar(Permiso per, int padre)
         {
             SqlParameter[] parametros = new SqlParameter[2];
             parametros[0] = new SqlParameter("@nombre", per.Nombre);
-            parametros[1] = new SqlParameter("@padre", per.Padre == null ? 0 : per.Padre.Id);
+            parametros[1] = new SqlParameter("@padre", padre);
             int res = Acceso.getInstance().escribir(Tabla + "_alta", parametros);
             return res;
         }
 
-        public static int Modificar(Permisos per)
+        public int Modificar(Permiso per, int padre)
         {
             SqlParameter[] parametros = new SqlParameter[3];
             parametros[0] = new SqlParameter("@nombre", per.Nombre);
-            parametros[1] = new SqlParameter("@padre", per.Padre==null? 0: per.Padre.Id);
+            parametros[1] = new SqlParameter("@padre", padre);
             parametros[2] = new SqlParameter("@id", per.Id);
             int res = Acceso.getInstance().escribir(Tabla + "_modificar", parametros);
             return res;
         }
 
-        public static List<Permisos> ListarUsuarioPermiso(Usuario param)
-        {
-            List<Permisos> lista = new List<Permisos>(); ;
-            SqlParameter[] parametros = new SqlParameter[1];
-            parametros[0] = new SqlParameter("@usuario", param.Login);
-            DataTable tabla = Acceso.getInstance().leer(Tabla2 + "_leer", parametros);
-            foreach (DataRow item in tabla.Rows)
-            {
-                Permisos per = new Permisos();
-                per.Id = int.Parse(item["permiso"].ToString());
-                per.Nombre = item["nombre"].ToString();
-                per.Padre = Buscar(int.Parse(item["padre"].ToString()));
-                lista.Add(per);
-            }
-            return lista;
-        }
 
-        public static int InsertarUsuarioPermiso(Usuario param, iPermisos per)
+
+        public int GuardarUsuarioPermiso(Usuario param, iPermiso per)
         {
             SqlParameter[] parametros = new SqlParameter[2];
             parametros[0] = new SqlParameter("@usuario", param.Login);
-            parametros[1] = new SqlParameter("@perfil", per.Id);
+            parametros[1] = new SqlParameter("@permiso", per.Id);
             int res = Acceso.getInstance().escribir(Tabla2 + "_alta", parametros);
             return res;
         }
 
-        public static int BorrarUsuarioPermiso(Usuario param)
+        public int BorrarUsuarioPermiso(Usuario param)
         {
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter("@usuario", param.Login);

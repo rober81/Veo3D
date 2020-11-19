@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -51,10 +52,9 @@
     <Compile Include="Idioma.cs" />
     <Compile Include="IdiomaDetalle.cs" />
     <Compile Include="Funcional\Impresora.cs" />
-    <Compile Include="iPermisos.cs" />
+    <Compile Include="iPermiso.cs" />
     <Compile Include="Funcional\Material.cs" />
     <Compile Include="Permiso.cs" />
-    <Compile Include="Permisos.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Funcional\ProductoPersonalizado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

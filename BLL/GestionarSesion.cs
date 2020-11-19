@@ -9,7 +9,7 @@ namespace BLL
     public class GestionarSesion
     {
         private BE.Usuario usuario;
-        private List<BE.iPermisos> permisos = new List<BE.iPermisos>();
+        private List<BE.iPermiso> permisos = new List<BE.iPermiso>();
 
         private static GestionarSesion _instancia = null;
 

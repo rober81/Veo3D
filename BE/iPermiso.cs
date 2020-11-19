@@ -5,10 +5,10 @@ using System.Text;
 
 namespace BE
 {
-    public interface iPermisos
+    public interface iPermiso
     {
         int Id { get; set; }
         string Nombre { get; set; }
-        List<iPermisos> Hijos { get;}
+        List<iPermiso> Hijos { get; set; }
     }
 }

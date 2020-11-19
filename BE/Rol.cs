@@ -5,25 +5,18 @@ using System.Text;
 
 namespace BE
 {
-    public class Rol : iPermisos
+    public class Rol : iPermiso
     {
-        private List<iPermisos> hijos = new List<iPermisos>();
+        private List<iPermiso> hijos = new List<iPermiso>();
         public int Id { get; set; }
         public string Nombre { get; set; }
+        public List<iPermiso> Hijos { get; set; }
 
-        public List<iPermisos> Hijos
-        {
-            get
-            {
-                return this.hijos;
-            }
-        }
-
-        public void Add(iPermisos param)
+        public void Add(iPermiso param)
         {
             hijos.Add(param);
         }
-        public void Remove(iPermisos param)
+        public void Remove(iPermiso param)
         {
             hijos.Remove(param);
         }
