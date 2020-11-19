@@ -78,6 +78,24 @@ namespace Gui.produccion
         protected global::Gui.controles.LabelTexto MMetros;
 
         /// <summary>
+        /// Control MStock.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto MStock;
+
+        /// <summary>
+        /// Control MCostoMetros.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto MCostoMetros;
+
+        /// <summary>
         /// Control BtnBaja.
         /// </summary>
         /// <remarks>

@@ -27,6 +27,8 @@ namespace DAL
                 obj.Tipo = item["tipo"].ToString();
                 obj.Peso = int.Parse(item["peso"].ToString());
                 obj.Metros = int.Parse(item["metros"].ToString());
+                obj.Stock = int.Parse(item["stock"].ToString());
+                obj.CostoxMetro = decimal.Parse(item["costom"].ToString());
                 lista.Add(obj);
             }
             return lista;
@@ -47,19 +49,23 @@ namespace DAL
                 buscado.Tipo = item["tipo"].ToString();
                 buscado.Peso = int.Parse(item["peso"].ToString());
                 buscado.Metros = int.Parse(item["metros"].ToString());
+                buscado.Stock = int.Parse(item["stock"].ToString());
+                buscado.CostoxMetro = decimal.Parse(item["costom"].ToString());
             }
             return buscado;
         }
 
         private static SqlParameter[] crearParametros(Material param)
         {
-            SqlParameter[] parametros = new SqlParameter[6];
+            SqlParameter[] parametros = new SqlParameter[8];
             parametros[0] = new SqlParameter("@id", param.Id);
             parametros[1] = new SqlParameter("@marca", param.Marca);
             parametros[2] = new SqlParameter("@color", param.Color);
             parametros[3] = new SqlParameter("@tipo", param.Tipo);
             parametros[4] = new SqlParameter("@peso", param.Peso);
             parametros[5] = new SqlParameter("@metros", param.Metros);
+            parametros[6] = new SqlParameter("@stock", param.Stock);
+            parametros[7] = new SqlParameter("@costom", param.CostoxMetro);
             return parametros;
         }
 

@@ -207,6 +207,13 @@ namespace Gui.controles
             return resultado;
         }
 
+        public decimal getTextoDecimal()
+        {
+            decimal resultado = 0;
+            decimal.TryParse(txt.Text, out resultado);
+            return resultado;
+        }
+
         public DateTime GetTextoDate()
         {
             return Convert.ToDateTime(txt.Text);

@@ -22,6 +22,8 @@
                 <uc1:labeltexto runat="server" id="MTipo" />
                 <uc1:labeltexto runat="server" id="MPeso" esnumero="true" />
                 <uc1:labeltexto runat="server" id="MMetros" esnumero="true" />
+                <uc1:labeltexto runat="server" id="MStock" esnumero="true" />
+                <uc1:labeltexto runat="server" id="MCostoMetros" esdecimal="true" />
                 <asp:Button ID="BtnBaja" runat="server" Text="Cancelar" OnClick="Baja_Click" CssClass="btn btn-danger" />
                 <asp:Button ID="BtnCancelar" runat="server" Text="Cancelar" OnClick="Cancelar_Click" CssClass="btn btn-warning" />
                 <asp:Button ID="BtnAceptar" runat="server" Text="Aceptar" OnClick="Aceptar_Click" CssClass="btn btn-success" />

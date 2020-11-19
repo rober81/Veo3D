@@ -35,6 +35,8 @@ namespace Gui.produccion
             MTipo.Texto = dato.Tipo;
             MPeso.Texto = dato.Peso.ToString();
             MMetros.Texto = dato.Metros.ToString();
+            MStock.Texto = dato.Stock.ToString();
+            MCostoMetros.Texto = dato.CostoxMetro.ToString();
         }
 
         protected void Cancelar_Click(object sender, EventArgs e)
@@ -59,6 +61,8 @@ namespace Gui.produccion
             valido = valido && MTipo.Validar();
             valido = valido && MPeso.Validar();
             valido = valido && MMetros.Validar();
+            valido = valido && MStock.Validar();
+            valido = valido && MCostoMetros.Validar();
             if (valido)
             {
                 MaterialBLL bll = new MaterialBLL();
@@ -68,6 +72,8 @@ namespace Gui.produccion
                 nuevo.Tipo = MTipo.Texto;
                 nuevo.Peso = MPeso.getTextoInt();
                 nuevo.Metros = MMetros.getTextoInt();
+                nuevo.Stock = MStock.getTextoInt();
+                nuevo.CostoxMetro = MCostoMetros.getTextoDecimal();
                 if (string.IsNullOrEmpty(MID.Texto))
                 {
                     nuevo.Id = 0;

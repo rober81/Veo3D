@@ -13,6 +13,8 @@ namespace BE
         public string Tipo { get; set; }
         public int Peso { get; set; }
         public int Metros { get; set; }
+        public int Stock { get; set; }
+        public decimal CostoxMetro { get; set; }
 
     }
 }
