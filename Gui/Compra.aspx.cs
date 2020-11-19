@@ -47,7 +47,7 @@ namespace Gui
 
         protected void Comprar_Click(object sender, EventArgs e)
         {
-            BE.Compra compra = new BE.Compra();
+            BE.Venta compra = new BE.Venta();
             if (string.IsNullOrEmpty(LblCalle.Texto))
             {
                 LblCalle.NoValido();
@@ -85,7 +85,7 @@ namespace Gui
             compra.Provincia = LblProvincia.Texto;
             compra.Personalizado = (ProductoPersonalizado)Session["ProductoPersonalizado"];
             compra.Usuario = (Usuario)Session["Usuario"];
-            CompraBLL compraBll = new CompraBLL();
+            VentaBLL compraBll = new VentaBLL();
             compraBll.Guardar(compra);
             Session["CompraFinalizada"] = compra;
             Response.Redirect("/Resumen.aspx");

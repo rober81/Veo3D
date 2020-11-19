@@ -1,5 +1,6 @@
 ﻿using BE;
 using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,7 +9,8 @@ namespace BLL
     public class GestionarPermisos
     {
         readonly PermisoMapper mapper = new PermisoMapper();
-        List<string> listaDefinida = null;
+
+        public List<string> ListaDefinida { get; set; }
 
         public GestionarPermisos()
         {
@@ -21,9 +23,9 @@ namespace BLL
             return mapper.ListarPermiso(); ;
         }
 
-        public int Insertar(Permiso per)
+        public int Insertar(Permiso per, int padre)
         {
-            int res = mapper.Guardar(per, 0);
+            int res = mapper.Guardar(per, padre);
             Bitacora("Insertar", per);
             return res;
         }
@@ -35,13 +37,26 @@ namespace BLL
             return res;
         }
 
+        public int Borrar(Permiso per)
+        {
+            int res = mapper.Baja(per);
+            Bitacora("Borrar", per);
+            return res;
+        }
+
         public List<iPermiso> ListarUsuarioPermiso(Usuario usr)
         {
             List<iPermiso> lista = mapper.ListarUsuarioPermiso(usr);
             return lista;
         }
 
-        public bool Buscar(List<iPermiso> permisos, string nombre)
+        public List<Tuple<Usuario, iPermiso>> ListarUsuarioPermiso()
+        {
+            List<Tuple<Usuario, iPermiso>> lista = mapper.ListarUsuarioPermiso();
+            return lista;
+        }
+
+            public bool Buscar(List<iPermiso> permisos, string nombre)
         {
             foreach (var item in permisos)
             {
@@ -70,16 +85,19 @@ namespace BLL
             return null;
         }
 
-        public int InsertarUsuarioPerfil(Usuario usr, List<iPermiso> perfiles)
+        public int GuardarUsuarioPermiso(Usuario usr, iPermiso per)
         {
-            mapper.BorrarUsuarioPermiso(usr);
             int res = 0;
-            foreach (var item in perfiles)
-            {
-                res += mapper.GuardarUsuarioPermiso(usr, item);
-            }
+            res += mapper.BorrarUsuarioPermiso(usr);
+            res += mapper.GuardarUsuarioPermiso(usr, per);
+
             Bitacora("Insertar", usr);
             return res;
+        }
+
+        public int BorrarUsuarioPermiso(Usuario usr)
+        {
+            return mapper.BorrarUsuarioPermiso(usr);
         }
 
         private void Bitacora(string accion, Permiso per)
@@ -102,30 +120,30 @@ namespace BLL
 
         public List<string> GenerarListarPermisos()
         {
-            listaDefinida = new List<string>();
-            listaDefinida.Add("LinkUsuario");
-            listaDefinida.Add("LinkIdioma");
-            listaDefinida.Add("LinkRol");
-            listaDefinida.Add("LinkPermisos");
-            listaDefinida.Add("LinkRealizar");
-            listaDefinida.Add("LinkBitacora");
-            listaDefinida.Add("LinkDigitoVerificador");
-            listaDefinida.Add("LinkProductos");
-            listaDefinida.Add("LinkPrecios");
-            listaDefinida.Add("LinkImpresoras");
-            listaDefinida.Add("LinkMateriales");
-            listaDefinida.Add("LinkReportes");
-            listaDefinida.Add("LinkPedidos");
-            listaDefinida.Add("LinkEnvios");
-            listaDefinida.Add("LinkPanelCompras");
-            listaDefinida.Add("LinkRegistrarOrden");
-            listaDefinida.Add("LinkReporteOrden");
-            listaDefinida.Add("LinkPrioridad");
-            listaDefinida.Add("LinkPresupuesto");
-            listaDefinida.Add("LinkPriorizacion");
-            listaDefinida.Add("LinkPanelPedidos");
-            listaDefinida.Add("LinkReportePresupuesto");
-            return listaDefinida;
+            ListaDefinida = new List<string>();
+            ListaDefinida.Add("LinkUsuario");
+            ListaDefinida.Add("LinkIdioma");
+            ListaDefinida.Add("LinkRol");
+            ListaDefinida.Add("LinkPermisos");
+            ListaDefinida.Add("LinkRealizar");
+            ListaDefinida.Add("LinkBitacora");
+            ListaDefinida.Add("LinkDigitoVerificador");
+            ListaDefinida.Add("LinkProductos");
+            ListaDefinida.Add("LinkPrecios");
+            ListaDefinida.Add("LinkImpresoras");
+            ListaDefinida.Add("LinkMateriales");
+            ListaDefinida.Add("LinkReportes");
+            ListaDefinida.Add("LinkPedidos");
+            ListaDefinida.Add("LinkEnvios");
+            ListaDefinida.Add("LinkPanelCompras");
+            ListaDefinida.Add("LinkRegistrarOrden");
+            ListaDefinida.Add("LinkReporteOrden");
+            ListaDefinida.Add("LinkPrioridad");
+            ListaDefinida.Add("LinkPresupuesto");
+            ListaDefinida.Add("LinkPriorizacion");
+            ListaDefinida.Add("LinkPanelPedidos");
+            ListaDefinida.Add("LinkReportePresupuesto");
+            return ListaDefinida;
         }
     }
 }

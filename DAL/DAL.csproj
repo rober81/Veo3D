@@ -46,7 +46,7 @@
     <Compile Include="BitacoraMapper.cs" />
     <Compile Include="CopiaSeguridadMapper.cs" />
     <Compile Include="DigitoVerificadorMapper.cs" />
-    <Compile Include="Funcional\CompraMapper.cs" />
+    <Compile Include="Funcional\VentaMapper.cs" />
     <Compile Include="Funcional\ImpresoraMapper.cs" />
     <Compile Include="Funcional\MaterialMapper.cs" />
     <Compile Include="Funcional\ProductoMapper.cs" />

@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace Gui.produccion
 {
-    public partial class Pedidos : System.Web.UI.Page
+    public partial class Ventas : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,7 +19,7 @@ namespace Gui.produccion
         }
         private void CargarDatos()
         {
-            CompraBLL bll = new CompraBLL();
+            VentaBLL bll = new VentaBLL();
             Grilla.DataSource = null;
             Grilla.DataSource = bll.Listar();
             Grilla.DataBind();

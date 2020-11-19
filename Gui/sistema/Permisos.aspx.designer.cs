@@ -33,13 +33,13 @@ namespace Gui.produccion
         protected global::System.Web.UI.WebControls.GridView Grilla;
 
         /// <summary>
-        /// Control LblPermisos.
+        /// Control LblPadre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblPermisos;
+        protected global::System.Web.UI.WebControls.Label LblPadre;
 
         /// <summary>
         /// Control ComboPermisos.
@@ -49,6 +49,15 @@ namespace Gui.produccion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ComboPermisos;
+
+        /// <summary>
+        /// Control TxtPermiso.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto TxtPermiso;
 
         /// <summary>
         /// Control BtnBaja.

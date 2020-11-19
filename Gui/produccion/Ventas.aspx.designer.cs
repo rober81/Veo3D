@@ -11,17 +11,17 @@ namespace Gui.produccion
 {
 
 
-    public partial class Pedidos
+    public partial class Ventas
     {
 
         /// <summary>
-        /// Control LblPanelPedidos.
+        /// Control LblListadoVentas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblPanelPedidos;
+        protected global::System.Web.UI.WebControls.Label LblListadoVentas;
 
         /// <summary>
         /// Control Grilla.

@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class CompraMapper
+    public class VentaMapper
     {
-        public static string Tabla = "Compra";
+        public static string Tabla = "Venta";
 
-        public static List<Compra> Listar()
+        public static List<Venta> Listar()
         {
-            Compra obj = null;
-            List<Compra> lista = new List<Compra>();
+            Venta obj = null;
+            List<Venta> lista = new List<Venta>();
             DataTable tabla = Acceso.getInstance().leer(Tabla + "_leer", null);
             foreach (DataRow item in tabla.Rows)
             {
-                obj = new Compra();
+                obj = new Venta();
                 obj.Personalizado = new ProductoPersonalizado(); ;
                 obj.Id = int.Parse(item["id"].ToString());
                 obj.Personalizado.AnchoMontura = item["anchomontura"].ToString();
@@ -43,15 +43,15 @@ namespace DAL
             return lista;
         }
 
-        public static Compra Buscar(Compra param)
+        public static Venta Buscar(Venta param)
         {
-            Compra obj = null;
+            Venta obj = null;
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter("@id", param.Id);
             DataTable tabla = Acceso.getInstance().leer(Tabla + "_buscar", parametros);
             foreach (DataRow item in tabla.Rows)
             {
-                obj = new Compra();
+                obj = new Venta();
                 obj.Personalizado = new ProductoPersonalizado(); ;
                 obj.Id = int.Parse(item["id"].ToString());
                 obj.Personalizado.AnchoMontura = item["anchomontura"].ToString();
@@ -73,7 +73,7 @@ namespace DAL
             return obj;
         }
 
-        private static SqlParameter[] crearParametros(Compra param)
+        private static SqlParameter[] crearParametros(Venta param)
         {
             SqlParameter[] parametros = new SqlParameter[14];
             parametros[0] = new SqlParameter("@id", param.Id);
@@ -93,12 +93,12 @@ namespace DAL
             return parametros;
         }
 
-        public static int Guardar(Compra param)
+        public static int Guardar(Venta param)
         {
             return Acceso.getInstance().escribir(Tabla + "_alta", crearParametros(param));
         }
 
-        public static int Modificar(Compra param)
+        public static int Modificar(Venta param)
         {
             SqlParameter[] parametros = new SqlParameter[2];
             parametros[0] = new SqlParameter("@id", param.Id);
@@ -106,7 +106,7 @@ namespace DAL
             return Acceso.getInstance().escribir(Tabla + "_modificar", parametros);
         }
 
-        public static int Baja(Compra param)
+        public static int Baja(Venta param)
         {
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter("@id", param.Id);

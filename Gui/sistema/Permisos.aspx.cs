@@ -11,6 +11,7 @@ namespace Gui.produccion
     public partial class Permisos : System.Web.UI.Page
     {
         GestionarPermisos bll = new GestionarPermisos();
+        List<BE.Permiso> lista = null;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -20,23 +21,52 @@ namespace Gui.produccion
         }
         private void CargarDatos()
         {
-            //GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
             Grilla.DataSource = null;
             Grilla.DataSource = bll.ListarPerfiles();
             Grilla.DataBind();
 
+            List<BE.Permiso> lista = new List<BE.Permiso>();
+            BE.Permiso nulo = new BE.Permiso();
+            nulo.Id = 0;
+            nulo.Nombre = "Ninguno";
+            lista.Add(nulo);
+            lista.AddRange(bll.ListarPerfiles());
             ComboPermisos.DataSource = null;
-            ComboPermisos.DataSource = bll.ListarPerfiles();
+            ComboPermisos.DataSource = lista;
             ComboPermisos.DataBind();
         }
 
         protected void Baja_Click(object sender, EventArgs e)
         {
-            //bll.GuardarDigitoVerificador(ComboPermisos.SelectedValue);
+            string id = Grilla.SelectedRow.Cells[1].Text;
+            BE.Permiso per = new BE.Permiso();
+            per.Id = Convert.ToInt32(id);
+            try
+            {
+                bll.Borrar(per);
+                CargarDatos();
+            }
+            catch (Exception)
+            {
+
+            }
         }
         protected void Agregar_Click(object sender, EventArgs e)
         {
-            //textboxlog.Text = bll.VerificarDigitoVerificadorLog(ComboTabla.SelectedValue);
+            if (! string.IsNullOrWhiteSpace(TxtPermiso.Texto))
+            {
+                BE.Permiso per = new BE.Permiso();
+                per.Nombre = TxtPermiso.Texto;
+                string padre = ComboPermisos.SelectedValue;
+                BE.Permiso padrePermiso = null;
+                if (!padre.Equals("Ninguno"))
+                {
+                    lista = bll.ListarPerfiles();
+                    padrePermiso = lista.FirstOrDefault( p => p.Nombre == ComboPermisos.SelectedValue);
+                }
+                bll.Insertar(per, padrePermiso != null? padrePermiso.Id:0);
+                CargarDatos();
+            }
         }
     }
 }

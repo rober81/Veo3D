@@ -17,13 +17,13 @@ namespace Gui
             {
                 if (Session["CompraFinalizada"] != null)
                 {
-                    BE.Compra item = (BE.Compra)Session["CompraFinalizada"];
+                    BE.Venta item = (BE.Venta)Session["CompraFinalizada"];
                     CargarDatos(item);
                 }
             }
         }
 
-        private void CargarDatos(BE.Compra parametro)
+        private void CargarDatos(BE.Venta parametro)
         {
             LblTitulo.Text = parametro.Personalizado.Producto.Nombre;
             LblTexto.Text = parametro.Personalizado.Producto.Descripcion;

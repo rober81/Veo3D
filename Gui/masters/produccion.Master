@@ -113,7 +113,7 @@
                     </a>
                     <div id="ventasMenu" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <asp:HyperLink ID="LinkPedidos" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Pedidos.aspx" runat="server"></asp:HyperLink>   
+                            <asp:HyperLink ID="LinkPedidos" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Ventas.aspx" runat="server"></asp:HyperLink>   
                             <asp:HyperLink ID="LinkEnvios" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Envios.aspx" runat="server"></asp:HyperLink>   
                         </div>
                     </div>

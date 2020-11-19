@@ -18,7 +18,7 @@ namespace Gui.produccion
                 if (Session["IdiomaNuevo"] != null)
                 {
                     BE.Idioma idiomaGenerado = (BE.Idioma)Session["IdiomaNuevo"];
-                    LblIdiomaSeleccionado.Text = $"{idiomaGenerado.Codigo} - {idiomaGenerado.Nombre}";
+                    LblIdiomaSeleccionado.Text = $"{idiomaGenerado.Codigo}  {idiomaGenerado.Nombre.ToUpper()}";
                     CargarDatos(idiomaGenerado);
                 }
             }
@@ -27,13 +27,13 @@ namespace Gui.produccion
 
         private void CargarDatos(BE.Idioma idiomaGenerado)
         {
-            GrillaIdiomas.DataSource = null;
-            GrillaIdiomas.DataSource = idiomaGenerado.Detalle;
-            GrillaIdiomas.DataBind();
+            Grilla.DataSource = null;
+            Grilla.DataSource = idiomaGenerado.Detalle;
+            Grilla.DataBind();
 
         }
 
-        protected void AgregarDetalleIdioma_Click(object sender, EventArgs e)
+        protected void Guardar_Click(object sender, EventArgs e)
         {
             if (Session["IdiomaNuevo"] != null)
             {
@@ -46,27 +46,43 @@ namespace Gui.produccion
                         Clave = item.Key,
                         Texto = item.Value
                     };
-                    //GestionarIdioma.getInstance().insertarDetalle(detalle);
+                    GestionarIdioma.getInstance().insertarDetalle(detalle);
                 }
             }
         }
 
-        protected void BorrarIdioma_Click(Object sender, GridViewDeleteEventArgs e)
+        protected void Borrar_Click(Object sender, GridViewDeleteEventArgs e)
         {
             Debug.WriteLine("borrar");
         }
-        protected void EditarIdioma_Click(Object sender, GridViewEditEventArgs e)
+        protected void Editar_Click(Object sender, GridViewEditEventArgs e)
         {
-            Debug.WriteLine("editar");
+            //GridViewRow row = Grilla.Rows[e.NewEditIndex];
+            //TextBox TxtEditar = row.FindControl("TxtEditar") as TextBox;
+            //if (TxtEditar != null)
+            //    Debug.WriteLine($"editar {TxtEditar.Text}");
+            //else
+            //   Debug.WriteLine($"editar null");
         }
-        protected void ActualizarIdioma_Click(Object sender, GridViewUpdateEventArgs e)
+        protected void Actualizar_Click(Object sender, GridViewUpdateEventArgs e)
         {
-            GridViewRow row = GrillaIdiomas.Rows[e.RowIndex];
-            string clave = row.Cells[1].Text;
-            string texto = row.Cells[2].Text;
-            Debug.WriteLine("actualizar");
+            GridViewRow row = Grilla.Rows[e.RowIndex];
+            TextBox TxtEditar = row.FindControl("TxtEditar") as TextBox;
+            BE.Idioma idiomaGenerado = (BE.Idioma)Session["IdiomaNuevo"];
+            string id = row.Cells[1].Text;
+            //string id = Grilla.DataKeys[gvrow.RowIndex][1].ToString();
+            idiomaGenerado.Detalle[id] = TxtEditar.Text;
+            Session["IdiomaNuevo"] = idiomaGenerado;
+            Grilla.EditIndex = -1;
+            CargarDatos(idiomaGenerado);
         }
-        protected void CancelarIdioma_Click(Object sender, GridViewCancelEditEventArgs e)
+
+        protected void Actualizado_Click(Object sender, GridViewUpdatedEventArgs e)
+        {
+
+        }
+
+        protected void Cancelar_Click(Object sender, GridViewCancelEditEventArgs e)
         {
             e.Cancel = true;
             Debug.WriteLine("cancelar");

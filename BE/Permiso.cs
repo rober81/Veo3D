@@ -14,5 +14,10 @@ namespace BE
         public List<iPermiso> Hijos { get; set; }
         
         public string Identificador => Id.ToString();
+
+        public override string ToString()
+        {
+            return Nombre; 
+        }
     }
 }

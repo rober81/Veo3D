@@ -1,4 +1,5 @@
 ﻿using BE;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -15,7 +16,7 @@ namespace DAL
             List<iPermiso> lista = new List<iPermiso>(); ;
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter("@usuario", param.Login);
-            DataTable tabla = Acceso.getInstance().leer(Tabla2 + "_leer", parametros);
+            DataTable tabla = Acceso.getInstance().leer(Tabla2 + "_buscar", parametros);
             foreach (DataRow item in tabla.Rows)
             {
                 Permiso per = new Permiso();
@@ -26,6 +27,23 @@ namespace DAL
             }
             return lista;
         }
+
+        public List<Tuple<Usuario, iPermiso>> ListarUsuarioPermiso()
+        {
+            List<Tuple<Usuario, iPermiso>> lista = new List<Tuple<Usuario, iPermiso>>();
+            DataTable tabla = Acceso.getInstance().leer(Tabla2 + "_leer", null);
+            foreach (DataRow item in tabla.Rows)
+            {
+                Permiso per = new Permiso();
+                per.Id = int.Parse(item["id"].ToString());
+                per.Nombre = item["nombre"].ToString();
+                Usuario usr = new Usuario();
+                usr.Login = item["usuario"].ToString();
+                lista.Add(new Tuple<Usuario, iPermiso>(usr, per));
+            }
+            return lista;
+        }
+
         public List<iPermiso> BuscarHijos(int id)
         {
             List<iPermiso> lista = new List<iPermiso>();
@@ -46,6 +64,10 @@ namespace DAL
         public List<Permiso> ListarPermiso()
         {
             List<Permiso> lista = new List<Permiso>();
+            BE.Permiso nulo = new BE.Permiso();
+            nulo.Id = 0;
+            nulo.Nombre = "Ninguno";
+           // lista.Add(nulo);
             DataTable tabla = Acceso.getInstance().leer(Tabla + "_leer", null);
             foreach (DataRow item in tabla.Rows)
             {
@@ -92,7 +114,13 @@ namespace DAL
             return res;
         }
 
-
+        public int Baja(Permiso per)
+        {
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter("@id", per.Id);
+            int res = Acceso.getInstance().escribir(Tabla + "_baja", parametros);
+            return res;
+        }
 
         public int GuardarUsuarioPermiso(Usuario param, iPermiso per)
         {

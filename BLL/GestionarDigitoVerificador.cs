@@ -24,7 +24,7 @@ namespace BLL
         public List<string> ListarTablas()
         {
             List<string> lista = new List<string>();
-            lista.Add("Compra");
+            lista.Add("Venta");
             lista.Add("Producto");
             lista.Add("Usuario");
             lista.Add("Impresora");
@@ -52,9 +52,9 @@ namespace BLL
         public DigitoVerificador GenerarDigitoVerificador(string tabla)
         {
             List<iDigitoVerificador> lista = null;
-            if ("Compra".Equals(tabla))
+            if ("Venta".Equals(tabla))
             {
-                CompraBLL cbll = new CompraBLL();
+                VentaBLL cbll = new VentaBLL();
                 lista = cbll.Listar().ToList<iDigitoVerificador>();
             }
             if ("Producto".Equals(tabla))

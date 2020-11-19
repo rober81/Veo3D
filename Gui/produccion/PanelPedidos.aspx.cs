@@ -20,7 +20,7 @@ namespace Gui.produccion
 
         private void CargarDatos()
         {
-            CompraBLL bll = new CompraBLL();
+            VentaBLL bll = new VentaBLL();
             Grilla.DataSource = null;
             Grilla.DataSource = bll.Listar();
             Grilla.DataBind();

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/produccion.Master" AutoEventWireup="true" CodeBehind="Pedidos.aspx.cs" Inherits="Gui.produccion.Pedidos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/produccion.Master" AutoEventWireup="true" CodeBehind="Ventas.aspx.cs" Inherits="Gui.produccion.Ventas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="TituloPagina2" runat="server">
@@ -7,7 +7,7 @@
     <div class="card shadow w-75 mx-auto my-auto">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">
-                <asp:Label ID="LblPanelPedidos" runat="server"></asp:Label>
+                <asp:Label ID="LblListadoVentas" runat="server"></asp:Label>
             </h6>
         </div>
         <div class="card-body">

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BE
 {
-    public class Compra : iDigitoVerificador
+    public class Venta : iDigitoVerificador
     {
         public int Id { get; set; }
         public ProductoPersonalizado Personalizado { get; set; }

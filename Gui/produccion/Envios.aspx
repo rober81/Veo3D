@@ -7,7 +7,7 @@
         <div class="card shadow w-75 mx-auto my-auto">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">
-                <asp:Label ID="LblPanelPedidos" runat="server"></asp:Label>
+                <asp:Label ID="LblListadoEnvios" runat="server"></asp:Label>
             </h6>
         </div>
         <div class="card-body">
