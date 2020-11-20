@@ -36,9 +36,14 @@ namespace DAL
 
         public static Material Buscar(Material param)
         {
+            return Buscar(param.Id);
+        }
+
+        public static Material Buscar(int param)
+        {
             Material buscado = null;
             SqlParameter[] parametros = new SqlParameter[1];
-            parametros[0] = new SqlParameter("@id", param.Id);
+            parametros[0] = new SqlParameter("@id", param);
             DataTable tabla = Acceso.getInstance().leer(Tabla + "_buscar", parametros);
             foreach (DataRow item in tabla.Rows)
             {

@@ -28,6 +28,7 @@ namespace DAL
                 obj.Estado = item["estado"].ToString();
                 obj.FechaInicio = Convert.ToDateTime(item["fechainicio"].ToString());
                 obj.FechaFin = Convert.ToDateTime(item["fechafin"].ToString());
+                obj.Material = MaterialMapper.Buscar(Convert.ToInt32(item["material"].ToString()));
                 lista.Add(obj);
             }
             return lista;
@@ -54,13 +55,14 @@ namespace DAL
                 obj.Estado = item["estado"].ToString();
                 obj.FechaInicio = Convert.ToDateTime(item["fechainicio"].ToString());
                 obj.FechaFin = Convert.ToDateTime(item["fechafin"].ToString());
+                obj.Material = MaterialMapper.Buscar(Convert.ToInt32(item["material"].ToString()));
             }
             return obj;
         }
 
         private static SqlParameter[] CrearParametros(Impresion param)
         {
-            SqlParameter[] parametros = new SqlParameter[7];
+            SqlParameter[] parametros = new SqlParameter[8];
             parametros[0] = new SqlParameter("@id", param.Id);
             parametros[1] = new SqlParameter("@venta", param.Venta.Id);
             parametros[2] = new SqlParameter("@impresora", param.Impresora.Id);
@@ -68,6 +70,7 @@ namespace DAL
             parametros[4] = new SqlParameter("@estado", param.Estado);
             parametros[5] = new SqlParameter("@fechainicio", param.FechaInicio);
             parametros[6] = new SqlParameter("@fechafin", param.FechaFin);
+            parametros[7] = new SqlParameter("@material", param.Material.Id);
             return parametros;
         }
 

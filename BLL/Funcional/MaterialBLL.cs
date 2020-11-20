@@ -20,6 +20,11 @@ namespace BLL
             return MaterialMapper.Buscar(mat);
         }
 
+        public Material Buscar(int mat)
+        {
+            return MaterialMapper.Buscar(mat);
+        }
+
         public int Guardar(Material mat)
         {
             return MaterialMapper.Insertar(mat);

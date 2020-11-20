@@ -57,7 +57,7 @@
                                 <uc1:LabelTexto runat="server" ID="LblPuerta" />
                             </div>
                             <div class="col">
-                                <uc1:LabelTexto runat="server" ID="LblDepto" />
+                                <uc1:LabelTexto runat="server" ID="LblDepto" EsValidado="false"/>
                             </div>
                         </div>
                         <div class="row">

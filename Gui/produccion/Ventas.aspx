@@ -1,4 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/produccion.Master" AutoEventWireup="true" CodeBehind="Ventas.aspx.cs" Inherits="Gui.produccion.Ventas" %>
+
+<%@ Register Src="~/controles/LabelTexto.ascx" TagPrefix="uc1" TagName="LabelTexto" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="TituloPagina2" runat="server">
@@ -17,7 +20,7 @@
                     <Columns>
                         <asp:BoundField HeaderText="Id" DataField="Id" />
                         <asp:BoundField HeaderText="Producto" DataField="Personalizado.Producto.Nombre" />
-                        <asp:BoundField HeaderText="Archivo" DataField="Personalizado.Producto.Archivo" />
+                        <asp:BoundField HeaderText="Archivo" DataField="Personalizado.Archivo" />
                         <asp:BoundField HeaderText="Tiempo Impresion" DataField="Personalizado.Producto.TiempoImpresion"  DataFormatString="{0} h"/>
                         <asp:BoundField HeaderText="Cantidad Material" DataField="Personalizado.Producto.CantidadMaterial" DataFormatString="{0} m" />
                         <asp:BoundField HeaderText="Ancho Montura" DataField="Personalizado.AnchoMontura" DataFormatString="{0} mm"/>
@@ -28,6 +31,12 @@
                         <asp:BoundField HeaderText="Estado" DataField="Estado"/>
                     </Columns>
                 </asp:GridView>
+                <div class="form-group">
+                    <asp:Label ID="LblMaterial" runat="server" Text="Permisos" AssociatedControlID="ComboMaterial"></asp:Label>
+                    <asp:DropDownList ID="ComboMaterial" runat="server" CssClass="form-control" />
+                </div>
+                <uc1:LabelTexto runat="server" ID="LblArchivo" />
+                <asp:Button ID="BtnActualizarArchivo" runat="server" CssClass="btn btn-secondary" OnClick="Archivo_Click" />
                 <asp:Button ID="BtnEnviarImprimir" runat="server" CssClass="btn btn-primary" OnClick="Imprimir_Click" />
             </div>
         </div>

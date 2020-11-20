@@ -35,5 +35,10 @@ namespace BLL
             return VentaMapper.Modificar(ven);
         }
 
+        public int ModificarArchivo(Venta ven)
+        {
+            return VentaMapper.ModificarArchivo(ven);
+        }
+
     }
 }

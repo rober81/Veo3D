@@ -12,9 +12,18 @@
             </div>
             <div class="card-body">       
                 <div class="table-responsive mx-auto">
-                    <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="true"
+                    <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false"
                         AutoGenerateSelectButton="true">
                         <SelectedRowStyle CssClass="table-success"/>
+                        <Columns>
+                            <asp:BoundField HeaderText="Id" DataField="Id" />
+                            <asp:BoundField HeaderText="Marca" DataField="Marca" />
+                            <asp:BoundField HeaderText="Color" DataField="Color" />
+                            <asp:BoundField HeaderText="Tipo" DataField="Tipo"/>
+                            <asp:BoundField HeaderText="Peso" DataField="Peso" DataFormatString="{0} kg"/>
+                            <asp:BoundField HeaderText="Metros por Rollo" DataField="Metros" DataFormatString="{0} m"/>
+                            <asp:BoundField HeaderText="Stock" DataField="Stock" DataFormatString="{0} m"/>
+                        </Columns>
                     </asp:GridView>
                     <asp:Button ID="BtnModificar" runat="server" CssClass="btn btn-secondary" OnClick="Modificar_Click"/>
                     <asp:Button ID="BtnNuevo" runat="server" CssClass="btn btn-primary" OnClick="Nuevo_Click"/>

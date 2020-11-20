@@ -13,6 +13,7 @@ namespace BE
         public Impresora Impresora { get; set; }
         public int Prioridad { get; set; }
         public string Estado { get; set; }
+        public Material Material { get; set; }
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFin { get; set; }
 

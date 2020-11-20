@@ -55,6 +55,7 @@ namespace Gui.web
             personal.AnchoCristales = LblAnchoCristales.Texto;
             personal.AlturaCristales = LblAlturaCristales.Texto;
             personal.LongitudPatillas = LblLongitudPatillas.Texto;
+            personal.Archivo = personal.Producto.Archivo;
             Session["ProductoPersonalizado"] = personal;
             Response.Redirect("/Compra.aspx");
         }

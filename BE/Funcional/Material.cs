@@ -16,5 +16,12 @@ namespace BE
         public int Stock { get; set; }
         public decimal CostoxMetro { get; set; }
 
+        public override string ToString()
+        {
+            return $"Marca: {Marca} Color: {Color} Tipo: {Tipo} Cant Stock: {Stock} m"; 
+        }
+
+        public string MaterialCompleto => ToString();
+
     }
 }

@@ -15,13 +15,13 @@ namespace Gui.produccion
     {
 
         /// <summary>
-        /// Control LblListadoVentas.
+        /// Control LblListadoPrioridades.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblListadoVentas;
+        protected global::System.Web.UI.WebControls.Label LblListadoPrioridades;
 
         /// <summary>
         /// Control Grilla.
