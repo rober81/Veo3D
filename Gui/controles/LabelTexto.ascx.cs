@@ -165,6 +165,8 @@ namespace Gui.controles
 
         public bool ValidarRegex(string reg)
         {
+            if (!EsValidado)
+                return true;
             if ((new Regex(reg)).IsMatch(txt.Text))
             {
                 return Valido();

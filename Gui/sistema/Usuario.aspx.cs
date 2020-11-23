@@ -11,37 +11,35 @@ namespace Gui.produccion
 {
     public partial class Usuario : System.Web.UI.Page
     {
-        GestionarUsuario usrbll = new GestionarUsuario();
+        BE.Usuario usr = null;
         protected void Page_Load(object sender, EventArgs e)
         {
             LblContrasenia.Txt.TextMode = TextBoxMode.Password;
             LblContraseniaRepetir.Txt.TextMode = TextBoxMode.Password;
+            if (Session["UsuarioId"] != null)
+            {
+                string id = Session["UsuarioId"].ToString();
+                usr = GestionarUsuario.Listar().Where(u => u.Login.Equals(id)).First();
+            }
+            else
+            {
+                LblRegistroUsuario.Visible = true;
+            }
             if (!IsPostBack)
             {
-                if (Session["UsuarioId"] != null)
-                {
-                    string usr = Session["UsuarioId"].ToString();
-                    CargarDatos(usr);
-                }
+                CargarDatos();
+                LblModificarUsuario.Visible = true;
+                LblContrasenia.Visible = false;
+                LblContraseniaRepetir.Visible = false;
+                LblContrasenia.EsValidado = false;
+                LblContraseniaRepetir.EsValidado = false;
             }
         }
 
-        private void CargarDatos(string id)
+        private void CargarDatos()
         {
-            BE.Usuario usr = null;
-            List<BE.Usuario> lista = GestionarUsuario.Listar();
-            foreach (var item in lista)
-            {
-                if (item.Login.Equals(id))
-                {
-                    usr = item;
-                }
-            }
-            if (usr == null) return;
             LblUsuario.Texto = usr.Login;
             LblCorreo.Texto = usr.Correo;
-            LblContrasenia.Texto = usr.Password;
-            LblContraseniaRepetir.Texto = usr.Password;
             INombre.Texto = usr.Nombre;
             LblApellido.Texto = usr.Apellido;
             LblDni.Texto = usr.Dni.ToString();
@@ -54,30 +52,39 @@ namespace Gui.produccion
 
         protected void Aceptar_Click(object sender, EventArgs e)
         {
-            if (!LblContrasenia.Texto.Equals(LblContraseniaRepetir.Texto))
-            {
-                LblContraseniaRepetir.NoValido();
-                return;
-            }
-            else LblContraseniaRepetir.Valido();
-
             bool valido = LblUsuario.Validar();
-            valido = valido && LblContrasenia.Validar();
-            valido = valido && LblCorreo.ValidarRegex(ListaRegex.Email);
+
+            if (usr == null)
+            {
+                if (!LblContrasenia.Texto.Equals(LblContraseniaRepetir.Texto))
+                {
+                    LblContraseniaRepetir.NoValido();
+                    return;
+                }
+                else LblContraseniaRepetir.Valido();
+                valido = valido && LblContrasenia.Validar();
+                valido = valido && LblCorreo.ValidarRegex(ListaRegex.Email);
+            }
+
             valido = valido && INombre.Validar();
             valido = valido && LblApellido.Validar();
             valido = valido && LblDni.Validar();
             if (valido)
             {
-                BE.Usuario usr = new BE.Usuario();
-                usr.Login = LblUsuario.Texto;
-                usr.Password = LblContrasenia.Texto;
-                usr.Correo = LblCorreo.Texto;
-                usr.Nombre = INombre.Texto;
-                usr.Apellido = LblApellido.Texto;
-                usr.Dni = LblDni.getTextoInt();
-                GestionarUsuario.Guardar(usr);
-                Response.Redirect("/index.aspx");
+                BE.Usuario usr2 = new BE.Usuario();
+                usr2.Login = LblUsuario.Texto;
+                usr2.Password = LblContrasenia.Texto;
+                usr2.Correo = LblCorreo.Texto;
+                usr2.Nombre = INombre.Texto;
+                usr2.Apellido = LblApellido.Texto;
+                usr2.Dni = LblDni.getTextoInt();
+                if (usr == null)
+                    GestionarUsuario.Guardar(usr2);
+                else
+                {
+                    GestionarUsuario.Modificar(usr2, true);
+                }
+                Response.Redirect("/sistema/ListaUsuarios.aspx");
             }
         }
     }

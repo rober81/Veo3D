@@ -14,8 +14,7 @@ namespace BLL
         public static int Guardar(Usuario usr)
         {
             usr.Password = GestionarEncriptacion.Encriptar(usr.Password);
-            int res = UsuarioMapper.Insertar(usr);
-            //CalcularDVV();
+            int res = UsuarioMapper.Guardar(usr);
             Bitacora("Guardar", usr);
             return res;
         }
@@ -26,7 +25,14 @@ namespace BLL
                 usr.Password = GestionarEncriptacion.Encriptar(usr.Password);
             int res = UsuarioMapper.Modificar(usr);
             Bitacora("Modificar", usr);
-            //CalcularDVV();
+            return res;
+        }
+
+        public static int CambiarPass(Usuario usr)
+        {
+            usr.Password = GestionarEncriptacion.Encriptar(usr.Password);
+            int res = UsuarioMapper.CambiarPass(usr);
+            Bitacora("Cambias PASS", usr);
             return res;
         }
 

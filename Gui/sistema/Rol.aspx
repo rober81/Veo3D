@@ -24,6 +24,6 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">
-    <asp:Button ID="BtnBaja" runat="server" CssClass="btn btn-secondary" OnClick="Baja_Click" />
-    <asp:Button ID="BtnAgregar" runat="server" CssClass="btn btn-primary" OnClick="Agregar_Click" />
+    <asp:Button ID="BtnBaja" runat="server" CssClass="btn btn-danger" OnClick="Baja_Click" />
+    <asp:Button ID="BtnAgregar" runat="server" CssClass="btn btn-success" OnClick="Agregar_Click" />
 </asp:Content>

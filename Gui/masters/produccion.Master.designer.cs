@@ -357,6 +357,15 @@ namespace Gui.masters
         protected global::System.Web.UI.WebControls.Label LblUsuarioNombre;
 
         /// <summary>
+        /// Control LinkCambiarPass.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LinkCambiarPass;
+
+        /// <summary>
         /// Control CardTitulo.
         /// </summary>
         /// <remarks>

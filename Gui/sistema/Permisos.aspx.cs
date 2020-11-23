@@ -51,6 +51,11 @@ namespace Gui.produccion
 
             }
         }
+        protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[1].Visible = false;
+        }
+
         protected void Agregar_Click(object sender, EventArgs e)
         {
             if (! string.IsNullOrWhiteSpace(TxtPermiso.Texto))

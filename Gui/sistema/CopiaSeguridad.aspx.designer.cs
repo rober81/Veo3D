@@ -24,24 +24,6 @@ namespace Gui.produccion
         protected global::System.Web.UI.WebControls.Label LinkRealizar;
 
         /// <summary>
-        /// Control LtNombreArchivo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::Gui.controles.LabelTexto LtNombreArchivo;
-
-        /// <summary>
-        /// Control BtnCrearCopia.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnCrearCopia;
-
-        /// <summary>
         /// Control GridView1.
         /// </summary>
         /// <remarks>
@@ -51,6 +33,15 @@ namespace Gui.produccion
         protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
+        /// Control LtNombreArchivo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto LtNombreArchivo;
+
+        /// <summary>
         /// Control BtnRestaurar.
         /// </summary>
         /// <remarks>
@@ -58,5 +49,14 @@ namespace Gui.produccion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnRestaurar;
+
+        /// <summary>
+        /// Control BtnCrearCopia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnCrearCopia;
     }
 }

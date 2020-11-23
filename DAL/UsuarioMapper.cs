@@ -24,7 +24,6 @@ namespace DAL
                 obj.Apellido = item["apellido"].ToString();
                 obj.Correo = item["correo"].ToString();
                 obj.Dni = int.Parse(item["dni"].ToString());
-                obj.DVH = item["Dvh"].ToString();
             }
             return obj;
         }
@@ -43,7 +42,6 @@ namespace DAL
                 obj.Apellido = item["apellido"].ToString();
                 obj.Correo = item["correo"].ToString();
                 obj.Dni = int.Parse(item["dni"].ToString());
-                obj.DVH = item["Dvh"].ToString();
                 lista.Add(obj);
             }
             return lista;
@@ -64,25 +62,23 @@ namespace DAL
                 obj.Apellido = item["apellido"].ToString();
                 obj.Correo = item["correo"].ToString();
                 obj.Dni = int.Parse(item["dni"].ToString());
-                obj.DVH = item["Dvh"].ToString();
             }
             return obj;
         }
 
         private static SqlParameter[] crearParametros(Usuario param)
         {
-            SqlParameter[] parametros = new SqlParameter[7];
+            SqlParameter[] parametros = new SqlParameter[6];
             parametros[0] = new SqlParameter("@usuario", param.Login);
             parametros[1] = new SqlParameter("@pass", param.Password);
             parametros[2] = new SqlParameter("@nombre", param.Nombre);
             parametros[3] = new SqlParameter("@apellido", param.Apellido);
             parametros[4] = new SqlParameter("@correo", param.Correo);
             parametros[5] = new SqlParameter("@dni", param.Dni);
-            parametros[6] = new SqlParameter("@dvh", "");
             return parametros;
         }
 
-        public static int Insertar(Usuario param)
+        public static int Guardar(Usuario param)
         {
             return Acceso.getInstance().escribir(Tabla + "_alta", crearParametros(param));
         }
@@ -90,6 +86,14 @@ namespace DAL
         public static int Modificar(Usuario param)
         {
             return Acceso.getInstance().escribir(Tabla + "_modificar", crearParametros(param));
+        }
+
+        public static int CambiarPass(Usuario param)
+        {
+            SqlParameter[] parametros = new SqlParameter[2];
+            parametros[0] = new SqlParameter("@usuario", param.Login);
+            parametros[1] = new SqlParameter("@pass", param.Password);
+            return Acceso.getInstance().escribir(Tabla + "_modificarPass", parametros);
         }
     }
 }

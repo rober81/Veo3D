@@ -14,3 +14,9 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
+.scrolling-table-container2 {
+    height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

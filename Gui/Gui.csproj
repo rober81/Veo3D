@@ -1836,6 +1836,7 @@
     <Content Include="produccion\ReportePresupuesto.aspx" />
     <Content Include="produccion\Reportes.aspx" />
     <Content Include="sistema\Rol.aspx" />
+    <Content Include="sistema\CambiasPass.aspx" />
     <Content Include="sistema\Usuario.aspx" />
     <Content Include="Web.config" />
     <Content Include="detalle.aspx" />
@@ -2089,6 +2090,13 @@
     </Compile>
     <Compile Include="sistema\Rol.aspx.designer.cs">
       <DependentUpon>Rol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sistema\CambiasPass.aspx.cs">
+      <DependentUpon>CambiasPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sistema\CambiasPass.aspx.designer.cs">
+      <DependentUpon>CambiasPass.aspx</DependentUpon>
     </Compile>
     <Compile Include="sistema\Usuario.aspx.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>

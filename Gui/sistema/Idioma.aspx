@@ -29,6 +29,6 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">
-    <asp:Button ID="BtnModificar" runat="server" CssClass="btn btn-secondary" OnClick="Modificar_Click" />
+    <asp:Button ID="BtnModificar" runat="server" CssClass="btn btn-warning" OnClick="Modificar_Click" />
     <asp:Button ID="BtnAgregarDetalleIdioma" runat="server" CssClass="btn btn-primary" OnClick="AgregarDetalleIdioma_Click" />
 </asp:Content>

@@ -57,16 +57,15 @@ namespace Gui.produccion
         }
         protected void Editar_Click(Object sender, GridViewEditEventArgs e)
         {
-            //GridViewRow row = Grilla.Rows[e.NewEditIndex];
-            //TextBox TxtEditar = row.FindControl("TxtEditar") as TextBox;
-            //if (TxtEditar != null)
-            //    Debug.WriteLine($"editar {TxtEditar.Text}");
-            //else
-            //   Debug.WriteLine($"editar null");
+            Grilla.EditIndex = e.NewEditIndex;
+            BE.Idioma idiomaGenerado = (BE.Idioma)Session["IdiomaNuevo"];
+            CargarDatos(idiomaGenerado);
         }
         protected void Actualizar_Click(Object sender, GridViewUpdateEventArgs e)
         {
             GridViewRow row = Grilla.Rows[e.RowIndex];
+            Grilla.EditIndex = e.RowIndex;
+            Grilla.DataBind();
             TextBox TxtEditar = row.FindControl("TxtEditar") as TextBox;
             BE.Idioma idiomaGenerado = (BE.Idioma)Session["IdiomaNuevo"];
             string id = row.Cells[1].Text;
@@ -85,7 +84,16 @@ namespace Gui.produccion
         protected void Cancelar_Click(Object sender, GridViewCancelEditEventArgs e)
         {
             e.Cancel = true;
+            Grilla.EditIndex = e.RowIndex;
+            Grilla.DataBind();
             Grilla.EditIndex = -1;
+            BE.Idioma idiomaGenerado = (BE.Idioma)Session["IdiomaNuevo"];
+            CargarDatos(idiomaGenerado);
+        }
+
+        protected void CancelarBoton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/sistema/Idioma.aspx");
         }
     }
 }

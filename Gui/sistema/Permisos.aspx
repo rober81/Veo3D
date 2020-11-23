@@ -10,11 +10,11 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="CardBody" runat="server">
-    <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false"
+    <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false" OnRowDataBound="GridView_RowDataBound"
         AutoGenerateSelectButton="true">
         <SelectedRowStyle CssClass="table-success" />
         <Columns>
-            <asp:BoundField HeaderText="Id" DataField="Id" />
+            <asp:BoundField HeaderText="Id" DataField="Id"/>
             <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
         </Columns>
     </asp:GridView>
@@ -26,6 +26,6 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">
-    <asp:Button ID="BtnBaja" runat="server" CssClass="btn btn-secondary" OnClick="Baja_Click" />
-    <asp:Button ID="BtnAgregar" runat="server" CssClass="btn btn-primary" OnClick="Agregar_Click" />
+    <asp:Button ID="BtnBaja" runat="server" CssClass="btn btn-danger" OnClick="Baja_Click" />
+    <asp:Button ID="BtnAgregar" runat="server" CssClass="btn btn-success" OnClick="Agregar_Click" />
 </asp:Content>

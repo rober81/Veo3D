@@ -13,9 +13,8 @@ namespace BLL
         }
         public static List<BE.CopiaDeSeguridad> ListarArchivos()
         {
-            string[] filePaths = Directory.GetFiles(carpetaBackup, "*.BAK",
-                                 SearchOption.AllDirectories);
-            List<BE.CopiaDeSeguridad> registros = new List<BE.CopiaDeSeguridad>(); //DAL.CopiaSeguridadMapper.Listar();
+            string[] filePaths = Directory.GetFiles(carpetaBackup, "*.BAK",SearchOption.AllDirectories);
+            List<BE.CopiaDeSeguridad> registros = new List<BE.CopiaDeSeguridad>();
             foreach (var item in filePaths)
             {
                 CopiaDeSeguridad arch = new CopiaDeSeguridad(item);
