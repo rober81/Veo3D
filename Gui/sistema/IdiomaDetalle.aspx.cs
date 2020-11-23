@@ -85,7 +85,7 @@ namespace Gui.produccion
         protected void Cancelar_Click(Object sender, GridViewCancelEditEventArgs e)
         {
             e.Cancel = true;
-            Debug.WriteLine("cancelar");
+            Grilla.EditIndex = -1;
         }
     }
 }

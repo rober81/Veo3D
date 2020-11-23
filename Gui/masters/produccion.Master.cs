@@ -12,7 +12,7 @@ using System.Web.UI.WebControls;
 
 namespace Gui.masters
 {
-    public partial class produccion : System.Web.UI.MasterPage
+    public partial class Produccion : MasterPage
     {
         private Usuario usuario;
         private HttpCookie cookieIdioma;
@@ -127,6 +127,30 @@ namespace Gui.masters
                     VerificarPermiso(control);
                 }
             }
+        }
+        public void ShowToastr(Page page, string message, string title, string type = "info")
+        {
+            page.ClientScript.RegisterStartupScript(page.GetType(), "toastr_message",
+                  String.Format("toastr.{0}('{1}', '{2}');", type.ToLower(), message, title), addScriptTags: true);
+        }
+
+        public void ToastInfo(Page page, string message, string title)
+        {
+            ShowToastr(page, message, title, "info");
+        }
+        public void ToastError(Page page, string message, string title)
+        {
+            ShowToastr(page, message, title, "error");
+        }
+
+        public void ToastExito(Page page, string message, string title)
+        {
+            ShowToastr(page, message, title, "success");
+        }
+
+        public void ToastExito(Page page, string message)
+        {
+            ShowToastr(page, message, "", "success");
         }
     }
 }

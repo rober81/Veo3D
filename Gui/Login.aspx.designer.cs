@@ -7,84 +7,66 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Gui.produccion
+namespace Gui.web
 {
 
 
-    public partial class ImpresoraAbm
+    public partial class Login
     {
 
         /// <summary>
-        /// Control LblAdminImpresora.
+        /// Control LblUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblAdminImpresora;
+        protected global::System.Web.UI.WebControls.Label LblUsuario;
 
         /// <summary>
-        /// Control IID.
+        /// Control TxtUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::Gui.controles.LabelTexto IID;
+        protected global::System.Web.UI.WebControls.TextBox TxtUsuario;
 
         /// <summary>
-        /// Control INombre.
+        /// Control LblContrasenia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::Gui.controles.LabelTexto INombre;
+        protected global::System.Web.UI.WebControls.Label LblContrasenia;
 
         /// <summary>
-        /// Control IMarca.
+        /// Control TxtContrasenia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::Gui.controles.LabelTexto IMarca;
+        protected global::System.Web.UI.WebControls.TextBox TxtContrasenia;
 
         /// <summary>
-        /// Control IModelo.
+        /// Control ChkPass.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::Gui.controles.LabelTexto IModelo;
+        protected global::System.Web.UI.WebControls.CheckBox ChkPass;
 
         /// <summary>
-        /// Control toast.
+        /// Control LblRecordarPass.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label toast;
-
-        /// <summary>
-        /// Control BtnBaja.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnBaja;
-
-        /// <summary>
-        /// Control BtnCancelar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnCancelar;
+        protected global::System.Web.UI.WebControls.Label LblRecordarPass;
 
         /// <summary>
         /// Control BtnAceptar.

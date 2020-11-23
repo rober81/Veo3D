@@ -76,7 +76,7 @@
                 </div>
             </nav>
 
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <asp:ContentPlaceHolder ID="CardBody" runat="server">
             </asp:ContentPlaceHolder>
 
             <!-- Footer -->

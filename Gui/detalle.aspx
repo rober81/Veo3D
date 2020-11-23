@@ -8,7 +8,7 @@
     <link href="../bootstrap/css/shop-item.css" rel="stylesheet" />
 
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="CardBody" runat="server">
     <div class="container">
         <div class="row">
             <div class="col-lg-9">

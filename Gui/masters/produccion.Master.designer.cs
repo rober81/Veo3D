@@ -11,7 +11,7 @@ namespace Gui.masters
 {
 
 
-    public partial class produccion
+    public partial class Produccion
     {
 
         /// <summary>
@@ -357,22 +357,31 @@ namespace Gui.masters
         protected global::System.Web.UI.WebControls.Label LblUsuarioNombre;
 
         /// <summary>
-        /// Control TituloPagina2.
+        /// Control CardTitulo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder TituloPagina2;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder CardTitulo;
 
         /// <summary>
-        /// Control ContentPlaceHolder1.
+        /// Control CardBody.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder CardBody;
+
+        /// <summary>
+        /// Control CardBotones.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder CardBotones;
 
         /// <summary>
         /// Control LblCerrarSesion.

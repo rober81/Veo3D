@@ -127,6 +127,8 @@
     <Content Include="anteojos\cabecera1.png" />
     <Content Include="anteojos\cabecera2.png" />
     <Content Include="anteojos\cabecera3.png" />
+    <Content Include="content\toastr.css" />
+    <Content Include="content\toastr.min.css" />
     <Content Include="Error.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Resumen.aspx" />
@@ -1800,6 +1802,13 @@
     <Content Include="Compra.aspx" />
     <Content Include="controles\ImagenProducto.ascx" />
     <Content Include="controles\LabelTexto.ascx" />
+    <Content Include="content\toastr.scss" />
+    <Content Include="content\toastr.less" />
+    <None Include="Scripts\jquery-1.6.3-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.3.js" />
+    <Content Include="Scripts\jquery-1.6.3.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
     <Content Include="sistema\Bitacora.aspx" />
     <Content Include="sistema\CopiaSeguridad.aspx" />
     <Content Include="sistema\DigitoVerificador.aspx" />
@@ -1810,7 +1819,6 @@
     <Content Include="produccion\ImpresoraAbm.aspx" />
     <Content Include="produccion\indexProd.aspx" />
     <Content Include="sistema\ListaUsuarios.aspx" />
-    <Content Include="sistema\LogError.aspx" />
     <Content Include="produccion\Material.aspx" />
     <Content Include="produccion\MaterialAbm.aspx" />
     <Content Include="produccion\PanelCompras.aspx" />
@@ -1879,12 +1887,12 @@
       <DependentUpon>LabelTexto.ascx</DependentUpon>
     </Compile>
     <Compile Include="controles\ListaRegex.cs" />
-    <Compile Include="masters\produccion.Master.cs">
-      <DependentUpon>produccion.Master</DependentUpon>
+    <Compile Include="masters\Produccion.Master.cs">
+      <DependentUpon>Produccion.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="masters\produccion.Master.designer.cs">
-      <DependentUpon>produccion.Master</DependentUpon>
+    <Compile Include="masters\Produccion.Master.designer.cs">
+      <DependentUpon>Produccion.Master</DependentUpon>
     </Compile>
     <Compile Include="masters\ventas.Master.cs">
       <DependentUpon>ventas.Master</DependentUpon>
@@ -1962,13 +1970,6 @@
     </Compile>
     <Compile Include="sistema\ListaUsuarios.aspx.designer.cs">
       <DependentUpon>ListaUsuarios.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="sistema\LogError.aspx.cs">
-      <DependentUpon>LogError.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="sistema\LogError.aspx.designer.cs">
-      <DependentUpon>LogError.aspx</DependentUpon>
     </Compile>
     <Compile Include="produccion\Material.aspx.cs">
       <DependentUpon>Material.aspx</DependentUpon>
@@ -2131,7 +2132,7 @@
     <Content Include="bootstrap\js\bootstrap.js.map" />
     <Content Include="bootstrap\js\bootstrap.min.js.map" />
     <Content Include="masters\ventas.Master" />
-    <Content Include="masters\produccion.Master" />
+    <Content Include="masters\Produccion.Master" />
     <Content Include="bootstrap\fontawesome-free\less\brands.less" />
     <Content Include="bootstrap\fontawesome-free\less\fontawesome.less" />
     <Content Include="bootstrap\fontawesome-free\less\regular.less" />

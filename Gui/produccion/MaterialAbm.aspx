@@ -2,33 +2,29 @@
 
 <%@ Register Src="~/controles/LabelTexto.ascx" TagPrefix="uc1" TagName="LabelTexto" %>
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="TituloPagina2" runat="server">
+
+<asp:Content ID="Content2" ContentPlaceHolderID="CardTitulo" runat="server">
+    <asp:Label ID="LblAdminMaterial" runat="server"></asp:Label>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="card shadow w-50 mx-auto my-auto">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">
-                <asp:Label ID="LblAdminMaterial" runat="server"></asp:Label>
-            </h6>
-        </div>
-        <div class="card-body">
-            <div class="table-responsive-md w-75 mx-auto">
-                <uc1:labeltexto runat="server" id="MID" esvalidado="false" />
-                <uc1:labeltexto runat="server" id="MMarca" />
-                <uc1:labeltexto runat="server" id="MColor" />
-                <uc1:labeltexto runat="server" id="MTipo" />
-                <uc1:labeltexto runat="server" id="MPeso" esnumero="true" />
-                <uc1:labeltexto runat="server" id="MMetros" esnumero="true" />
-                <uc1:labeltexto runat="server" id="MStock" esnumero="true" />
-                <uc1:labeltexto runat="server" id="MCostoMetros" esdecimal="true" />
-                <asp:Button ID="BtnBaja" runat="server" Text="Cancelar" OnClick="Baja_Click" CssClass="btn btn-danger" />
-                <asp:Button ID="BtnCancelar" runat="server" Text="Cancelar" OnClick="Cancelar_Click" CssClass="btn btn-warning" />
-                <asp:Button ID="BtnAceptar" runat="server" Text="Aceptar" OnClick="Aceptar_Click" CssClass="btn btn-success" />
-                <asp:Label ID="toast" runat="server" Text=""></asp:Label>
-            </div>
-        </div>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="CardBody" runat="server">
+    <div class="table-responsive-md w-75 mx-auto">
+        <uc1:LabelTexto runat="server" ID="MID" EsValidado="false" />
+        <uc1:LabelTexto runat="server" ID="MMarca" />
+        <uc1:LabelTexto runat="server" ID="MColor" />
+        <uc1:LabelTexto runat="server" ID="MTipo" />
+        <uc1:LabelTexto runat="server" ID="MPeso" EsNumero="true" />
+        <uc1:LabelTexto runat="server" ID="MMetros" EsNumero="true" />
+        <uc1:LabelTexto runat="server" ID="MStock" EsNumero="true" />
+        <uc1:LabelTexto runat="server" ID="MCostoMetros" EsDecimal="true" />
     </div>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">
+    <asp:Button ID="BtnBaja" runat="server" Text="Cancelar" OnClick="Baja_Click" CssClass="btn btn-danger" />
+    <asp:Button ID="BtnCancelar" runat="server" Text="Cancelar" OnClick="Cancelar_Click" CssClass="btn btn-warning" />
+    <asp:Button ID="BtnAceptar" runat="server" Text="Aceptar" OnClick="Aceptar_Click" CssClass="btn btn-success" />
+    <asp:Label ID="toast" runat="server" Text=""></asp:Label>
 </asp:Content>
