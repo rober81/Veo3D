@@ -9,13 +9,25 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="CardBody" runat="server">
 
-    <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="true"
+    <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false" OnRowDataBound="GridView_RowDataBound"
         AutoGenerateSelectButton="true">
         <SelectedRowStyle CssClass="table-success" />
+        <Columns>
+            <asp:BoundField HeaderText="Id" DataField="Id"/>
+            <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
+            <asp:BoundField HeaderText="Descripción" DataField="Descripcion" />
+            <asp:BoundField HeaderText="Archivo" DataField="Archivo" />
+            <asp:BoundField HeaderText="Imagen" DataField="Imagen" />
+            <asp:BoundField HeaderText="Tiempo Impresión" DataField="TiempoImpresion" DataFormatString="{0} h" />
+            <asp:BoundField HeaderText="Cantidad Material" DataField="CantidadMaterial" DataFormatString="{0} m" />
+            <asp:BoundField HeaderText="Tipo" DataField="Tipo" />
+            <asp:BoundField HeaderText="Calificación" DataField="Calificacion" />
+            <asp:BoundField HeaderText="Precio" DataField="Precio" DataFormatString="$ {0}" />
+        </Columns>
     </asp:GridView>
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">
-    <asp:Button ID="BtnModificar" runat="server" CssClass="btn btn-secondary" OnClick="Modificar_Click" />
+    <asp:Button ID="BtnModificar" runat="server" CssClass="btn btn-warning" OnClick="Modificar_Click" />
     <asp:Button ID="BtnNuevo" runat="server" CssClass="btn btn-primary" OnClick="Nuevo_Click" />
 </asp:Content>

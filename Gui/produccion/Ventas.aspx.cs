@@ -73,5 +73,9 @@ namespace Gui.produccion
                 CargarDatos();
             }
         }
+        protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[1].Visible = false;
+        }
     }
 }

@@ -8,10 +8,12 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="CardBody" runat="server">
-    <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false" AutoGenerateSelectButton="true">
+    <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false" AutoGenerateSelectButton="true"
+        OnRowDataBound="GridView_RowDataBound">
         <SelectedRowStyle CssClass="table-success" />
         <Columns>
             <asp:BoundField HeaderText="Id" DataField="Id" />
+             <asp:BoundField HeaderText="Cliente" DataField="Usuario.NombreCompleto" />
             <asp:BoundField HeaderText="Producto" DataField="Personalizado.Producto.Nombre" />
             <asp:BoundField HeaderText="Provincia" DataField="Provincia" />
             <asp:BoundField HeaderText="Localidad" DataField="Localidad" />

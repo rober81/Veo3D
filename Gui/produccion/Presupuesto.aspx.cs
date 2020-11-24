@@ -18,12 +18,11 @@ namespace Gui.produccion
                 CargarDatos();
             }
         }
-
         private void CargarDatos()
         {
             ImpresionBLL bll = new ImpresionBLL();
             Grilla.DataSource = null;
-            Grilla.DataSource = bll.Listar().OrderBy(x => x.Impresora.Nombre).ThenBy(x => x.Prioridad).ToList();//.Where(i => i.Estado.Equals(Estados.EnviadoAImprimir));
+            Grilla.DataSource = bll.Listar().OrderBy(x => x.Prioridad).ToList();//.Where(i => i.Estado.Equals(Estados.EnviadoAImprimir));
             Grilla.DataBind();
 
             MaterialBLL mbll = new MaterialBLL();
@@ -33,7 +32,6 @@ namespace Gui.produccion
             ComboMaterial.DataSource = mbll.Listar();
             ComboMaterial.DataBind();
         }
-
         protected void Cambiar_Click(object sender, EventArgs e)
         {
             MaterialBLL mbll = new MaterialBLL();
@@ -50,7 +48,6 @@ namespace Gui.produccion
                 CargarDatos();
             }
         }
-
         protected void Calcular_Click(object sender, EventArgs e)
         {
             if (Grilla.SelectedRow != null)
@@ -59,7 +56,6 @@ namespace Gui.produccion
                
             }
         }
-
         protected void Primario_Click(object sender, EventArgs e)
         {
             ImpresionBLL impBll = new ImpresionBLL();
@@ -75,7 +71,6 @@ namespace Gui.produccion
                 CargarDatos();
             }
         }
-
         private void ActualizarStockMaterial(BE.Impresion impre)
         {
             MaterialBLL bll = new MaterialBLL();
@@ -83,6 +78,10 @@ namespace Gui.produccion
             BE.Material mat = impre.Material;
             mat.Stock = mat.Stock - Convert.ToInt32(cantidad);
             bll.Modificar(mat);
+        }
+        protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[1].Visible = false;
         }
     }
 }

@@ -11,7 +11,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="CardBody" runat="server">
     <div class="table-responsive-md w-75 mx-auto">
-        <uc1:LabelTexto runat="server" ID="IID" EsValidado="false" />
+        <uc1:LabelTexto runat="server" ID="IID" EsValidado="false" visible="false"/>
         <uc1:LabelTexto runat="server" ID="INombre" />
         <uc1:LabelTexto runat="server" ID="IMarca" />
         <uc1:LabelTexto runat="server" ID="IModelo" />

@@ -8,7 +8,7 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="CardBody" runat="server">
-    <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false"
+    <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false" OnRowDataBound="GridView_RowDataBound"
         AutoGenerateSelectButton="true">
         <SelectedRowStyle CssClass="table-success" />
         <Columns>
@@ -19,10 +19,11 @@
             <asp:BoundField HeaderText="Peso" DataField="Peso" DataFormatString="{0} kg" />
             <asp:BoundField HeaderText="Metros por Rollo" DataField="Metros" DataFormatString="{0} m" />
             <asp:BoundField HeaderText="Stock" DataField="Stock" DataFormatString="{0} m" />
+            <asp:BoundField HeaderText="Costo x Metro" DataField="CostoxMetro" DataFormatString="$ {0}" />
         </Columns>
     </asp:GridView>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">
-    <asp:Button ID="BtnModificar" runat="server" CssClass="btn btn-secondary" OnClick="Modificar_Click" />
+    <asp:Button ID="BtnModificar" runat="server" CssClass="btn btn-warning" OnClick="Modificar_Click" />
     <asp:Button ID="BtnNuevo" runat="server" CssClass="btn btn-primary" OnClick="Nuevo_Click" />
 </asp:Content>

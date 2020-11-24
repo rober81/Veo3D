@@ -26,6 +26,11 @@ namespace Gui.produccion
             Grilla.DataBind();
         }
 
+        protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[1].Visible = false;
+        }
+
         protected void Nuevo_Click(object sender, EventArgs e)
         {
             Session["ProductoId"] = null;

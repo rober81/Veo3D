@@ -11,13 +11,15 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="CardBody" runat="server">
     <div class="table-responsive mx-auto">
-        <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false" AutoGenerateSelectButton="true">
+        <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false" AutoGenerateSelectButton="true"
+            OnRowDataBound="GridView_RowDataBound">
             <SelectedRowStyle CssClass="table-success" />
             <Columns>
                 <asp:BoundField HeaderText="Id" DataField="Id" />
+                <asp:BoundField HeaderText="Cliente" DataField="Usuario.NombreCompleto" />
                 <asp:BoundField HeaderText="Producto" DataField="Personalizado.Producto.Nombre" />
                 <asp:BoundField HeaderText="Archivo" DataField="Personalizado.Archivo" />
-                <asp:BoundField HeaderText="Tiempo Impresion" DataField="Personalizado.Producto.TiempoImpresion" DataFormatString="{0} h" />
+                <asp:BoundField HeaderText="Tiempo Impresión" DataField="Personalizado.Producto.TiempoImpresion" DataFormatString="{0} h" />
                 <asp:BoundField HeaderText="Cantidad Material" DataField="Personalizado.Producto.CantidadMaterial" DataFormatString="{0} m" />
                 <asp:BoundField HeaderText="Ancho Montura" DataField="Personalizado.AnchoMontura" DataFormatString="{0} mm" />
                 <asp:BoundField HeaderText="Puente" DataField="Personalizado.Puente" DataFormatString="{0} mm" />
@@ -36,6 +38,6 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">
-    <asp:Button ID="BtnActualizarArchivo" runat="server" CssClass="btn btn-secondary" OnClick="Archivo_Click" />
+    <asp:Button ID="BtnActualizarArchivo" runat="server" CssClass="btn btn-warning" OnClick="Archivo_Click" />
     <asp:Button ID="BtnEnviarImprimir" runat="server" CssClass="btn btn-primary" OnClick="Imprimir_Click" />
 </asp:Content>

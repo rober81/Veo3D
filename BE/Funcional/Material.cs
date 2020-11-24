@@ -23,5 +23,7 @@ namespace BE
 
         public string MaterialCompleto => ToString();
 
+        public string MaterialDato => $"Marca: {Marca} Color: {Color}";
+
     }
 }

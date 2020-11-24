@@ -17,7 +17,6 @@ namespace Gui.produccion
                 CargarDatos();
             }
         }
-
         private void CargarDatos()
         {
             ImpresionBLL bll = new ImpresionBLL();
@@ -25,25 +24,22 @@ namespace Gui.produccion
             Grilla.DataSource = bll.Listar().OrderBy(x => x.Impresora.Nombre).ThenBy(x => x.Prioridad).ToList();//.Where(i => i.Estado.Equals(Estados.EnviadoAImprimir));
             Grilla.DataBind();
         }
-
         protected void Bajar_Click(object sender, EventArgs e)
         {
             if (Grilla.SelectedRow != null)
             {
-                string id = Grilla.SelectedRow.Cells[3].Text;
+                string id = Grilla.SelectedRow.Cells[1].Text;
                 Modificar(id,1);
             }
         }
-
         protected void Subir_Click(object sender, EventArgs e)
         {
             if (Grilla.SelectedRow != null)
             {
-                string id = Grilla.SelectedRow.Cells[3].Text;
+                string id = Grilla.SelectedRow.Cells[1].Text;
                 Modificar(id,0);
             }
         }
-
         private void Modificar(string id, int sumar)
         {
             ImpresionBLL impBll = new ImpresionBLL();
@@ -55,6 +51,10 @@ namespace Gui.produccion
                 nueva--;
             impBll.CambiarPrioridad(impresion,nueva);
             CargarDatos();
+        }
+        protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[1].Visible = false;
         }
     }
 }

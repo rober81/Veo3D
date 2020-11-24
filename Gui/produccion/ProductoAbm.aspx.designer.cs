@@ -42,6 +42,15 @@ namespace Gui.produccion
         protected global::Gui.controles.LabelTexto PNombre;
 
         /// <summary>
+        /// Control PDescripcion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto PDescripcion;
+
+        /// <summary>
         /// Control PArchivo.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,24 @@ namespace Gui.produccion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::Gui.controles.LabelTexto PArchivo;
+
+        /// <summary>
+        /// Control PImagen.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto PImagen;
+
+        /// <summary>
+        /// Control PTipo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto PTipo;
 
         /// <summary>
         /// Control PPrecio.
@@ -76,33 +103,6 @@ namespace Gui.produccion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::Gui.controles.LabelTexto PTiempoImpresion;
-
-        /// <summary>
-        /// Control PImagen.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::Gui.controles.LabelTexto PImagen;
-
-        /// <summary>
-        /// Control PDescripcion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::Gui.controles.LabelTexto PDescripcion;
-
-        /// <summary>
-        /// Control PTipo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::Gui.controles.LabelTexto PTipo;
 
         /// <summary>
         /// Control PCalificacion.

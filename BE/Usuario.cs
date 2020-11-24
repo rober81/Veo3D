@@ -8,7 +8,9 @@ namespace BE
         public string Login { get; set; }
         public string Correo { get; set; }
         public string Password { get; set; }
-        public string Identificador { get => Login;}
+        public string NombreCompleto { get => $"{Apellido} {Nombre}"; }
+
+        public string Identificador { get => Login; }
 
         public Usuario()
         {
@@ -24,9 +26,5 @@ namespace BE
             return Login;
         }
 
-        public string getID()
-        {
-            return Login;
-        }
     }
 }
