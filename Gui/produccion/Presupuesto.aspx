@@ -4,7 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="CardTitulo" runat="server">
-    <asp:Label ID="LblPresupuesto" runat="server"></asp:Label>
+    <asp:Label ID="LblAdmImpresion" runat="server"></asp:Label>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="CardBody" runat="server">
@@ -30,10 +30,15 @@
         <asp:Label ID="LblMaterial" runat="server" Text="Permisos" AssociatedControlID="ComboMaterial"></asp:Label>
         <asp:DropDownList ID="ComboMaterial" runat="server" CssClass="form-control" />
     </div>
+    <div class="alert alert-success" role="alert" runat="server" id="ResultadoDiv">
+        <h4 class="alert-heading">Presupuesto</h4>
+        <p><asp:Label ID="LblCalculo" runat="server" Text=""></asp:Label></p>
+    </div>
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">
     <asp:Button ID="BtnCambiarMaterial" runat="server" CssClass="btn btn btn-warning" OnClick="Cambiar_Click" />
-    <asp:Button ID="BtnCalcular" runat="server" CssClass="btn btn btn-primary" OnClick="Calcular_Click" />
+    <asp:Button ID="BtnCalcular" runat="server" CssClass="btn btn btn-info" OnClick="Calcular_Click" />
     <asp:Button ID="BtnImprimir" runat="server" CssClass="btn btn-success" OnClick="Primario_Click" />
+    <asp:Button ID="BtnTerminado" runat="server" CssClass="btn btn-primary" OnClick="Terminado_Click" />
 </asp:Content>

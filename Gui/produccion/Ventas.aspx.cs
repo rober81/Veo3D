@@ -22,7 +22,7 @@ namespace Gui.produccion
         {
             VentaBLL bll = new VentaBLL();
             Grilla.DataSource = null;
-            Grilla.DataSource = bll.Listar();
+            Grilla.DataSource = bll.Listar().Where(x => x.Estado.Equals(Estados.Nuevo)).ToList();
             Grilla.DataBind();
 
             MaterialBLL mbll = new MaterialBLL();

@@ -13,7 +13,7 @@
         <SelectedRowStyle CssClass="table-success" />
         <Columns>
             <asp:BoundField HeaderText="Id" DataField="Id" />
-             <asp:BoundField HeaderText="Cliente" DataField="Usuario.NombreCompleto" />
+            <asp:BoundField HeaderText="Cliente" DataField="Usuario.NombreCompleto" />
             <asp:BoundField HeaderText="Producto" DataField="Personalizado.Producto.Nombre" />
             <asp:BoundField HeaderText="Provincia" DataField="Provincia" />
             <asp:BoundField HeaderText="Localidad" DataField="Localidad" />

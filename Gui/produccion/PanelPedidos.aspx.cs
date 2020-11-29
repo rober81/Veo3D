@@ -20,10 +20,14 @@ namespace Gui.produccion
 
         private void CargarDatos()
         {
-            VentaBLL bll = new VentaBLL();
+            ImpresionBLL bll = new ImpresionBLL();
             Grilla.DataSource = null;
-            Grilla.DataSource = bll.Listar();
+            Grilla.DataSource = bll.Listar().Where(i => i.Estado.Equals(Estados.Finalizado)).ToList();
             Grilla.DataBind();
+        }
+        protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[1].Visible = false;
         }
     }
 }

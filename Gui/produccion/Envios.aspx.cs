@@ -22,7 +22,7 @@ namespace Gui.produccion
         {
             VentaBLL bll = new VentaBLL();
             Grilla.DataSource = null;
-            Grilla.DataSource = bll.Listar();
+            Grilla.DataSource = bll.Listar().Where(x => x.Estado.Equals(Estados.EnviarADomicilio) && ! x.Estado.Equals(Estados.EnvioDomicilio)).ToList();
             Grilla.DataBind();
         }
 
@@ -35,9 +35,9 @@ namespace Gui.produccion
             {
                 string id = Grilla.SelectedRow.Cells[1].Text;
                 Venta venta = ventaBll.Buscar(Convert.ToInt32(id));
-                if (!venta.Estado.Equals(Estados.Finalizado))
+                if (!venta.Estado.Equals(Estados.EnvioDomicilio))
                     return;
-                impBll.EnviarADomicilio(venta);
+                impBll.EnviadoADomicilio(venta);
                 CargarDatos();
             }
         }

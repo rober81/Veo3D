@@ -13,6 +13,7 @@ namespace Gui.produccion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ResultadoDiv.Visible = false;
             if (!IsPostBack)
             {
                 CargarDatos();
@@ -22,7 +23,7 @@ namespace Gui.produccion
         {
             ImpresionBLL bll = new ImpresionBLL();
             Grilla.DataSource = null;
-            Grilla.DataSource = bll.Listar().OrderBy(x => x.Prioridad).ToList();//.Where(i => i.Estado.Equals(Estados.EnviadoAImprimir));
+            Grilla.DataSource = bll.Listar().Where(i => ! i.Estado.Equals(Estados.Finalizado)).OrderBy(x => x.Prioridad).ToList();
             Grilla.DataBind();
 
             MaterialBLL mbll = new MaterialBLL();
@@ -50,10 +51,15 @@ namespace Gui.produccion
         }
         protected void Calcular_Click(object sender, EventArgs e)
         {
+            ImpresionBLL impBll = new ImpresionBLL();
             if (Grilla.SelectedRow != null)
             {
                 string id = Grilla.SelectedRow.Cells[1].Text;
-               
+                BE.Impresion seleccionado = impBll.Buscar(Convert.ToInt32(id));
+                var valor = seleccionado.Venta.Personalizado.Producto.CantidadMaterial * seleccionado.Material.CostoxMetro;
+
+                ResultadoDiv.Visible = true;
+                LblCalculo.Text = $"Tiempo: {seleccionado.Venta.Personalizado.Producto.TiempoImpresion} horas \n Valor: ${valor}.-";
             }
         }
         protected void Primario_Click(object sender, EventArgs e)
@@ -71,6 +77,23 @@ namespace Gui.produccion
                 CargarDatos();
             }
         }
+
+        protected void Terminado_Click(object sender, EventArgs e)
+        {
+            ImpresionBLL impBll = new ImpresionBLL();
+            if (Grilla.SelectedRow != null)
+            {
+                string id = Grilla.SelectedRow.Cells[1].Text;
+                BE.Impresion modificado = impBll.Buscar(Convert.ToInt32(id));
+                if (!modificado.Estado.Equals(Estados.Imprimiendo))
+                    return;
+                modificado.Estado = Estados.Finalizado;
+                impBll.Modificar(modificado);
+                impBll.EnviarADomicilio(modificado.Venta);
+                CargarDatos();
+            }
+        }
+
         private void ActualizarStockMaterial(BE.Impresion impre)
         {
             MaterialBLL bll = new MaterialBLL();

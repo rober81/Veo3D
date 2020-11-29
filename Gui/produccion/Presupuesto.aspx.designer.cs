@@ -15,13 +15,13 @@ namespace Gui.produccion
     {
 
         /// <summary>
-        /// Control LblPresupuesto.
+        /// Control LblAdmImpresion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblPresupuesto;
+        protected global::System.Web.UI.WebControls.Label LblAdmImpresion;
 
         /// <summary>
         /// Control Grilla.
@@ -51,6 +51,24 @@ namespace Gui.produccion
         protected global::System.Web.UI.WebControls.DropDownList ComboMaterial;
 
         /// <summary>
+        /// Control ResultadoDiv.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ResultadoDiv;
+
+        /// <summary>
+        /// Control LblCalculo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblCalculo;
+
+        /// <summary>
         /// Control BtnCambiarMaterial.
         /// </summary>
         /// <remarks>
@@ -76,5 +94,14 @@ namespace Gui.produccion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnImprimir;
+
+        /// <summary>
+        /// Control BtnTerminado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnTerminado;
     }
 }

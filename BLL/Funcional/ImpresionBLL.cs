@@ -40,6 +40,14 @@ namespace BLL
         {
             //Actualizo la venta avisando que fue a domicilio
             VentaBLL vbll = new VentaBLL();
+            venta.Estado = Estados.EnviarADomicilio;
+            return vbll.Modificar(venta);
+        }
+
+        public int EnviadoADomicilio(Venta venta)
+        {
+            //Actualizo la venta avisando que fue a domicilio
+            VentaBLL vbll = new VentaBLL();
             venta.Estado = Estados.EnvioDomicilio;
             return vbll.Modificar(venta);
         }

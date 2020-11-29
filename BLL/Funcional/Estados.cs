@@ -17,6 +17,7 @@ namespace BLL
         public static string Finalizado = "Finalizado";
 
         //Envios
+        public static string EnviarADomicilio = "Enviar a Domicilio";
         public static string EnvioDomicilio = "Enviado a Domicilio";
     }
 }
