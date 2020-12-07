@@ -36,6 +36,7 @@ namespace DAL
                 obj.Provincia = item["provincia"].ToString();
                 obj.Estado = item["estado"].ToString();
                 obj.Usuario = UsuarioMapper.Buscar(item["usuario"].ToString());
+                obj.CodigoPostal = item["codigoPostal"].ToString();
                 Producto param = new Producto();
                 param.Id = int.Parse(item["producto"].ToString());
                 obj.Personalizado.Producto = ProductoMapper.Buscar(param);
@@ -73,6 +74,7 @@ namespace DAL
                 obj.Provincia = item["provincia"].ToString();
                 obj.Estado = item["estado"].ToString();
                 obj.Usuario = UsuarioMapper.Buscar(item["usuario"].ToString());
+                obj.CodigoPostal = item["codigoPostal"].ToString();
                 Producto paramp = new Producto();
                 paramp.Id = int.Parse(item["producto"].ToString());
                 obj.Personalizado.Producto = ProductoMapper.Buscar(paramp);
@@ -82,7 +84,7 @@ namespace DAL
 
         private static SqlParameter[] crearParametros(Venta param)
         {
-            SqlParameter[] parametros = new SqlParameter[15];
+            SqlParameter[] parametros = new SqlParameter[16];
             parametros[0] = new SqlParameter("@id", param.Id);
             parametros[1] = new SqlParameter("@producto", param.Personalizado.Producto.Id);
             parametros[2] = new SqlParameter("@anchomontura", param.Personalizado.AnchoMontura);
@@ -98,6 +100,7 @@ namespace DAL
             parametros[12] = new SqlParameter("@estado", param.Estado);
             parametros[13] = new SqlParameter("@usuario", param.Usuario.Login);
             parametros[14] = new SqlParameter("@archivo", param.Personalizado.Archivo);
+            parametros[15] = new SqlParameter("@codigoPostal", param.CodigoPostal);
             return parametros;
         }
 

@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Produccion.Master.cs" Inherits="Gui.masters.Produccion" %>
 
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -25,6 +27,10 @@
 </head>
 <body id="page-top">
     <form id="form1" runat="server">
+
+        <asp:ScriptManager runat="server"></asp:ScriptManager>        
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" ClientIDMode="AutoID" Visible="false">  
+        </rsweb:ReportViewer>
         <!-- Page Wrapper -->
         <div id="wrapper">
 

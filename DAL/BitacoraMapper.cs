@@ -19,7 +19,8 @@ namespace DAL
             foreach (DataRow item in tabla.Rows)
             {
                 obj = new BE.Bitacora();
-                obj.Usuario = new BE.Usuario(item["usuario"].ToString());
+                obj.Usuario = new BE.Usuario();
+                obj.Usuario.Login = item["usuario"].ToString();
                 obj.Fecha = DateTime.Parse(item["fecha"].ToString());
                 obj.Tabla = item["tabla"].ToString();
                 obj.Accion = item["accion"].ToString();

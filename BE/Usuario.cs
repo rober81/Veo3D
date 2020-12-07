@@ -2,6 +2,7 @@ using System;
 
 namespace BE
 {
+    [Serializable]
     public class Usuario : Persona, iDigitoVerificador
     {
 
@@ -11,15 +12,6 @@ namespace BE
         public string NombreCompleto { get => $"{Apellido} {Nombre}"; }
 
         public string Identificador { get => Login; }
-
-        public Usuario()
-        {
-        }
-
-        public Usuario(string login)
-        {
-            this.Login = login;
-        }
 
         public override string ToString()
         {

@@ -1,6 +1,7 @@
 ﻿using BE;
 using BLL;
 using Gui.controles;
+using Microsoft.Reporting.WebForms;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -151,6 +152,44 @@ namespace Gui.masters
         public void ToastExito(Page page, string message)
         {
             ShowToastr(page, message, "", "success");
+        }
+
+        public void CrearPDF<T>(string fileName, string reporte, IEnumerable<T> datasource)
+        {
+            CreateReport<T>("PDF", fileName, reporte, datasource);
+        }
+
+        public void CrearXLS<T>(string fileName, string reporte, IEnumerable<T> datasource)
+        {
+            CreateReport<T>("XLS", fileName, reporte, datasource); 
+        }
+
+        public void CreateReport<T>(string tipo, string fileName, string reporte, IEnumerable<T> datasource)
+        {
+
+            Warning[] warnings;
+            string[] streamIds;
+            string mimeType = string.Empty;
+            string encoding = string.Empty;
+            string extension = string.Empty;
+
+            // Setup the report viewer object and get the array of bytes
+            ReportViewer viewer = new ReportViewer();
+            viewer.ProcessingMode = ProcessingMode.Local;
+            viewer.LocalReport.ReportPath = reporte;
+            viewer.LocalReport.DataSources.Clear();
+            //EL nombre del/los datasource usados en la creacion del reporte, debe ser respetado, porque figura en el XML
+            viewer.LocalReport.DataSources.Add(new ReportDataSource("Dataset", datasource));
+
+            byte[] bytes = viewer.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
+
+            // Now that you have all the bytes representing the PDF report, buffer it and send it to the client.
+            Response.Buffer = true;
+            Response.Clear();
+            Response.ContentType = mimeType;
+            Response.AddHeader("content-disposition", "attachment; filename=" + fileName + "." + extension);
+            Response.BinaryWrite(bytes); // create the file
+            Response.Flush();
         }
     }
 }

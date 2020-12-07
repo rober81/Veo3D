@@ -5,6 +5,7 @@ using System.Text;
 
 namespace BE
 {
+    [Serializable]
     public class ProductoPersonalizado
     {
         public Producto Producto { get; set; }

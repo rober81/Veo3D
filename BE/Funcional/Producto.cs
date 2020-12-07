@@ -4,6 +4,7 @@ using System.Text;
 
 namespace BE
 {
+    [Serializable]
     public class Producto : iDigitoVerificador
     {
         public int Id { get; set; }
