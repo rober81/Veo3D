@@ -129,30 +129,6 @@ namespace Gui.masters
                 }
             }
         }
-        public void ShowToastr(Page page, string message, string title, string type = "info")
-        {
-            page.ClientScript.RegisterStartupScript(page.GetType(), "toastr_message",
-                  String.Format("toastr.{0}('{1}', '{2}');", type.ToLower(), message, title), addScriptTags: true);
-        }
-
-        public void ToastInfo(Page page, string message, string title)
-        {
-            ShowToastr(page, message, title, "info");
-        }
-        public void ToastError(Page page, string message, string title)
-        {
-            ShowToastr(page, message, title, "error");
-        }
-
-        public void ToastExito(Page page, string message, string title)
-        {
-            ShowToastr(page, message, title, "success");
-        }
-
-        public void ToastExito(Page page, string message)
-        {
-            ShowToastr(page, message, "", "success");
-        }
 
         public void CrearPDF<T>(string fileName, string reporte, IEnumerable<T> datasource)
         {
@@ -191,5 +167,6 @@ namespace Gui.masters
             Response.BinaryWrite(bytes); // create the file
             Response.Flush();
         }
+
     }
 }

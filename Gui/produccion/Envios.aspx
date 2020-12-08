@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/produccion.Master" AutoEventWireup="true" CodeBehind="Envios.aspx.cs" Inherits="Gui.produccion.Envios" %>
 
+<%@ Register Src="~/controles/Mensaje.ascx" TagPrefix="uc1" TagName="Mensaje" %>
+
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -29,4 +32,5 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">
     <asp:Button ID="BtnGenerarEtiquetas" runat="server" CssClass="btn btn-primary" OnClick="Generar_Click" />
     <asp:Button ID="BtnEnviarDomicilio" runat="server" CssClass="btn btn-success" OnClick="Aceptar_Click" />
+    <uc1:Mensaje runat="server" id="Mensaje" />
 </asp:Content>

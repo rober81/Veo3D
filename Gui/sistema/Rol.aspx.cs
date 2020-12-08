@@ -12,7 +12,6 @@ namespace Gui.produccion
     public partial class Rol : System.Web.UI.Page
     {
         GestionarPermisos bll = new GestionarPermisos();
-        List<BE.Permiso> lista = null;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

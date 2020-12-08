@@ -78,12 +78,14 @@ namespace Gui.produccion
                 {
                     nuevo.Id = 0;
                     bll.Guardar(nuevo);
-                    (this.Master as masters.Produccion).ToastExito(this, "Operación Exitosa!!");
+                    Mensaje.ResultadoExito("Operación Exitosa.");
+                    //(Master as masters.Produccion).ResultadoExito("", "Operación Exitosa.");
                 } else
                 {
                     nuevo.Id = MID.getTextoInt();
                     bll.Modificar(nuevo);
-                    (this.Master as masters.Produccion).ToastExito(this, "Operación Exitosa!!");
+                    Mensaje.ResultadoExito("Operación Exitosa.");
+                    //(Master as masters.Produccion).ResultadoExito("", "Operación Exitosa.");
                 }
                 //Response.Redirect("/produccion/Material.aspx");
             }

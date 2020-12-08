@@ -1,7 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Produccion.Master.cs" Inherits="Gui.masters.Produccion" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
-
 <!DOCTYPE html>
 
 <html>
@@ -28,8 +27,8 @@
 <body id="page-top">
     <form id="form1" runat="server">
 
-        <asp:ScriptManager runat="server"></asp:ScriptManager>        
-        <rsweb:ReportViewer ID="ReportViewer1" runat="server" ClientIDMode="AutoID" Visible="false">  
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" ClientIDMode="AutoID" Visible="false">
         </rsweb:ReportViewer>
         <!-- Page Wrapper -->
         <div id="wrapper">
@@ -356,7 +355,7 @@
                             <div class="card-header py-3">
                                 <h6 class="m-0 font-weight-bold text-primary">
                                     <asp:ContentPlaceHolder ID="CardTitulo" runat="server">
-                                    </asp:ContentPlaceHolder>   
+                                    </asp:ContentPlaceHolder>
                                 </h6>
                             </div>
                             <div class="card-body">
@@ -364,8 +363,8 @@
                                     <asp:ContentPlaceHolder ID="CardBody" runat="server">
                                     </asp:ContentPlaceHolder>
                                 </div>
-                                <div class="">
-                                     <asp:ContentPlaceHolder ID="CardBotones" runat="server" >
+                                <div>
+                                    <asp:ContentPlaceHolder ID="CardBotones" runat="server">
                                     </asp:ContentPlaceHolder>
                                 </div>
                             </div>
@@ -416,7 +415,8 @@
                             <asp:Label ID="LblCancelar" runat="server" Text="Label"></asp:Label>
                         </button>
                         <asp:LinkButton ID="LinkCerrarSesion" OnClick="LinkCerrar_Click" CssClass="btn btn-primary" runat="server">
-                            <asp:Label ID="LblCerrar" runat="server" Text="Label" CssClass="btn btn-primary"></asp:Label></asp:LinkButton>
+                            <asp:Label ID="LblCerrar" runat="server" Text="Label" CssClass="btn btn-primary"></asp:Label>
+                        </asp:LinkButton>
 
                     </div>
                 </div>
@@ -429,7 +429,5 @@
     <script src="/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="/bootstrap/js/jquery-easing/jquery.easing.min.js"></script>
     <script src="/bootstrap/js/sb-admin-2.min.js"></script>
-    <link href="toastr.css" rel="stylesheet"/>
-    <script src="toastr.js"></script>
 </body>
 </html>

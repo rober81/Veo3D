@@ -47,10 +47,10 @@ namespace Gui.produccion
         protected void Generar_Click(object sender, EventArgs e)
         {
             VentaBLL ventaBll = new VentaBLL();
-            string id = Grilla.SelectedRow.Cells[1].Text;
-            Venta venta = ventaBll.Buscar(Convert.ToInt32(id));
+            var datasource = ventaBll.Listar().Where(x => x.Estado.Equals(Estados.EnviarADomicilio) && !x.Estado.Equals(Estados.EnvioDomicilio)).ToList();
             var master = Master as masters.Produccion;
-            master.CrearPDF<Venta>("Etiquetas.pdf", @"Reportes\ReporteEtiqueta.rdlc", ventaBll.Listar().Where(x => x.Estado.Equals(Estados.EnviarADomicilio) && !x.Estado.Equals(Estados.EnvioDomicilio)).ToList());
+            master.CrearPDF<Venta>("Etiquetas.pdf", @"Reportes\ReporteEtiqueta.rdlc", datasource);
+            Mensaje.ResultadoExito("Operación Exitosa.");
         }
 
         protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
