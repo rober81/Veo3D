@@ -141,12 +141,12 @@ namespace Gui.produccion
         protected global::System.Web.UI.WebControls.Button BtnAceptar;
 
         /// <summary>
-        /// Control toast.
+        /// Control Mensaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label toast;
+        protected global::Gui.controles.Mensaje Mensaje;
     }
 }

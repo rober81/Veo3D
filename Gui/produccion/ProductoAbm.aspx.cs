@@ -80,17 +80,21 @@ namespace Gui.produccion
                 nuevo.Tipo = PTipo.Texto;
                 nuevo.Calificacion = PCalificacion.getTextoInt();
                 nuevo.Precio = Convert.ToDecimal(PPrecio.Texto);
+                int salida;
                 if (string.IsNullOrEmpty(PID.Texto))
                 {
                     nuevo.Id = 0;
-                    bll.Guardar(nuevo);
+                    salida = bll.Guardar(nuevo);
                 }
                 else
                 {
                     nuevo.Id = PID.getTextoInt();
-                    bll.Modificar(nuevo);
+                    salida = bll.Modificar(nuevo);
                 }
-                Response.Redirect("/produccion/Producto.aspx");
+                if (salida == 1)
+                    Response.Redirect("/produccion/Producto.aspx");
+                else
+                    Mensaje.ErrorMsg();
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿using BE;
 using BLL;
 using Gui.controles;
+using Microsoft.Reporting.WebForms;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -128,29 +129,35 @@ namespace Gui.masters
                 }
             }
         }
-        public void ShowToastr(Page page, string message, string title, string type = "info")
+
+        public void CrearReporte<T>(string tipo, string fileName, IEnumerable<T> datasource)
         {
-            page.ClientScript.RegisterStartupScript(page.GetType(), "toastr_message",
-                  String.Format("toastr.{0}('{1}', '{2}');", type.ToLower(), message, title), addScriptTags: true);
+            string reporte = $@"Reportes\{fileName}.rdlc";
+
+            Warning[] warnings;
+            string[] streamIds;
+            string mimeType = string.Empty;
+            string encoding = string.Empty;
+            string extension = string.Empty;
+
+            // Setup the report viewer object and get the array of bytes
+            ReportViewer viewer = new ReportViewer();
+            viewer.ProcessingMode = ProcessingMode.Local;
+            viewer.LocalReport.ReportPath = reporte;
+            viewer.LocalReport.DataSources.Clear();
+            //EL nombre del/los datasource usados en la creacion del reporte, debe ser respetado, porque figura en el XML
+            viewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", datasource));
+
+            byte[] bytes = viewer.LocalReport.Render(tipo == "PDF" ? tipo: "Excel", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
+
+            // Now that you have all the bytes representing the PDF report, buffer it and send it to the client.
+            Response.Buffer = true;
+            Response.Clear();
+            Response.ContentType = mimeType;
+            Response.AddHeader("content-disposition", "attachment; filename=" + fileName + "." + extension);
+            Response.BinaryWrite(bytes); // create the file
+            Response.Flush();
         }
 
-        public void ToastInfo(Page page, string message, string title)
-        {
-            ShowToastr(page, message, title, "info");
-        }
-        public void ToastError(Page page, string message, string title)
-        {
-            ShowToastr(page, message, title, "error");
-        }
-
-        public void ToastExito(Page page, string message, string title)
-        {
-            ShowToastr(page, message, title, "success");
-        }
-
-        public void ToastExito(Page page, string message)
-        {
-            ShowToastr(page, message, "", "success");
-        }
     }
 }

@@ -43,12 +43,16 @@ namespace Gui.produccion
             per.Id = Convert.ToInt32(id);
             try
             {
-                bll.Borrar(per);
+                int salida = bll.Borrar(per);
                 CargarDatos();
+                if (salida > 0)
+                    Mensaje.Exito();
+                else
+                    Mensaje.ErrorMsg();
             }
             catch (Exception)
             {
-
+                Mensaje.ErrorMsg();
             }
         }
         protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -69,8 +73,12 @@ namespace Gui.produccion
                     lista = bll.ListarPerfiles();
                     padrePermiso = lista.FirstOrDefault( p => p.Nombre == ComboPermisos.SelectedValue);
                 }
-                bll.Insertar(per, padrePermiso != null? padrePermiso.Id:0);
+                int salida = bll.Insertar(per, padrePermiso != null? padrePermiso.Id:0);
                 CargarDatos();
+                if (salida > 0)
+                    Mensaje.Exito();
+                else
+                    Mensaje.ErrorMsg();
             }
         }
     }

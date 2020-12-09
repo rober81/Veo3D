@@ -46,11 +46,12 @@ namespace Gui.produccion
 
         protected void Generar_Click(object sender, EventArgs e)
         {
-            VentaBLL ventaBll = new VentaBLL();
-            var datasource = ventaBll.Listar().Where(x => x.Estado.Equals(Estados.EnviarADomicilio) && !x.Estado.Equals(Estados.EnvioDomicilio)).ToList();
+           string nombre = "Etiqueta";
+            VentaBLL bll = new VentaBLL();
+            var datasource = bll.Listar().Where(x => x.Estado.Equals(Estados.EnviarADomicilio) && !x.Estado.Equals(Estados.EnvioDomicilio)).ToList();
+
             var master = Master as masters.Produccion;
-            master.CrearPDF<Venta>("Etiquetas.pdf", @"Reportes\ReporteEtiqueta.rdlc", datasource);
-            Mensaje.ResultadoExito("Operación Exitosa.");
+            master.CrearReporte<BE.Venta>("PDF", nombre, datasource);
         }
 
         protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)

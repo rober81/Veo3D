@@ -34,7 +34,9 @@ namespace Gui.produccion
 
         protected void Generar_Click(object sender, EventArgs e)
         {
-            bll.GuardarDigitoVerificador(ComboTabla.SelectedValue);
+            int salida = bll.GuardarDigitoVerificador(ComboTabla.SelectedValue);
+            Mensaje.Exito();
+            CargarDatos();
         }
         protected void Verificar_Click(object sender, EventArgs e)
         {

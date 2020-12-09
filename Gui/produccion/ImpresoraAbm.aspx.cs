@@ -62,17 +62,21 @@ namespace Gui.produccion
                 nuevo.Nombre = INombre.Texto;
                 nuevo.Marca = IMarca.Texto;
                 nuevo.Modelo = IModelo.Texto;
+                int salida;
                 if (string.IsNullOrEmpty(IID.Texto))
                 {
                     nuevo.Id = 0;
-                    bll.Guardar(nuevo);
+                    salida = bll.Guardar(nuevo);
                 }
                 else
                 {
                     nuevo.Id = IID.getTextoInt();
-                    bll.Modificar(nuevo);
+                    salida = bll.Modificar(nuevo);
                 }
-                Response.Redirect("/produccion/Impresora.aspx");
+                if (salida == 1)
+                    Response.Redirect("/produccion/Impresora.aspx");
+                else
+                    Mensaje.ErrorMsg();
             }
         }
     }

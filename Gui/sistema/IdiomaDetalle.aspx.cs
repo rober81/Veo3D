@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -35,6 +36,7 @@ namespace Gui.produccion
 
         protected void Guardar_Click(object sender, EventArgs e)
         {
+            int salida = 0;
             if (Session["IdiomaNuevo"] != null)
             {
                 BE.Idioma idiomaGenerado = (BE.Idioma)Session["IdiomaNuevo"];
@@ -46,8 +48,12 @@ namespace Gui.produccion
                         Clave = item.Key,
                         Texto = item.Value
                     };
-                    GestionarIdioma.getInstance().insertarDetalle(detalle);
+                    salida = GestionarIdioma.getInstance().insertarDetalle(detalle);
                 }
+                if (salida > 0)
+                    Response.Redirect("/sistema/Idioma.aspx");
+                else
+                    Mensaje.ErrorMsg();
             }
         }
 
@@ -67,13 +73,28 @@ namespace Gui.produccion
             Grilla.EditIndex = e.RowIndex;
             Grilla.DataBind();
             TextBox TxtEditar = row.FindControl("TxtEditar") as TextBox;
-            BE.Idioma idiomaGenerado = (BE.Idioma)Session["IdiomaNuevo"];
-            string id = row.Cells[1].Text;
-            //string id = Grilla.DataKeys[gvrow.RowIndex][1].ToString();
-            idiomaGenerado.Detalle[id] = TxtEditar.Text;
-            Session["IdiomaNuevo"] = idiomaGenerado;
-            Grilla.EditIndex = -1;
-            CargarDatos(idiomaGenerado);
+            if (string.IsNullOrWhiteSpace(TxtEditar.Text))
+            {
+                //TxtEditar.BorderColor = Color.Red;
+                // TxtEditar.BorderWidth = 3;
+                e.Cancel = true;
+                Grilla.EditIndex = e.RowIndex;
+                Grilla.DataBind();
+                Grilla.EditIndex = -1;
+                BE.Idioma idiomaGenerado = (BE.Idioma)Session["IdiomaNuevo"];
+                CargarDatos(idiomaGenerado);
+            }
+            else
+            {
+                BE.Idioma idiomaGenerado = (BE.Idioma)Session["IdiomaNuevo"];
+                string id = row.Cells[1].Text;
+                idiomaGenerado.Detalle[id] = TxtEditar.Text;
+                Session["IdiomaNuevo"] = idiomaGenerado;
+                TxtEditar.BorderColor = ColorTranslator.FromHtml("#CED4DA");
+                TxtEditar.BorderWidth = 1;
+                Grilla.EditIndex = -1;
+                CargarDatos(idiomaGenerado);
+            }
         }
 
         protected void Actualizado_Click(Object sender, GridViewUpdatedEventArgs e)

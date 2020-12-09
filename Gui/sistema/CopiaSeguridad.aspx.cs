@@ -42,18 +42,18 @@ namespace Gui.produccion
                     int res = BLL.GestionarCopiaDeSeguridad.Backup(copia);
                     if (res == 0 && File.Exists(copia.Nombre))
                     {
-                        //Mensaje("msgBackOk");
                         CargarDatos();
+                        Mensaje.Exito();
                     }
                     else
                     {
-                        //Mensaje("msgBackNo");
+                        Mensaje.ErrorMsg();
                     }
                 }
                 catch (Exception ex)
                 {
                     GestionarError.loguear(ex.ToString());
-                    //Mensaje("msgBackNo");
+                    Mensaje.ErrorMsg();
                 }
             }
             LtNombreArchivo.Texto = "Veo3D_DB_" + DateTime.Now.ToString("dd-MM-yyyy-hhmmss") + ".BAK";
@@ -75,21 +75,19 @@ namespace Gui.produccion
                         BE.CopiaDeSeguridad copia = seleccionado;
                         if (File.Exists(copia.Nombre))
                         {
-                            //BLL.GestionarCopiaDeSeguridad.Restaurar(copia);
-                            //Mensaje("msgRestoreOk");
-                            //BLL.GestionarSesion.getInstance().cerrarSesion();
+                            Mensaje.Exito();
                             Response.Redirect("/index.aspx");
                         }
                         else
                         {
-                            //Mensaje("msgErrorArchivoNoExiste", "msgError");
+                            Mensaje.ErrorMsg();
                         }
                     }
                 }
                 catch (Exception ex)
                 {
                     GestionarError.loguear(ex.ToString());
-                    //Mensaje("msgRestoreNo", "msgError");
+                    Mensaje.ErrorMsg();
                 }
             }
         }

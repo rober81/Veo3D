@@ -22,6 +22,6 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">
-    <asp:Button ID="BtnModificar" runat="server" CssClass="btn btn-warning" OnClick="Modificar_Click" />
-    <asp:Button ID="BtnNuevo" runat="server" CssClass="btn btn-primary" OnClick="Nuevo_Click" />
+    <asp:Button ID="BtnModificar" runat="server" CssClass="btn btn-warning m-1" OnClick="Modificar_Click" />
+    <asp:Button ID="BtnNuevo" runat="server" CssClass="btn btn-primary m-1" OnClick="Nuevo_Click" />
 </asp:Content>

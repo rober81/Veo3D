@@ -74,20 +74,20 @@ namespace Gui.produccion
                 nuevo.Metros = MMetros.getTextoInt();
                 nuevo.Stock = MStock.getTextoInt();
                 nuevo.CostoxMetro = MCostoMetros.getTextoDecimal();
+                int salida;
                 if (string.IsNullOrEmpty(MID.Texto))
                 {
                     nuevo.Id = 0;
-                    bll.Guardar(nuevo);
-                    Mensaje.ResultadoExito("Operación Exitosa.");
-                    //(Master as masters.Produccion).ResultadoExito("", "Operación Exitosa.");
+                    salida = bll.Guardar(nuevo);
                 } else
                 {
                     nuevo.Id = MID.getTextoInt();
-                    bll.Modificar(nuevo);
-                    Mensaje.ResultadoExito("Operación Exitosa.");
-                    //(Master as masters.Produccion).ResultadoExito("", "Operación Exitosa.");
+                    salida = bll.Modificar(nuevo);
                 }
-                //Response.Redirect("/produccion/Material.aspx");
+                if (salida == 1)
+                    Response.Redirect("/produccion/Material.aspx");
+                else
+                    Mensaje.ErrorMsg();
             }
         }
     }

@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/produccion.Master" AutoEventWireup="true" CodeBehind="CopiaSeguridad.aspx.cs" Inherits="Gui.produccion.CopiaSeguridad" %>
 
 <%@ Register Src="~/controles/LabelTexto.ascx" TagPrefix="uc1" TagName="LabelTexto" %>
+<%@ Register Src="~/controles/Mensaje.ascx" TagPrefix="uc1" TagName="Mensaje" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -18,6 +20,7 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">
-    <asp:Button ID="BtnRestaurar" runat="server" CssClass="btn btn-danger" OnClick="BtnRestaurar_Click" />
-    <asp:Button ID="BtnCrearCopia" runat="server" CssClass="btn btn-success" OnClick="BtnCrear_Click" />
+    <asp:Button ID="BtnRestaurar" runat="server" CssClass="btn btn-danger m-1" OnClick="BtnRestaurar_Click" />
+    <asp:Button ID="BtnCrearCopia" runat="server" CssClass="btn btn-success m-1" OnClick="BtnCrear_Click" />
+    <uc1:Mensaje runat="server" ID="Mensaje" />
 </asp:Content>

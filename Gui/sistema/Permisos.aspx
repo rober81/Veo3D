@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/produccion.Master" AutoEventWireup="true" CodeBehind="Permisos.aspx.cs" Inherits="Gui.produccion.Permisos" %>
 
 <%@ Register Src="~/controles/LabelTexto.ascx" TagPrefix="uc1" TagName="LabelTexto" %>
+<%@ Register Src="~/controles/Mensaje.ascx" TagPrefix="uc1" TagName="Mensaje" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -26,6 +28,7 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">
-    <asp:Button ID="BtnBaja" runat="server" CssClass="btn btn-danger" OnClick="Baja_Click" />
-    <asp:Button ID="BtnAgregar" runat="server" CssClass="btn btn-success" OnClick="Agregar_Click" />
+    <asp:Button ID="BtnBaja" runat="server" CssClass="btn btn-danger m-1" OnClick="Baja_Click" />
+    <asp:Button ID="BtnAgregar" runat="server" CssClass="btn btn-success m-1" OnClick="Agregar_Click" />
+    <uc1:Mensaje runat="server" ID="Mensaje" />
 </asp:Content>

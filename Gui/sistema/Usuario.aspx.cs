@@ -27,12 +27,15 @@ namespace Gui.produccion
             }
             if (!IsPostBack)
             {
-                CargarDatos();
-                LblModificarUsuario.Visible = true;
-                LblContrasenia.Visible = false;
-                LblContraseniaRepetir.Visible = false;
-                LblContrasenia.EsValidado = false;
-                LblContraseniaRepetir.EsValidado = false;
+                if (usr != null)
+                {
+                    CargarDatos();
+                    LblModificarUsuario.Visible = true;
+                    LblContrasenia.Visible = false;
+                    LblContraseniaRepetir.Visible = false;
+                    LblContrasenia.EsValidado = false;
+                    LblContraseniaRepetir.EsValidado = false;
+                }
             }
         }
 
@@ -78,13 +81,17 @@ namespace Gui.produccion
                 usr2.Nombre = INombre.Texto;
                 usr2.Apellido = LblApellido.Texto;
                 usr2.Dni = LblDni.getTextoInt();
+                int salida;
                 if (usr == null)
-                    GestionarUsuario.Guardar(usr2);
+                    salida = GestionarUsuario.Guardar(usr2);
                 else
                 {
-                    GestionarUsuario.Modificar(usr2, true);
+                    salida = GestionarUsuario.Modificar(usr2, true);
                 }
-                Response.Redirect("/sistema/ListaUsuarios.aspx");
+                if (salida == 1)
+                    Response.Redirect("/sistema/ListaUsuarios.aspx");
+                else
+                    Mensaje.ErrorMsg();
             }
         }
     }

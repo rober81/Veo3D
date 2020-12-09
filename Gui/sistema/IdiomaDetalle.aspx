@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/produccion.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="IdiomaDetalle.aspx.cs" Inherits="Gui.produccion.IdiomaDetalle" %>
 
+<%@ Register Src="~/controles/Mensaje.ascx" TagPrefix="uc1" TagName="Mensaje" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CardTitulo" runat="server">
@@ -34,6 +37,7 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">
-    <asp:Button ID="BtnCancelar" runat="server" Text="Cancelar" OnClick="CancelarBoton_Click" CssClass="btn btn btn-secondary" />
-    <asp:Button ID="BtnGuardar" runat="server" CssClass="btn btn-success" OnClick="Guardar_Click" />
+    <asp:Button ID="BtnCancelar" runat="server" Text="Cancelar" OnClick="CancelarBoton_Click" CssClass="btn btn btn-secondary m-1" />
+    <asp:Button ID="BtnGuardar" runat="server" CssClass="btn btn-success m-1" OnClick="Guardar_Click" />
+    <uc1:Mensaje runat="server" ID="Mensaje" />
 </asp:Content>

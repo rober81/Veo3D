@@ -49,16 +49,24 @@ namespace Gui.produccion
             string id = Grilla.SelectedRow.Cells[1].Text;
             BE.Usuario usr = new BE.Usuario();
             usr.Login = id;
-            bll.BorrarUsuarioPermiso(usr);
+            int salida = bll.BorrarUsuarioPermiso(usr);
             CargarDatos();
+            if (salida == 1)
+                Mensaje.Exito();
+            else
+                Mensaje.ErrorMsg();
         }
         protected void Agregar_Click(object sender, EventArgs e)
         {
                 BE.Permiso per = bll.ListarPerfiles().First(p => p.Nombre.Equals(ComboPermisos.SelectedValue));
                 BE.Usuario usr = new BE.Usuario();
                 usr.Login = ComboUsuarios.SelectedValue;  
-                bll.GuardarUsuarioPermiso(usr, per);
+                int salida = bll.GuardarUsuarioPermiso(usr, per);
                 CargarDatos();
+                if (salida == 1)
+                    Mensaje.Exito();
+                else
+                    Mensaje.ErrorMsg();
         }
     }
 }

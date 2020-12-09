@@ -45,5 +45,23 @@ namespace Gui.produccion
                 Response.Redirect("/produccion/MaterialAbm.aspx");
             }
         }
+
+        protected void XLS_Click(object sender, EventArgs e)
+        {
+            Exportar("XLS");
+        }
+        protected void PDF_Click(object sender, EventArgs e)
+        {
+            Exportar("PDF");
+        }
+        private void Exportar(string tipo)
+        {
+            string nombre = "Material";
+            MaterialBLL bll = new MaterialBLL();
+            var datasource = bll.Listar();
+
+            var master = Master as masters.Produccion;
+            master.CrearReporte<BE.Material>(tipo,nombre, datasource);
+        }
     }
 }

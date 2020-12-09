@@ -97,7 +97,6 @@
                             <asp:HyperLink ID="LinkPrecios" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Precios.aspx" runat="server"></asp:HyperLink>
                             <asp:HyperLink ID="LinkImpresoras" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Impresora.aspx" runat="server"></asp:HyperLink>
                             <asp:HyperLink ID="LinkMateriales" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Material.aspx" runat="server"></asp:HyperLink>
-                            <asp:HyperLink ID="LinkReportes" Visible="false" CssClass="collapse-item" NavigateUrl="/produccion/Reportes.aspx" runat="server"></asp:HyperLink>
                         </div>
                     </div>
                 </li>

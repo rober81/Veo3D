@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/produccion.Master" AutoEventWireup="true" CodeBehind="DigitoVerificador.aspx.cs" Inherits="Gui.produccion.DigitoVerificador" %>
 
+<%@ Register Src="~/controles/Mensaje.ascx" TagPrefix="uc1" TagName="Mensaje" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CardTitulo" runat="server">
@@ -15,8 +18,9 @@
         <asp:DropDownList ID="ComboTabla" runat="server" CssClass="form-control" />
         <br />
         <div class="">
-            <asp:Button ID="BtnGenerarDigito" runat="server" CssClass="btn btn-danger" OnClick="Generar_Click" />
-            <asp:Button ID="BtnVerificarDigito" runat="server" CssClass="btn btn-success" OnClick="Verificar_Click" />
+            <asp:Button ID="BtnGenerarDigito" runat="server" CssClass="btn btn-danger m-1" OnClick="Generar_Click" />
+            <asp:Button ID="BtnVerificarDigito" runat="server" CssClass="btn btn-success m-1" OnClick="Verificar_Click" />
+            <uc1:Mensaje runat="server" ID="Mensaje" />
         </div>
     </div>
     <asp:TextBox ID="textboxlog" runat="server" TextMode="MultiLine" ReadOnly="true" Height="220" Width="800"></asp:TextBox>
