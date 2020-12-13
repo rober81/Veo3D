@@ -56,8 +56,11 @@ namespace BLL
             return lista;
         }
 
-            public bool Buscar(List<iPermiso> permisos, string nombre)
+        public bool Buscar(string nombre)
         {
+            List<iPermiso> permisos = GestionarSesion.getInstance().Permisos;
+            if (permisos == null)
+                return false;
             foreach (var item in permisos)
             {
                 if (item.Nombre == nombre)
@@ -85,13 +88,21 @@ namespace BLL
             return null;
         }
 
+        public bool TieneAdmin()
+        {
+            List<iPermiso> permisos = GestionarSesion.getInstance().Permisos.Where(x => ! x.Nombre.Equals("Cliente")).ToList();
+            if (permisos.Count > 0)
+                    return true;
+            return false;
+        }
+
         public int GuardarUsuarioPermiso(Usuario usr, iPermiso per)
         {
             int res = 0;
-            res += mapper.BorrarUsuarioPermiso(usr);
+            //res += mapper.BorrarUsuarioPermiso(usr);
             res += mapper.GuardarUsuarioPermiso(usr, per);
 
-            Bitacora("Insertar", usr);
+            Bitacora("Insertar Permiso", usr);
             return res;
         }
 

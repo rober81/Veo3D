@@ -96,6 +96,24 @@ namespace Gui.produccion
         protected global::Gui.controles.LabelTexto LblDni;
 
         /// <summary>
+        /// Control LblPermisosDefault.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblPermisosDefault;
+
+        /// <summary>
+        /// Control ComboPermisos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ComboPermisos;
+
+        /// <summary>
         /// Control BtnCancelar.
         /// </summary>
         /// <remarks>

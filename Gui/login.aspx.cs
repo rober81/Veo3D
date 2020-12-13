@@ -32,10 +32,8 @@ namespace Gui.web
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            //TxtUsuario.Text = "administrador";
-            //TxtContrasenia.Text = "administrador";
             if (!string.IsNullOrWhiteSpace(TxtUsuario.Text) && !string.IsNullOrWhiteSpace(TxtContrasenia.Text)){
-                GestionarSesion.getInstance().iniciarSesion(TxtUsuario.Text, TxtContrasenia.Text);
+                GestionarSesion.getInstance().IniciarSesion(TxtUsuario.Text, TxtContrasenia.Text);
                 Usuario logueado = GestionarSesion.getInstance().Usuario;
                 if (logueado != null)
                 {

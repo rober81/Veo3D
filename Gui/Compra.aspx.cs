@@ -23,9 +23,12 @@ namespace Gui
                 }
 
             }
-            bool logueado = Session["Usuario"] == null;
-            LblNoLogueado.Visible = logueado;
-            BtnMercadopago.Visible = !logueado;
+            bool logueado = GestionarSesion.getInstance().Usuario != null;
+            GestionarPermisos permisosbll = new GestionarPermisos();
+            bool permisoCliente = permisosbll.Buscar("Cliente");
+            LblNoLogueado.Visible = !logueado;
+            LblNoLogueadoCliente.Visible = logueado && !permisoCliente;
+            BtnMercadopago.Visible = logueado && permisoCliente;
         }
 
         private void CargarDatos(ProductoPersonalizado prod)

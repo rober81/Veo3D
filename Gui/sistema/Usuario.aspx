@@ -21,6 +21,10 @@
         <uc1:LabelTexto runat="server" ID="INombre" />
         <uc1:LabelTexto runat="server" ID="LblApellido" />
         <uc1:LabelTexto runat="server" ID="LblDni" EsNumero="true" />
+        <div class="form-group">
+            <asp:Label ID="LblPermisosDefault" runat="server" Text="Permisos" AssociatedControlID="ComboPermisos"></asp:Label>
+            <asp:DropDownList ID="ComboPermisos" runat="server" CssClass="form-control" />
+        </div>
     </div>
 </asp:Content>
 

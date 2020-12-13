@@ -15,6 +15,8 @@ namespace BLL
         {
             usr.Password = GestionarEncriptacion.Encriptar(usr.Password);
             int res = UsuarioMapper.Guardar(usr);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Usuario");
             Bitacora("Guardar", usr);
             return res;
         }
@@ -24,6 +26,8 @@ namespace BLL
             if (! yaEncriptado)
                 usr.Password = GestionarEncriptacion.Encriptar(usr.Password);
             int res = UsuarioMapper.Modificar(usr);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Usuario");
             Bitacora("Modificar", usr);
             return res;
         }
@@ -32,6 +36,8 @@ namespace BLL
         {
             usr.Password = GestionarEncriptacion.Encriptar(usr.Password);
             int res = UsuarioMapper.CambiarPass(usr);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Usuario");
             Bitacora("Cambias PASS", usr);
             return res;
         }

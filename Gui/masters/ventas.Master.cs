@@ -16,8 +16,6 @@ namespace Gui.masters
     {
         protected Usuario usuario;
         HttpCookie cookieIdioma;
-        List<iPermiso> permisos;
-        GestionarPermisos permisosbll;
         protected void Page_Load(object sender, EventArgs e)
         {
             PermisosMenu();
@@ -98,7 +96,7 @@ namespace Gui.masters
         public void LinkCerrar_Click(object sender, EventArgs e)
         {
             Session["Usuario"] = null;
-            GestionarSesion.getInstance().cerrarSesion();
+            GestionarSesion.getInstance().CerrarSesion();
             LinkLogin.Visible = true;
             LinkCerrar2.Visible = false;
             FormsAuthentication.SignOut();
@@ -107,13 +105,12 @@ namespace Gui.masters
 
         protected void PermisosMenu()
         {
-            permisosbll = new GestionarPermisos();
+            GestionarPermisos permisosbll = new GestionarPermisos();
             BE.Usuario usr = GestionarSesion.getInstance().Usuario;
             if (usr != null)
             {
-                permisos = permisosbll.ListarUsuarioPermiso(usr);
                 LinkAdministracion.Visible = false;
-                if (!permisosbll.Buscar(permisos, "Cliente"))
+                if (permisosbll.TieneAdmin())
                 {
                     LinkAdministracion.Visible = true;
                 }

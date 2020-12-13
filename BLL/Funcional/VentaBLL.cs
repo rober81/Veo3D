@@ -27,17 +27,26 @@ namespace BLL
         public int Guardar(Venta ven)
         {
             ven.Estado = "Nuevo";
-            return VentaMapper.Guardar(ven);
+            int salida =  VentaMapper.Guardar(ven);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Venta");
+            return salida;
         }
 
         public int Modificar(Venta ven)
         {
-            return VentaMapper.Modificar(ven);
+            int salida = VentaMapper.Modificar(ven);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Venta");
+            return salida;
         }
 
         public int ModificarArchivo(Venta ven)
         {
-            return VentaMapper.ModificarArchivo(ven);
+            int salida = VentaMapper.ModificarArchivo(ven);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Venta");
+            return salida;
         }
 
     }

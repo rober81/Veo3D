@@ -18,8 +18,7 @@ namespace Gui.masters
         private Usuario usuario;
         private HttpCookie cookieIdioma;
         private string defaultIdioma = "Español";
-        GestionarPermisos permisosbll;
-        List<iPermiso> permisos;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             usuario = (Usuario)Session["Usuario"];
@@ -90,25 +89,24 @@ namespace Gui.masters
         protected void LinkCerrar_Click(object sender, EventArgs e)
         {
             Session["Usuario"] = null;
-            GestionarSesion.getInstance().cerrarSesion();
+            GestionarSesion.getInstance().CerrarSesion();
             FormsAuthentication.SignOut();
             Response.Redirect("/index.aspx");
         }
 
         protected void PermisosMenu()
         {
-            permisosbll = new GestionarPermisos();
-            permisos = permisosbll.ListarUsuarioPermiso(GestionarSesion.getInstance().Usuario);
             VerificarPermisos(this.Controls);
         }
 
         private void VerificarPermiso(Control control)
         {
+            GestionarPermisos permisosbll = new GestionarPermisos();
             if (control == null || control.ID == null)
                 return;
             if (control is HyperLink _link)
             {
-                if (permisosbll.Buscar(permisos, control.ID))
+                if (permisosbll.Buscar(control.ID))
                 {
                     control.Visible = true;
                 }
@@ -130,18 +128,9 @@ namespace Gui.masters
             }
         }
 
-        public void CrearPDF<T>(string fileName, string reporte, IEnumerable<T> datasource)
+        public void CrearReporte<T>(string tipo, string fileName, IEnumerable<T> datasource)
         {
-            CreateReport<T>("PDF", fileName, reporte, datasource);
-        }
-
-        public void CrearXLS<T>(string fileName, string reporte, IEnumerable<T> datasource)
-        {
-            CreateReport<T>("XLS", fileName, reporte, datasource); 
-        }
-
-        public void CreateReport<T>(string tipo, string fileName, string reporte, IEnumerable<T> datasource)
-        {
+            string reporte = $@"Reportes\{fileName}.rdlc";
 
             Warning[] warnings;
             string[] streamIds;
@@ -155,9 +144,9 @@ namespace Gui.masters
             viewer.LocalReport.ReportPath = reporte;
             viewer.LocalReport.DataSources.Clear();
             //EL nombre del/los datasource usados en la creacion del reporte, debe ser respetado, porque figura en el XML
-            viewer.LocalReport.DataSources.Add(new ReportDataSource("Dataset", datasource));
+            viewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", datasource));
 
-            byte[] bytes = viewer.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
+            byte[] bytes = viewer.LocalReport.Render(tipo == "PDF" ? tipo: "Excel", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
 
             // Now that you have all the bytes representing the PDF report, buffer it and send it to the client.
             Response.Buffer = true;

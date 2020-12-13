@@ -24,6 +24,13 @@ namespace Gui.produccion
             else
             {
                 LblRegistroUsuario.Visible = true;
+                GestionarPermisos bllPermisos = new GestionarPermisos();
+                ComboPermisos.DataSource = null;
+                ComboPermisos.DataSource = bllPermisos.ListarPerfiles();
+                ComboPermisos.DataBind();
+                ComboPermisos.Visible = true;
+                LblPermisosDefault.Visible = true;
+
             }
             if (!IsPostBack)
             {
@@ -35,6 +42,8 @@ namespace Gui.produccion
                     LblContraseniaRepetir.Visible = false;
                     LblContrasenia.EsValidado = false;
                     LblContraseniaRepetir.EsValidado = false;
+                    ComboPermisos.Visible = false;
+                    LblPermisosDefault.Visible = false;
                 }
             }
         }
@@ -83,7 +92,12 @@ namespace Gui.produccion
                 usr2.Dni = LblDni.getTextoInt();
                 int salida;
                 if (usr == null)
+                {
                     salida = GestionarUsuario.Guardar(usr2);
+                    GestionarPermisos bllPermiso = new GestionarPermisos();
+                    BE.Permiso permisoDefault = bllPermiso.ListarPerfiles().First(p => p.Nombre.Equals(ComboPermisos.SelectedValue));
+                    bllPermiso.GuardarUsuarioPermiso(usr, permisoDefault);
+                }
                 else
                 {
                     salida = GestionarUsuario.Modificar(usr2, true);

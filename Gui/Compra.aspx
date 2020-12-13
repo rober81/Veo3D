@@ -78,6 +78,7 @@
                             <div class="col text-center">
                                 <asp:Button ID="BtnMercadopago" runat="server" OnClick="Comprar_Click" CssClass="btn btn-primary fa-align-right" />
                                 <asp:Label ID="LblNoLogueado" text="Debe Loguearse para Continuar" runat="server"></asp:Label>
+                                <asp:Label ID="LblNoLogueadoCliente" text="Debe Loguearse para Continuar" runat="server"></asp:Label>
                             </div>
                         </div>
                     </div>

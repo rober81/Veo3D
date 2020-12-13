@@ -33,17 +33,26 @@ namespace BLL
 
         public int Guardar(Producto prod)
         {
-            return ProductoMapper.Insertar(prod);
+            int salida = ProductoMapper.Insertar(prod);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Producto");
+            return salida;
         }
 
         public int Modificar(Producto prod)
         {
-            return ProductoMapper.Modificar(prod);
+            int salida = ProductoMapper.Modificar(prod);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Producto");
+            return salida;
         }
 
         public int Baja(Producto prod)
         {
-            return ProductoMapper.Baja(prod);
+            int salida = ProductoMapper.Baja(prod);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Producto");
+            return salida;
         }
     }
 }

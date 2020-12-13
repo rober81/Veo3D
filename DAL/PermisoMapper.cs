@@ -133,6 +133,8 @@ namespace DAL
 
         public int BorrarUsuarioPermiso(Usuario param)
         {
+            if (param == null)
+                return 1;
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter("@usuario", param.Login);
             return Acceso.getInstance().escribir(Tabla2 + "_borrar", parametros);

@@ -47,6 +47,10 @@ namespace Gui
                 usr.Apellido = LblApellido.Texto;
                 usr.Dni = LblDni.getTextoInt();
                 GestionarUsuario.Guardar(usr);
+                GestionarPermisos bllPermiso = new GestionarPermisos();
+                BE.Permiso permisoCliente = bllPermiso.ListarPerfiles().First(p => p.Nombre.Equals("Cliente"));
+                int salida = bllPermiso.GuardarUsuarioPermiso(usr, permisoCliente);
+                Mensaje.Exito();
                 Response.Redirect("/index.aspx");
             }
         }

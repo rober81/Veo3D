@@ -22,17 +22,26 @@ namespace BLL
 
         public int Guardar(Impresora imp)
         {
-            return ImpresoraMapper.Insertar(imp);
+            int salida = ImpresoraMapper.Insertar(imp);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Impresora");
+            return salida;
         }
 
         public int Modificar(Impresora imp)
         {
-            return ImpresoraMapper.Modificar(imp);
+            int salida = ImpresoraMapper.Modificar(imp);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Impresora");
+            return salida;
         }
 
         public int Baja(Impresora imp)
         {
-            return ImpresoraMapper.Baja(imp);
+            int salida = ImpresoraMapper.Baja(imp);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Impresora");
+            return salida;
         }
 
     }

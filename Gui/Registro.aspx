@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/ventas.Master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="Gui.Registro" %>
 
 <%@ Register Src="~/controles/LabelTexto.ascx" TagPrefix="uc1" TagName="LabelTexto" %>
+<%@ Register Src="~/controles/Mensaje.ascx" TagPrefix="uc1" TagName="Mensaje" %>
+
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -22,9 +24,9 @@
                 <uc1:labeltexto runat="server" id="INombre" />
                 <uc1:labeltexto runat="server" id="LblApellido" />
                 <uc1:labeltexto runat="server" id="LblDni" Esnumero ="true"/>
-                <asp:Button ID="BtnCancelar" runat="server" Text="Cancelar" OnClick="Cancelar_Click" CssClass="btn btn-danger" />
-                <asp:Button ID="BtnAceptar" runat="server" Text="Aceptar" OnClick="Aceptar_Click" CssClass="btn btn-success" />
-                <asp:Label ID="toast" runat="server" Text=""></asp:Label>
+                <asp:Button ID="BtnCancelar" runat="server" Text="Cancelar" OnClick="Cancelar_Click" CssClass="btn btn-secondary m-1" />
+                <asp:Button ID="BtnAceptar" runat="server" Text="Aceptar" OnClick="Aceptar_Click" CssClass="btn btn-success m-1" />
+                <uc1:Mensaje runat="server" ID="Mensaje" />
             </div>
         </div>
     </div>
