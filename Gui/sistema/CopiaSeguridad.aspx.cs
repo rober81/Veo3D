@@ -25,7 +25,7 @@ namespace Gui.produccion
         {
             string carpeta = ConfigurationManager.AppSettings["CarpetaBackup"].ToString();
             GridView1.DataSource = null;
-            GridView1.DataSource = (from item in GestionarCopiaDeSeguridad.ListarArchivos() select new { Nombre = item.Nombre.Substring(carpeta.Length+1), Fecha = item.Fecha }).ToList();
+            GridView1.DataSource = (from item in GestionarCopiaDeSeguridad.ListarArchivos().OrderByDescending(o => o.Fecha) select new { Nombre = item.Nombre.Substring(carpeta.Length+1), Fecha = item.Fecha }).ToList();
             GridView1.DataBind();
 
         }
@@ -72,10 +72,12 @@ namespace Gui.produccion
                         BE.CopiaDeSeguridad seleccionado = new BE.CopiaDeSeguridad();
                         string carpeta = ConfigurationManager.AppSettings["CarpetaBackup"].ToString();
                         seleccionado.Nombre = $@"{carpeta}\{nombre}";
-                        BE.CopiaDeSeguridad copia = seleccionado;
-                        if (File.Exists(copia.Nombre))
+                        if (File.Exists(seleccionado.Nombre))
                         {
+                            int res = BLL.GestionarCopiaDeSeguridad.Restaurar(seleccionado);
                             Mensaje.Exito();
+                            Session["Usuario"] = null;
+                            GestionarSesion.getInstance().CerrarSesion();
                             Response.Redirect("/index.aspx");
                         }
                         else

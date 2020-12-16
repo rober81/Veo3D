@@ -13,7 +13,7 @@
     <RootNamespace>Gui</RootNamespace>
     <AssemblyName>Gui</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -2259,7 +2259,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49919</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/veo3d</IISUrl>
+          <IISUrl>http://localhost:49919/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

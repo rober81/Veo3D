@@ -4,6 +4,7 @@ using System.Text;
 using Util;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace DAL
 {
@@ -17,7 +18,7 @@ namespace DAL
         {
             if (instancia == null)
             {
-                instancia = new Acceso(Configuracion.getInstance().aplicacionDB);
+                instancia = new Acceso(ConfigurationManager.ConnectionStrings["BaseDatos"].ConnectionString);
             }
             return instancia;
         }
@@ -26,14 +27,14 @@ namespace DAL
         {
             if (instanciaBitacora == null)
             {
-                instanciaBitacora = new Acceso(Configuracion.getInstance().bitacoraDB);
+                instanciaBitacora = new Acceso(ConfigurationManager.ConnectionStrings["BaseBitacora"].ConnectionString);
             }
             return instanciaBitacora;
         }
 
-        private Acceso(string db)
+        private Acceso(string conn)
         {
-            conexion = new SqlConnection("INITIAL CATALOG = " + db + "; DATA SOURCE =.\\" + Configuracion.getInstance().servidor + "; INTEGRATED SECURITY = SSPI");
+            conexion = new SqlConnection(conn);
         }
 
         public void abrir()

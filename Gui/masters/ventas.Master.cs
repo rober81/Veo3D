@@ -107,9 +107,9 @@ namespace Gui.masters
         {
             GestionarPermisos permisosbll = new GestionarPermisos();
             BE.Usuario usr = GestionarSesion.getInstance().Usuario;
+            LinkAdministracion.Visible = false;
             if (usr != null)
             {
-                LinkAdministracion.Visible = false;
                 if (permisosbll.TieneAdmin())
                 {
                     LinkAdministracion.Visible = true;
