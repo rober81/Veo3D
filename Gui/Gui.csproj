@@ -13,7 +13,7 @@
     <RootNamespace>Gui</RootNamespace>
     <AssemblyName>Gui</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -132,8 +132,6 @@
     <Content Include="anteojos\cabecera1.png" />
     <Content Include="anteojos\cabecera2.png" />
     <Content Include="anteojos\cabecera3.png" />
-    <Content Include="content\toastr.css" />
-    <Content Include="content\toastr.min.css" />
     <Content Include="controles\Mensaje.ascx" />
     <Content Include="Error.aspx" />
     <Content Include="img\logo.png" />
@@ -1809,13 +1807,9 @@
     <Content Include="Compra.aspx" />
     <Content Include="controles\ImagenProducto.ascx" />
     <Content Include="controles\LabelTexto.ascx" />
-    <Content Include="content\toastr.scss" />
-    <Content Include="content\toastr.less" />
     <None Include="Scripts\jquery-1.6.3-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.3.js" />
     <Content Include="Scripts\jquery-1.6.3.min.js" />
-    <Content Include="Scripts\toastr.js" />
-    <Content Include="Scripts\toastr.min.js" />
     <Content Include="sistema\Bitacora.aspx" />
     <Content Include="sistema\CopiaSeguridad.aspx" />
     <Content Include="sistema\DigitoVerificador.aspx" />
@@ -2265,7 +2259,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49919</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49919/</IISUrl>
+          <IISUrl>http://localhost/veo3d</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

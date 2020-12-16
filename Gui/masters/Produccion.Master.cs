@@ -18,8 +18,7 @@ namespace Gui.masters
         private Usuario usuario;
         private HttpCookie cookieIdioma;
         private string defaultIdioma = "Español";
-        GestionarPermisos permisosbll;
-        List<iPermiso> permisos;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             usuario = (Usuario)Session["Usuario"];
@@ -90,25 +89,24 @@ namespace Gui.masters
         protected void LinkCerrar_Click(object sender, EventArgs e)
         {
             Session["Usuario"] = null;
-            GestionarSesion.getInstance().cerrarSesion();
+            GestionarSesion.getInstance().CerrarSesion();
             FormsAuthentication.SignOut();
             Response.Redirect("/index.aspx");
         }
 
         protected void PermisosMenu()
         {
-            permisosbll = new GestionarPermisos();
-            permisos = permisosbll.ListarUsuarioPermiso(GestionarSesion.getInstance().Usuario);
             VerificarPermisos(this.Controls);
         }
 
         private void VerificarPermiso(Control control)
         {
+            GestionarPermisos permisosbll = new GestionarPermisos();
             if (control == null || control.ID == null)
                 return;
             if (control is HyperLink _link)
             {
-                if (permisosbll.Buscar(permisos, control.ID))
+                if (permisosbll.Buscar(control.ID))
                 {
                     control.Visible = true;
                 }
