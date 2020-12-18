@@ -150,6 +150,15 @@ namespace Gui
         protected global::Gui.controles.LabelTexto LblLocalidad;
 
         /// <summary>
+        /// Control LblCodigoPostal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto LblCodigoPostal;
+
+        /// <summary>
         /// Control BtnMercadopago.
         /// </summary>
         /// <remarks>

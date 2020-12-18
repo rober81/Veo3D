@@ -11,13 +11,14 @@ namespace Gui
 {
     public partial class Resumen : System.Web.UI.Page
     {
+        BE.Venta item;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 if (Session["CompraFinalizada"] != null)
                 {
-                    BE.Venta item = (BE.Venta)Session["CompraFinalizada"];
+                    item = (BE.Venta)Session["CompraFinalizada"];
                     CargarDatos(item);
                 }
             }
@@ -43,6 +44,18 @@ namespace Gui
         protected void Volver_Click(object sender, EventArgs e)
         {
             Response.Redirect("/index.aspx");
+        }
+
+        protected void PDF_Click(object sender, EventArgs e)
+        {
+            string nombre = "Factura";
+            List<BE.Venta> ventas = new List<Venta>();
+            item = (BE.Venta)Session["CompraFinalizada"];
+            ventas.Add(item);
+            var datasource = ventas;
+
+            var master = Master as masters.ventas;
+            master.CrearReporte<BE.Venta>("PDF", nombre, datasource);
         }
     }
 }

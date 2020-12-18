@@ -67,6 +67,9 @@
                             <div class="col">
                                 <uc1:LabelTexto runat="server" ID="LblLocalidad" />
                             </div>
+                             <div class="col">
+                                <uc1:LabelTexto runat="server" ID="LblCodigoPostal" />
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col text-center">

@@ -11,7 +11,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Gui</RootNamespace>
-    <AssemblyName>Gui</AssemblyName>
+    <AssemblyName>Veo3D</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -2237,12 +2237,14 @@
       <Name>BLL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Reportes\Etiqueta.rdlc" />
-    <EmbeddedResource Include="Reportes\Impresoras.rdlc" />
-    <EmbeddedResource Include="Reportes\Material.rdlc" />
-    <EmbeddedResource Include="Reportes\Productos.rdlc" />
+    <Content Include="Reportes\Factura.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reportes\Etiqueta.rdlc" />
+    <Content Include="Reportes\Impresoras.rdlc" />
+    <Content Include="Reportes\Material.rdlc" />
+    <Content Include="Reportes\Productos.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

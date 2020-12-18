@@ -63,7 +63,8 @@
                     </div>
                     <div class="row">
                         <div class="col text-center">
-                            <asp:Button ID="BtnVolver" runat="server" OnClick="Volver_Click" CssClass="btn btn-primary fa-align-right" />
+                            <asp:Button ID="BtnFactura" runat="server" CssClass="btn btn-success m-1" OnClick="PDF_Click" />
+                            <asp:Button ID="BtnVolver" runat="server" OnClick="Volver_Click" CssClass="btn btn-primary m-1" />
                         </div>
                     </div>
                 </div>

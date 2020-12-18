@@ -141,6 +141,15 @@ namespace Gui
         protected global::Gui.controles.LabelTexto LblLocalidad;
 
         /// <summary>
+        /// Control BtnFactura.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnFactura;
+
+        /// <summary>
         /// Control BtnVolver.
         /// </summary>
         /// <remarks>

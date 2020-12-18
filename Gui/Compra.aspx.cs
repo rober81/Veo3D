@@ -63,12 +63,6 @@ namespace Gui
                 return;
             }  else LblPuerta.Valido();
 
-            if (string.IsNullOrEmpty(LblDepto.Texto))
-            {
-                LblDepto.NoValido();
-                return;
-            } else LblDepto.Valido();
-
             if (string.IsNullOrEmpty(LblLocalidad.Texto))
             {
                 LblLocalidad.NoValido();
@@ -81,11 +75,20 @@ namespace Gui
                 return;
             } else LblProvincia.Valido();
 
+            if (string.IsNullOrEmpty(LblCodigoPostal.Texto))
+            {
+                LblCodigoPostal.NoValido();
+                return;
+            }
+            else LblCodigoPostal.Valido();
+
             compra.Calle = LblCalle.Texto;
             compra.Puerta = LblPuerta.Texto;
-            compra.Depto = LblDepto.Texto;
+            if (! string.IsNullOrEmpty(LblDepto.Texto))
+                compra.Depto = LblDepto.Texto;
             compra.Localidad = LblLocalidad.Texto;
             compra.Provincia = LblProvincia.Texto;
+            compra.CodigoPostal = LblCodigoPostal.Texto;
             compra.Personalizado = (ProductoPersonalizado)Session["ProductoPersonalizado"];
             compra.Usuario = (Usuario)Session["Usuario"];
             VentaBLL compraBll = new VentaBLL();

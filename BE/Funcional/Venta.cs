@@ -20,6 +20,8 @@ namespace BE
         public Usuario Usuario { get; set; }
 
         public string NombreCompleto { get => Usuario.NombreCompleto; }
+        public string Producto { get => Personalizado.Producto.Nombre; }
+        public Decimal Precio { get => Personalizado.Producto.Precio; }
 
         public string Identificador => Id.ToString();
     }
