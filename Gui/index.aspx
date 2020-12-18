@@ -35,13 +35,13 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <img class="d-block img-fluid" src="/anteojos/cabecera1.png" alt="First slide">
+                            <img class="d-block img-fluid" src="/img/cabecera1.png" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" src="/anteojos/cabecera2.png" alt="Second slide">
+                            <img class="d-block img-fluid" src="/img/cabecera2.png" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" src="/anteojos/cabecera3.png" alt="Third slide">
+                            <img class="d-block img-fluid" src="/img/cabecera3.png" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

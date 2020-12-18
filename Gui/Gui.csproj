@@ -119,8 +119,6 @@
     <Content Include="anteojos\15.png" />
     <Content Include="anteojos\16.png" />
     <Content Include="anteojos\17.png" />
-    <Content Include="anteojos\18.png" />
-    <Content Include="anteojos\19.png" />
     <Content Include="anteojos\2.png" />
     <Content Include="anteojos\3.png" />
     <Content Include="anteojos\4.png" />
@@ -129,11 +127,11 @@
     <Content Include="anteojos\7.png" />
     <Content Include="anteojos\8.png" />
     <Content Include="anteojos\9.png" />
-    <Content Include="anteojos\cabecera1.png" />
-    <Content Include="anteojos\cabecera2.png" />
-    <Content Include="anteojos\cabecera3.png" />
     <Content Include="controles\Mensaje.ascx" />
     <Content Include="Error.aspx" />
+    <Content Include="img\cabecera1.png" />
+    <Content Include="img\cabecera2.png" />
+    <Content Include="img\cabecera3.png" />
     <Content Include="img\logo.png" />
     <Content Include="Registro.aspx" />
     <Content Include="Resumen.aspx" />
@@ -2245,6 +2243,9 @@
     <Content Include="Reportes\Impresoras.rdlc" />
     <Content Include="Reportes\Material.rdlc" />
     <Content Include="Reportes\Productos.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reportes\Historial.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

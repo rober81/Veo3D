@@ -159,15 +159,6 @@ namespace Gui.masters
         protected global::System.Web.UI.WebControls.HyperLink LinkDigitoVerificador;
 
         /// <summary>
-        /// Control LinkLogErrores.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LinkLogErrores;
-
-        /// <summary>
         /// Control LblAdministracionMenu.
         /// </summary>
         /// <remarks>
@@ -184,15 +175,6 @@ namespace Gui.masters
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink LinkProductos;
-
-        /// <summary>
-        /// Control LinkPrecios.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LinkPrecios;
 
         /// <summary>
         /// Control LinkImpresoras.
@@ -276,24 +258,6 @@ namespace Gui.masters
         protected global::System.Web.UI.WebControls.HyperLink LinkPresupuesto;
 
         /// <summary>
-        /// Control LinkReportePresupuesto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LinkReportePresupuesto;
-
-        /// <summary>
-        /// Control LinkPriorizacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LinkPriorizacion;
-
-        /// <summary>
         /// Control LinkPanelPedidos.
         /// </summary>
         /// <remarks>
@@ -328,15 +292,6 @@ namespace Gui.masters
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink LinkRegistrarOrden;
-
-        /// <summary>
-        /// Control LinkReporteOrden.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LinkReporteOrden;
 
         /// <summary>
         /// Control ComboIdioma.

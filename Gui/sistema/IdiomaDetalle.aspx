@@ -33,7 +33,6 @@
             </Columns>
         </asp:GridView>
     </div>
-    <br />
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">

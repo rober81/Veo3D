@@ -41,6 +41,7 @@ namespace Gui
             LblAnchoCristales.Texto = prod.AnchoCristales;
             LblAlturaCristales.Texto = prod.AlturaCristales;
             LblLongitudPatillas.Texto = prod.LongitudPatillas;
+            LblColor.Texto = prod.Color;
         }
 
         protected void Cancelar_Click(object sender, EventArgs e)
@@ -84,8 +85,7 @@ namespace Gui
 
             compra.Calle = LblCalle.Texto;
             compra.Puerta = LblPuerta.Texto;
-            if (! string.IsNullOrEmpty(LblDepto.Texto))
-                compra.Depto = LblDepto.Texto;
+            compra.Depto = string.IsNullOrEmpty(LblDepto.Texto) ? string.Empty : LblDepto.Texto;
             compra.Localidad = LblLocalidad.Texto;
             compra.Provincia = LblProvincia.Texto;
             compra.CodigoPostal = LblCodigoPostal.Texto;

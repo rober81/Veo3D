@@ -41,15 +41,7 @@ namespace BLL
             //Actualizo la venta avisando que fue a domicilio
             VentaBLL vbll = new VentaBLL();
             venta.Estado = Estados.EnviarADomicilio;
-            return vbll.Modificar(venta);
-        }
-
-        public int EnviadoADomicilio(Venta venta)
-        {
-            //Actualizo la venta avisando que fue a domicilio
-            VentaBLL vbll = new VentaBLL();
-            venta.Estado = Estados.EnvioDomicilio;
-            return vbll.Modificar(venta);
+            return vbll.ModificarEstado(venta);
         }
 
         public int EnviarAImprimir(Impresion imp)
@@ -71,7 +63,7 @@ namespace BLL
             //Actualizo la venta avisando que fue a imprimir
             VentaBLL vbll = new VentaBLL();
             imp.Venta.Estado = Estados.EnviadoAImprimir;
-            vbll.Modificar(imp.Venta);
+            vbll.ModificarEstado(imp.Venta);
             return ImpresionMapper.Guardar(imp);
         }
 

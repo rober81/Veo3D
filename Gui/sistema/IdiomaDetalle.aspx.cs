@@ -75,8 +75,6 @@ namespace Gui.produccion
             TextBox TxtEditar = row.FindControl("TxtEditar") as TextBox;
             if (string.IsNullOrWhiteSpace(TxtEditar.Text))
             {
-                //TxtEditar.BorderColor = Color.Red;
-                // TxtEditar.BorderWidth = 3;
                 e.Cancel = true;
                 Grilla.EditIndex = e.RowIndex;
                 Grilla.DataBind();

@@ -39,6 +39,7 @@ namespace Gui
             LblDepto.Texto = parametro.Depto;
             LblLocalidad.Texto = parametro.Localidad;
             LblProvincia.Texto = parametro.Provincia;
+            LblColor.Texto = parametro.Personalizado.Color;
         }
 
         protected void Volver_Click(object sender, EventArgs e)

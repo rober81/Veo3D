@@ -17,6 +17,7 @@ namespace BE
         public string Provincia { get; set; }
         public string Estado { get; set; }
         public string CodigoPostal { get; set; }
+        public string CodigoEnvio { get; set; }
         public Usuario Usuario { get; set; }
 
         public string NombreCompleto { get => Usuario.NombreCompleto; }

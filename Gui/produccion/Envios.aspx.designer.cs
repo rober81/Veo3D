@@ -33,6 +33,15 @@ namespace Gui.produccion
         protected global::System.Web.UI.WebControls.GridView Grilla;
 
         /// <summary>
+        /// Control LblCodigoEnvio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto LblCodigoEnvio;
+
+        /// <summary>
         /// Control BtnGenerarEtiquetas.
         /// </summary>
         /// <remarks>

@@ -60,7 +60,8 @@ namespace Gui.produccion
             if (GrillaIdiomas.SelectedRow != null)
             {
                 var idioma = GrillaIdiomas.SelectedRow.Cells[1].Text;
-                var codigo = GrillaIdiomas.SelectedRow.Cells[2].Text;
+                if (idioma.StartsWith("Esp"))
+                    idioma = "Español";
                 BE.Idioma seleccionado = new BE.Idioma(idioma);
                 GestionarIdioma.getInstance().Cargar(seleccionado);
                 Session["IdiomaNuevo"] = seleccionado;

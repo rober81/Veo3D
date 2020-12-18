@@ -96,6 +96,15 @@ namespace Gui
         protected global::Gui.controles.LabelTexto LblAlturaCristales;
 
         /// <summary>
+        /// Control LblColor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::Gui.controles.LabelTexto LblColor;
+
+        /// <summary>
         /// Control LblDireccion.
         /// </summary>
         /// <remarks>

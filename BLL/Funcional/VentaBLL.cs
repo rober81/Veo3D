@@ -33,9 +33,17 @@ namespace BLL
             return salida;
         }
 
-        public int Modificar(Venta ven)
+        public int ModificarEstado(Venta ven)
         {
             int salida = VentaMapper.Modificar(ven);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Venta");
+            return salida;
+        }
+
+        public int Enviar(Venta ven)
+        {
+            int salida = VentaMapper.ModificarArchivo(ven);
             GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
             bll.GuardarDigitoVerificador("Venta");
             return salida;
@@ -47,6 +55,27 @@ namespace BLL
             GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
             bll.GuardarDigitoVerificador("Venta");
             return salida;
+        }
+
+        public int ModificarEnvio(Venta ven)
+        {
+            int salida = VentaMapper.ModificarEnvio(ven);
+            EnviadoADomicilio(ven);
+            GestionarDigitoVerificador bll = new GestionarDigitoVerificador();
+            bll.GuardarDigitoVerificador("Venta");
+            return salida;
+        }
+
+        public int EnviadoADomicilio(Venta venta)
+        {
+            venta.Estado = Estados.EnvioDomicilio;
+            return ModificarEstado(venta);
+        }
+
+        public int EnviarADomicilio(Venta venta)
+        {
+            venta.Estado = Estados.EnviarADomicilio;
+            return ModificarEstado(venta);
         }
 
     }

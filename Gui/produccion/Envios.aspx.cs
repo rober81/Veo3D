@@ -23,23 +23,31 @@ namespace Gui.produccion
         private void CargarDatos()
         {
             VentaBLL bll = new VentaBLL();
+            var listado = bll.Listar().Where(x => x.Estado.Equals(Estados.EnviarADomicilio) && !x.Estado.Equals(Estados.EnvioDomicilio)).ToList();
             Grilla.DataSource = null;
-            Grilla.DataSource = bll.Listar().Where(x => x.Estado.Equals(Estados.EnviarADomicilio) && ! x.Estado.Equals(Estados.EnvioDomicilio)).ToList();
+            Grilla.DataSource = listado;
             Grilla.DataBind();
+            LblCodigoEnvio.Visible = true;
+            if (listado.Count == 0)
+                LblCodigoEnvio.Visible = false;
+
         }
 
         protected void Aceptar_Click(object sender, EventArgs e)
         {
             VentaBLL ventaBll = new VentaBLL();
-            ImpresionBLL impBll = new ImpresionBLL();
 
-            if (Grilla.SelectedRow != null)
+            var valido = LblCodigoEnvio.Validar();
+            if (Grilla.SelectedRow != null && valido)
             {
                 string id = Grilla.SelectedRow.Cells[1].Text;
                 Venta venta = ventaBll.Buscar(Convert.ToInt32(id));
-                if (!venta.Estado.Equals(Estados.EnvioDomicilio))
+                venta.CodigoEnvio = LblCodigoEnvio.Texto;
+                if (venta.Estado.Equals(Estados.EnvioDomicilio))
                     return;
-                impBll.EnviadoADomicilio(venta);
+                ventaBll.ModificarEnvio(venta);
+                ventaBll.EnviadoADomicilio(venta);
+                LblCodigoEnvio.Texto = string.Empty;
                 CargarDatos();
             }
         }

@@ -27,7 +27,25 @@ namespace Gui.produccion
         }
         protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            e.Row.Cells[1].Visible = false;
+            e.Row.Cells[0].Visible = false;
+        }
+
+        protected void XLS_Click(object sender, EventArgs e)
+        {
+            Exportar("XLS");
+        }
+        protected void PDF_Click(object sender, EventArgs e)
+        {
+            Exportar("PDF");
+        }
+        private void Exportar(string tipo)
+        {
+            string nombre = "Historial";
+            ImpresionBLL bll = new ImpresionBLL();
+            var datasource = bll.Listar().Where(i => i.Estado.Equals(Estados.Finalizado)).ToList();
+
+            var master = Master as masters.Produccion;
+            master.CrearReporte<BE.Impresion>(tipo, nombre, datasource);
         }
     }
 }

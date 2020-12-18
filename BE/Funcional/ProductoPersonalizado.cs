@@ -15,5 +15,6 @@ namespace BE
         public string AnchoCristales { get; set; }
         public string AlturaCristales { get; set; }
         public string LongitudPatillas { get; set; }
+        public string Color { get; set; }
     }
 }

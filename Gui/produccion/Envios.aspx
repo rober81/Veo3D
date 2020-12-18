@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/produccion.Master" AutoEventWireup="true" CodeBehind="Envios.aspx.cs" Inherits="Gui.produccion.Envios" %>
 
 <%@ Register Src="~/controles/Mensaje.ascx" TagPrefix="uc1" TagName="Mensaje" %>
+<%@ Register Src="~/controles/LabelTexto.ascx" TagPrefix="uc1" TagName="LabelTexto" %>
+
 
 
 
@@ -27,6 +29,9 @@
             <asp:BoundField HeaderText="Estado" DataField="Estado" />
         </Columns>
     </asp:GridView>
+    <div class="w-50">
+        <uc1:LabelTexto runat="server" ID="LblCodigoEnvio" />
+    </div>
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="CardBotones" runat="server">

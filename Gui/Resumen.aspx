@@ -38,6 +38,7 @@
                                     <uc1:LabelTexto runat="server" ID="LblAlturaCristales" DesHabilitado="true" />
                                 </div>
                                 <div class="col">
+                                    <uc1:LabelTexto runat="server" ID="LblColor" DesHabilitado="true" />
                                 </div>
                             </div>
                         </div>

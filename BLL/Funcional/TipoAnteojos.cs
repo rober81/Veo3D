@@ -12,5 +12,6 @@ namespace BLL
         public static string Deportivo = "Deportivo";
         public static string Sol = "Sol";
         public static string Retro = "Retro";
+        public static string Informal = "Informal";
     }
 }

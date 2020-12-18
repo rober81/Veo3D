@@ -8,13 +8,16 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="CardBody" runat="server">
-<asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false" AutoGenerateSelectButton="true"
+        <div class="d-flex justify-content-end">
+            <asp:Button ID="BtnXLS" runat="server" CssClass="btn btn-info btn-sm m-1" OnClick="XLS_Click" />
+        </div>
+<asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false" AutoGenerateSelectButton="false"
         OnRowDataBound="GridView_RowDataBound">
         <SelectedRowStyle CssClass="table-success" />
         <Columns>
             <asp:BoundField HeaderText="Id Impresión" DataField="Id" />
             <asp:BoundField HeaderText="Cliente" DataField="Venta.Usuario.NombreCompleto" />
-            <asp:BoundField HeaderText="Nombre" DataField="Venta.Personalizado.Producto.Nombre" />
+            <asp:BoundField HeaderText="Producto" DataField="Venta.Personalizado.Producto.Nombre" />
             <asp:BoundField HeaderText="Archivo" DataField="Venta.Personalizado.Archivo" />
             <asp:BoundField HeaderText="Material" DataField="Material.MaterialDato" />
             <asp:BoundField HeaderText="Color" DataField="Material.Color" />
@@ -28,6 +31,7 @@
             <asp:BoundField HeaderText="Calle" DataField="Venta.Calle" />
             <asp:BoundField HeaderText="Puerta" DataField="Venta.Puerta" />
             <asp:BoundField HeaderText="Depto" DataField="Venta.Depto" />
+            <asp:BoundField HeaderText="Envio" DataField="Venta.CodigoEnvio" />
             <asp:BoundField HeaderText="Estado" DataField="Estado" />
         </Columns>
     </asp:GridView>

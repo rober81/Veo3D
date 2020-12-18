@@ -114,6 +114,24 @@ namespace Gui.web
         protected global::Gui.controles.LabelTexto LblLongitudPatillas;
 
         /// <summary>
+        /// Control LblColor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblColor;
+
+        /// <summary>
+        /// Control Combocolor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Combocolor;
+
+        /// <summary>
         /// Control BtnSiguiente.
         /// </summary>
         /// <remarks>

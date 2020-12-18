@@ -17,7 +17,7 @@
                         <asp:Label ID="LblPersonalizacion" runat="server" Text="Label"></asp:Label>
                     </div>
                     <div class="card-body">
-                                                <div class="row">
+                        <div class="row">
                             <div class="col">
                                 <asp:Image ID="IPImagenProd" runat="server" CssClass="card-img-top img-fluid mx-auto" />
                             </div>
@@ -46,6 +46,27 @@
                                 <uc1:LabelTexto runat="server" ID="LblAnchoCristales" EsNumero="true" />
                                 <uc1:LabelTexto runat="server" ID="LblAlturaCristales" EsNumero="true" />
                                 <uc1:LabelTexto runat="server" ID="LblLongitudPatillas" EsNumero="true" />
+                                <div class="form-group">
+                                    <asp:Label ID="LblColor" runat="server" AssociatedControlID="ComboColor"></asp:Label>
+                                    <asp:DropDownList ID="Combocolor" runat="server" CssClass="form-control" >
+                                        <asp:ListItem>Negro</asp:ListItem>
+                                        <asp:ListItem>Azul</asp:ListItem>
+                                        <asp:ListItem>Marrón</asp:ListItem>
+                                        <asp:ListItem>Gris</asp:ListItem>
+                                        <asp:ListItem>Verde</asp:ListItem>
+                                        <asp:ListItem>Naranja</asp:ListItem>
+                                        <asp:ListItem>Rosa</asp:ListItem>
+                                        <asp:ListItem>Púrpura</asp:ListItem>
+                                        <asp:ListItem>Rojo</asp:ListItem>
+                                        <asp:ListItem>Blanco</asp:ListItem>
+                                        <asp:ListItem>Amarillo</asp:ListItem>
+                                        <asp:ListItem>Turquesa</asp:ListItem>
+                                        <asp:ListItem>Magenta</asp:ListItem>
+                                        <asp:ListItem>Cian</asp:ListItem>
+                                        <asp:ListItem>Rosado</asp:ListItem>
+                                        <asp:ListItem>Celeste</asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
                                 <asp:Button ID="BtnSiguiente" runat="server" OnClick="Siguiente_Click" CssClass="btn btn-success fa-align-right" />
                             </div>
                         </div>
