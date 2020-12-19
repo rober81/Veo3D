@@ -28,7 +28,7 @@ namespace Gui.produccion
         private void cargarTabla(List<BE.Bitacora> lista)
         {
             GridView1.DataSource = null;
-            GridView1.DataSource = lista;
+            GridView1.DataSource = lista.OrderByDescending(x => x.Fecha);
             GridView1.DataBind();
         }
 

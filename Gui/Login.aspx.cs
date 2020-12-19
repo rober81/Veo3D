@@ -38,7 +38,7 @@ namespace Gui.web
                 if (logueado != null)
                 {
                     Session["Usuario"] = logueado;
-                    FormsAuthentication.SetAuthCookie(logueado.Login, ChkPass.Checked);
+                    FormsAuthentication.SetAuthCookie(logueado.Login,false);
                     Response.Redirect("/index.aspx",true);
                 }
             }

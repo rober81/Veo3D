@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Acceso.cs" />
     <Compile Include="BitacoraMapper.cs" />
+    <Compile Include="ComprasMapper.cs" />
     <Compile Include="CopiaSeguridadMapper.cs" />
     <Compile Include="DigitoVerificadorMapper.cs" />
     <Compile Include="Funcional\ImpresionMapper.cs" />

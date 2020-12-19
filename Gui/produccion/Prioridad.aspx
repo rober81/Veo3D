@@ -8,6 +8,10 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="CardBody" runat="server">
+    <div class="d-flex justify-content-end">
+        <asp:Button ID="BtnXLS" runat="server" CssClass="btn btn-info btn-sm m-1" OnClick="XLS_Click" />
+        <asp:Button ID="BtnPDF" runat="server" CssClass="btn btn-info btn-sm m-1" OnClick="PDF_Click" />
+    </div>
     <asp:GridView ID="Grilla" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false" AutoGenerateSelectButton="true"
         OnRowDataBound="GridView_RowDataBound">
         <SelectedRowStyle CssClass="table-success" />

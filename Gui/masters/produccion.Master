@@ -135,7 +135,7 @@
                     </div>
                 </li>
 
-                <!-- Nav Item - Pages Collapse Menu -->
+                <!-- Nav Item - Pages Collapse Menu 
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#comprasMenu" aria-expanded="true" aria-controls="comprasMenu">
                         <i class="fas fa-fw fa-shopping-cart"></i>
@@ -148,7 +148,7 @@
                         </div>
                     </div>
                 </li>
-
+                -->
                 <!-- Divider -->
                 <hr class="sidebar-divider d-none d-md-block">
 
@@ -280,10 +280,10 @@
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">
-                            <asp:Label ID="LblCancelar" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="LblCancelar" runat="server"></asp:Label>
                         </button>
-                        <asp:LinkButton ID="LinkCerrarSesion" OnClick="LinkCerrar_Click" CssClass="btn btn-primary" runat="server">
-                            <asp:Label ID="LblCerrar" runat="server" Text="Label" CssClass="btn btn-primary"></asp:Label>
+                        <asp:LinkButton ID="LinkCerrarSesion" OnClick="LinkCerrar_Click" CssClass="btn btn-primary m-1" runat="server">
+                            <asp:Label ID="LblCerrar" runat="server"></asp:Label>
                         </asp:LinkButton>
 
                     </div>

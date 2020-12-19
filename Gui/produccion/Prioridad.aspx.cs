@@ -21,7 +21,7 @@ namespace Gui.produccion
         {
             ImpresionBLL bll = new ImpresionBLL();
             Grilla.DataSource = null;
-            Grilla.DataSource = bll.Listar().OrderBy(x => x.Impresora.Nombre).ThenBy(x => x.Prioridad).ToList();//.Where(i => i.Estado.Equals(Estados.EnviadoAImprimir));
+            Grilla.DataSource = bll.Listar().Where(x => !x.Estado.Equals(Estados.Finalizado)).OrderBy(x => x.Impresora.Nombre).ThenBy(x => x.Prioridad).ToList();
             Grilla.DataBind();
         }
         protected void Bajar_Click(object sender, EventArgs e)
@@ -55,6 +55,24 @@ namespace Gui.produccion
         protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             e.Row.Cells[1].Visible = false;
+        }
+
+        protected void XLS_Click(object sender, EventArgs e)
+        {
+            Exportar("XLS");
+        }
+        protected void PDF_Click(object sender, EventArgs e)
+        {
+            Exportar("PDF");
+        }
+        private void Exportar(string tipo)
+        {
+            string nombre = "OrdenImpresion";
+            ImpresionBLL bll = new ImpresionBLL();
+            var datasource = bll.Listar().Where(x => x.Estado.Equals(!x.Estado.Equals(Estados.Finalizado))).OrderBy(x => x.Impresora.Nombre).ThenBy(x => x.Prioridad).ToList();
+
+            var master = Master as masters.Produccion;
+            master.CrearReporte<BE.Impresion>(tipo, nombre, datasource);
         }
     }
 }

@@ -31,6 +31,8 @@ namespace BE
         public string Puerta { get => Venta.Puerta; }
         public string Depto { get => Venta.Depto; }
         public string Envio { get => Venta.CodigoEnvio; }
+        public string ImpresoraNombre { get => Impresora.Nombre; }
+
 
         public override string ToString()
         {

@@ -96,7 +96,7 @@ namespace Gui.produccion
                     salida = GestionarUsuario.Guardar(usr2);
                     GestionarPermisos bllPermiso = new GestionarPermisos();
                     BE.Permiso permisoDefault = bllPermiso.ListarPerfiles().First(p => p.Nombre.Equals(ComboPermisos.SelectedValue));
-                    bllPermiso.GuardarUsuarioPermiso(usr, permisoDefault);
+                    bllPermiso.GuardarUsuarioPermiso(usr2, permisoDefault);
                 }
                 else
                 {

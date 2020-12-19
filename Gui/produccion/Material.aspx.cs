@@ -63,5 +63,6 @@ namespace Gui.produccion
             var master = Master as masters.Produccion;
             master.CrearReporte<BE.Material>(tipo,nombre, datasource);
         }
+
     }
 }

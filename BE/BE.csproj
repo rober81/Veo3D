@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bitacora.cs" />
+    <Compile Include="Funcional\DetalleCompra.cs" />
     <Compile Include="DigitoVerificadorDetalle.cs" />
     <Compile Include="Funcional\Impresion.cs" />
     <Compile Include="Funcional\Venta.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Funcional\Impresora.cs" />
     <Compile Include="iPermiso.cs" />
     <Compile Include="Funcional\Material.cs" />
+    <Compile Include="Funcional\OrdenCompra.cs" />
     <Compile Include="Permiso.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Funcional\ProductoPersonalizado.cs" />
