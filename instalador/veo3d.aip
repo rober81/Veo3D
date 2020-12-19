@@ -81,79 +81,79 @@
     <ROW Component="AI_CustomARPName" ComponentId="{33E4D988-9EAD-47C1-BAF7-A83EF2DE7862}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
     <ROW Component="AI_ExePath" ComponentId="{F7C7FA63-6990-475D-84C7-245B6141200C}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
     <ROW Component="APPDIR" ComponentId="{F8A5915C-B1B1-4836-8D2A-26A4B103A099}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="BE.dll" ComponentId="{F31913AB-3901-47F8-A83C-6CEC287F64B2}" Directory_="bin_Dir" Attributes="0" KeyPath="BE.dll"/>
-    <ROW Component="BLL.dll" ComponentId="{0BEF7500-9717-49E1-8860-5C3A7BA86F3E}" Directory_="bin_Dir" Attributes="0" KeyPath="BLL.dll"/>
-    <ROW Component="Bitacora.aspx" ComponentId="{9D8E4923-2939-412E-9CAD-A78323BE2990}" Directory_="sistema_Dir" Attributes="0" KeyPath="Bitacora.aspx" Type="0"/>
-    <ROW Component="Compra.aspx" ComponentId="{6320E4C1-3750-4B0B-9F7A-BF872E01F045}" Directory_="veo3d_Dir" Attributes="0" KeyPath="Compra.aspx" Type="0"/>
-    <ROW Component="DAL.dll" ComponentId="{239DF6C1-5B98-4F9B-96A6-91AF69AE204B}" Directory_="bin_Dir" Attributes="0" KeyPath="DAL.dll"/>
-    <ROW Component="Envios.aspx" ComponentId="{1539EFDC-AF0B-446C-858E-184CF905261B}" Directory_="produccion_Dir" Attributes="0" KeyPath="Envios.aspx" Type="0"/>
-    <ROW Component="Etiqueta.rdlc" ComponentId="{923222D0-7E9A-4F8D-B588-7653273C1440}" Directory_="Reportes_Dir" Attributes="0" KeyPath="Etiqueta.rdlc" Type="0"/>
-    <ROW Component="Google.Api.Gax.Rest.dll" ComponentId="{5E4EA4DC-7E20-4BE7-9A1A-AD684942640B}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Api.Gax.Rest.dll"/>
-    <ROW Component="Google.Api.Gax.dll" ComponentId="{703ECFF0-4E05-4000-A964-28FE5D2D7213}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Api.Gax.dll"/>
-    <ROW Component="Google.Apis.Auth.PlatformServices.dll" ComponentId="{BCF19934-3B43-4BE4-8EA1-30FBA0F6B8AB}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Apis.Auth.PlatformServices.dll"/>
-    <ROW Component="Google.Apis.Auth.dll" ComponentId="{32ADAEB9-4D2C-48EB-994E-26ABFB2E511C}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Apis.Auth.dll"/>
-    <ROW Component="Google.Apis.Core.dll" ComponentId="{D89AE683-CB6F-461C-9E70-D02D724781C7}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Apis.Core.dll"/>
-    <ROW Component="Google.Apis.PlatformServices.dll" ComponentId="{509E22C8-FD91-4962-8AB4-584FB8518485}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Apis.PlatformServices.dll"/>
-    <ROW Component="Google.Apis.Translate.v2.dll" ComponentId="{E17CC3DD-3693-46DA-897B-34173166CEB0}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Apis.Translate.v2.dll"/>
-    <ROW Component="Google.Apis.dll" ComponentId="{3D3DF983-E71F-48F6-9FA8-ABD0859030BC}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Apis.dll"/>
-    <ROW Component="Google.Cloud.Translation.V2.dll" ComponentId="{36734BF3-C161-4896-AD62-547936B0ECD1}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Cloud.Translation.V2.dll"/>
-    <ROW Component="ImagenProducto.ascx" ComponentId="{12985766-925A-4061-917D-21BEBA4E4539}" Directory_="controles_Dir" Attributes="0" KeyPath="ImagenProducto.ascx" Type="0"/>
-    <ROW Component="LICENSE.txt" ComponentId="{10155483-E8DA-453E-ADE2-33FFE924739B}" Directory_="fontawesomefree_Dir" Attributes="0" KeyPath="LICENSE.txt" Type="0"/>
-    <ROW Component="Microsoft.Bcl.AsyncInterfaces.dll" ComponentId="{1463DD02-4996-4F43-B54C-D767F922F202}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.Bcl.AsyncInterfaces.dll"/>
-    <ROW Component="Microsoft.Build.Tasks.CodeAnalysis.dll" ComponentId="{6E4ED48A-8A21-4CD9-BCCA-4D699D89FDE2}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.Build.Tasks.CodeAnalysis.dll"/>
-    <ROW Component="Microsoft.CodeAnalysis.CSharp.Scripting.dll" ComponentId="{3375A69F-5B60-4FF7-BE02-2EF98CA39C7F}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.CSharp.Scripting.dll"/>
-    <ROW Component="Microsoft.CodeAnalysis.CSharp.dll" ComponentId="{9B00ABF0-2117-4B58-B3C6-0AC2F75312AB}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.CSharp.dll"/>
-    <ROW Component="Microsoft.CodeAnalysis.Scripting.dll" ComponentId="{6CAA8841-59CA-40E0-AC15-0A12DBFAC264}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.Scripting.dll"/>
-    <ROW Component="Microsoft.CodeAnalysis.VisualBasic.dll" ComponentId="{E37F43B9-7C41-458D-81EA-6A284A975519}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.VisualBasic.dll"/>
-    <ROW Component="Microsoft.CodeAnalysis.dll" ComponentId="{0EFB5ED9-3A03-412B-B2E7-BE3B4BFE148E}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.dll"/>
-    <ROW Component="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" ComponentId="{76572A2B-85B1-4C66-8677-1694E97FB6D8}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll"/>
-    <ROW Component="Microsoft.DiaSymReader.Native.amd64.dll" ComponentId="{9E1BA218-A38D-4F17-9AAD-3839F4B46468}" Directory_="roslyn_Dir" Attributes="256" KeyPath="Microsoft.DiaSymReader.Native.amd64.dll"/>
-    <ROW Component="Microsoft.DiaSymReader.Native.x86.dll" ComponentId="{7B6F303C-7BB5-44FC-B5E4-4E2E24715818}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.DiaSymReader.Native.x86.dll"/>
-    <ROW Component="Microsoft.ReportViewer.Common.dll" ComponentId="{E85ABE6B-3755-4FBC-96C9-0DA5EEA1C110}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.dll"/>
-    <ROW Component="Microsoft.ReportViewer.ProcessingObjectModel.dll" ComponentId="{0EC9395D-36E7-4610-A136-5A2EC3B9C71B}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.ProcessingObjectModel.dll"/>
-    <ROW Component="Microsoft.ReportViewer.WebForms.dll" ComponentId="{C4AC7FB6-B1E0-4696-94FD-E3EF92ECC5FC}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WebForms.dll"/>
-    <ROW Component="Microsoft.SqlServer.Types.dll" ComponentId="{D2998E4A-C1A9-4F78-B118-47889A6C6D08}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.dll"/>
-    <ROW Component="Newtonsoft.Json.dll" ComponentId="{5474B292-7E9D-4D90-B866-6FA149C1726F}" Directory_="bin_Dir" Attributes="0" KeyPath="Newtonsoft.Json.dll"/>
-    <ROW Component="Produccion.Master" ComponentId="{92C40167-4A1C-4600-882D-92D329288A4E}" Directory_="masters_Dir" Attributes="0" KeyPath="Produccion.Master" Type="0"/>
+    <ROW Component="BE.dll" ComponentId="{48D6F753-43F2-410A-B5C1-7B2A870DBCB7}" Directory_="bin_Dir" Attributes="0" KeyPath="BE.dll"/>
+    <ROW Component="BLL.dll" ComponentId="{A1D758AB-16F3-4E6A-A248-88391C7C4106}" Directory_="bin_Dir" Attributes="0" KeyPath="BLL.dll"/>
+    <ROW Component="Bitacora.aspx" ComponentId="{CB507431-3630-42ED-99FF-3C1E63D209F5}" Directory_="sistema_Dir" Attributes="0" KeyPath="Bitacora.aspx" Type="0"/>
+    <ROW Component="Compra.aspx" ComponentId="{30814061-7065-49F8-A11A-6159FF6657E1}" Directory_="veo3d_Dir" Attributes="0" KeyPath="Compra.aspx" Type="0"/>
+    <ROW Component="DAL.dll" ComponentId="{2DC4F5D5-68AA-4417-8B51-D55B687BD363}" Directory_="bin_Dir" Attributes="0" KeyPath="DAL.dll"/>
+    <ROW Component="Envios.aspx" ComponentId="{58F70FB7-B12B-4040-AF81-C10FA1D151B2}" Directory_="produccion_Dir" Attributes="0" KeyPath="Envios.aspx" Type="0"/>
+    <ROW Component="Etiqueta.rdlc" ComponentId="{C4357EDA-92C9-4BAA-B404-A40C6373B32A}" Directory_="Reportes_Dir" Attributes="0" KeyPath="Etiqueta.rdlc" Type="0"/>
+    <ROW Component="Google.Api.Gax.Rest.dll" ComponentId="{C94DD2A6-D4E2-4B2B-8E47-ED41122D52DE}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Api.Gax.Rest.dll"/>
+    <ROW Component="Google.Api.Gax.dll" ComponentId="{E2954332-F6D0-4474-B629-4AA1448F4E33}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Api.Gax.dll"/>
+    <ROW Component="Google.Apis.Auth.PlatformServices.dll" ComponentId="{9307B80A-2B11-40D3-8A47-B2FBAEEA07E2}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Apis.Auth.PlatformServices.dll"/>
+    <ROW Component="Google.Apis.Auth.dll" ComponentId="{E3568ADD-BC84-4AB3-9584-9ED88802B4E4}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Apis.Auth.dll"/>
+    <ROW Component="Google.Apis.Core.dll" ComponentId="{392DC359-3DD4-4357-9458-E5496ED321D8}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Apis.Core.dll"/>
+    <ROW Component="Google.Apis.PlatformServices.dll" ComponentId="{AB644CB6-1F26-4554-9B83-15A0256AF563}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Apis.PlatformServices.dll"/>
+    <ROW Component="Google.Apis.Translate.v2.dll" ComponentId="{CC6F9788-EC85-4909-8148-FF4A6E774F2E}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Apis.Translate.v2.dll"/>
+    <ROW Component="Google.Apis.dll" ComponentId="{CBF63CD6-026C-49BB-A119-1B186AE0470F}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Apis.dll"/>
+    <ROW Component="Google.Cloud.Translation.V2.dll" ComponentId="{102ED362-02D3-4569-9A2A-F2A3F20553EF}" Directory_="bin_Dir" Attributes="0" KeyPath="Google.Cloud.Translation.V2.dll"/>
+    <ROW Component="ImagenProducto.ascx" ComponentId="{67B14B9F-53A1-4406-A473-AF5852E9E680}" Directory_="controles_Dir" Attributes="0" KeyPath="ImagenProducto.ascx" Type="0"/>
+    <ROW Component="LICENSE.txt" ComponentId="{51B36978-4E92-4235-A5EB-55D41B0D725C}" Directory_="fontawesomefree_Dir" Attributes="0" KeyPath="LICENSE.txt" Type="0"/>
+    <ROW Component="Microsoft.Bcl.AsyncInterfaces.dll" ComponentId="{BD33395E-135C-4DF0-8BFC-317474AAE6E9}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.Bcl.AsyncInterfaces.dll"/>
+    <ROW Component="Microsoft.Build.Tasks.CodeAnalysis.dll" ComponentId="{60B6309B-0A45-482C-B07A-B833EA40E0A6}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.Build.Tasks.CodeAnalysis.dll"/>
+    <ROW Component="Microsoft.CodeAnalysis.CSharp.Scripting.dll" ComponentId="{ACF3465D-AF6B-40C5-BBEF-9880C412745A}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.CSharp.Scripting.dll"/>
+    <ROW Component="Microsoft.CodeAnalysis.CSharp.dll" ComponentId="{6259E5A4-F81A-4ECA-9259-0C17F570C787}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.CSharp.dll"/>
+    <ROW Component="Microsoft.CodeAnalysis.Scripting.dll" ComponentId="{D4B51993-9391-491D-9471-C4FE99388E83}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.Scripting.dll"/>
+    <ROW Component="Microsoft.CodeAnalysis.VisualBasic.dll" ComponentId="{A8AEBE10-6856-4458-A7A2-FE41A2551FD8}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.VisualBasic.dll"/>
+    <ROW Component="Microsoft.CodeAnalysis.dll" ComponentId="{2ADD524C-EA25-4A36-BCD0-BF4FD0486216}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.CodeAnalysis.dll"/>
+    <ROW Component="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" ComponentId="{43ABF6AB-45E0-40E7-8B44-D6649369FD29}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll"/>
+    <ROW Component="Microsoft.DiaSymReader.Native.amd64.dll" ComponentId="{0D37E5F5-78BA-4002-970D-70FCAD7CFC5B}" Directory_="roslyn_Dir" Attributes="256" KeyPath="Microsoft.DiaSymReader.Native.amd64.dll"/>
+    <ROW Component="Microsoft.DiaSymReader.Native.x86.dll" ComponentId="{5EA0D7E0-873A-4267-906C-E19B33A34063}" Directory_="roslyn_Dir" Attributes="0" KeyPath="Microsoft.DiaSymReader.Native.x86.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.dll" ComponentId="{AC81A168-58AF-44C2-8E79-642E3B3F0763}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.dll"/>
+    <ROW Component="Microsoft.ReportViewer.ProcessingObjectModel.dll" ComponentId="{2D20F97B-F7E5-4C83-A200-91E6DD05B0B0}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.ProcessingObjectModel.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WebForms.dll" ComponentId="{065DD4A9-BA05-44B2-B91E-7B642BE53335}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WebForms.dll"/>
+    <ROW Component="Microsoft.SqlServer.Types.dll" ComponentId="{F56930BF-0D1A-44D5-8DC2-A3A54458B65E}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.dll"/>
+    <ROW Component="Newtonsoft.Json.dll" ComponentId="{75C54DBA-FDE5-49AA-A12A-A54BE677C93F}" Directory_="bin_Dir" Attributes="0" KeyPath="Newtonsoft.Json.dll"/>
+    <ROW Component="Produccion.Master" ComponentId="{61BCA509-8A3B-4993-8EF7-D5CD6602CB48}" Directory_="masters_Dir" Attributes="0" KeyPath="Produccion.Master" Type="0"/>
     <ROW Component="ProductInformation" ComponentId="{8C5F6B1A-DB66-4319-875F-9247329B21BD}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
-    <ROW Component="SqlServerSpatial140.dll" ComponentId="{CE444893-A503-4245-B814-B290FEDA35B8}" Directory_="x64_Dir" Attributes="256" KeyPath="SqlServerSpatial140.dll"/>
-    <ROW Component="SqlServerSpatial140.dll_1" ComponentId="{F0B135D0-C44A-44B2-86BC-CA3D147CB067}" Directory_="x86_Dir" Attributes="0" KeyPath="SqlServerSpatial140.dll_1"/>
-    <ROW Component="System.Buffers.dll" ComponentId="{2274D935-52CB-4F88-8633-4EA8DC22B420}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Buffers.dll"/>
-    <ROW Component="System.Collections.Immutable.dll" ComponentId="{0CA8FC22-02E0-4A18-89E9-3BE5C2D3A3A1}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Collections.Immutable.dll"/>
-    <ROW Component="System.Memory.dll" ComponentId="{50BC1EAA-4164-4B59-8308-DFFE47FD0AC6}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Memory.dll"/>
-    <ROW Component="System.Numerics.Vectors.dll" ComponentId="{2DD5FF7B-6B3C-465B-BCD8-F12885E4E87C}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll"/>
-    <ROW Component="System.Reflection.Metadata.dll" ComponentId="{5DEAD9E5-DB03-41B2-8AE8-14BBD17093F6}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Reflection.Metadata.dll"/>
-    <ROW Component="System.Runtime.CompilerServices.Unsafe.dll" ComponentId="{E19F25B1-BE57-4462-93E3-8FB7A8388CAE}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsafe.dll"/>
-    <ROW Component="System.Runtime.CompilerServices.Unsafe.dll_1" ComponentId="{EA5BEE5A-A2DC-45A2-9CC9-6398873229EE}" Directory_="bin_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsafe.dll_1"/>
-    <ROW Component="System.Text.Encoding.CodePages.dll" ComponentId="{E1FDF40F-8531-4E10-9B02-E259FFF6578D}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Text.Encoding.CodePages.dll"/>
-    <ROW Component="System.Threading.Tasks.Extensions.dll" ComponentId="{9C97344C-AF60-4B48-93E2-4C1CAD3F58C0}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Threading.Tasks.Extensions.dll"/>
-    <ROW Component="System.Threading.Tasks.Extensions.dll_1" ComponentId="{D8418E04-7A91-4E5F-BDF4-15B344FCC763}" Directory_="bin_Dir" Attributes="0" KeyPath="System.Threading.Tasks.Extensions.dll_1"/>
-    <ROW Component="VBCSCompiler.exe" ComponentId="{FC841FD7-D217-4572-A317-2380DD4B1C33}" Directory_="roslyn_Dir" Attributes="0" KeyPath="VBCSCompiler.exe"/>
-    <ROW Component="Veo3D.dll" ComponentId="{B18B17C2-F96A-4B98-BB70-2E8679837E5D}" Directory_="bin_Dir" Attributes="0" KeyPath="Veo3D.dll"/>
-    <ROW Component="ad.svg" ComponentId="{D0E3D829-FD20-4A3E-9F17-78ACDC947EF7}" Directory_="solid_Dir" Attributes="0" KeyPath="ad.svg" Type="0"/>
-    <ROW Component="addressbook.svg" ComponentId="{D77BC0D1-C5AA-46E7-BBFA-3E5134A4E777}" Directory_="regular_Dir" Attributes="0" KeyPath="addressbook.svg" Type="0"/>
-    <ROW Component="all.css" ComponentId="{1ACB3A7E-21ED-4EAA-9F18-18DE1E4C2BB2}" Directory_="css_1_Dir" Attributes="0" KeyPath="all.css" Type="0"/>
-    <ROW Component="all.js" ComponentId="{54924741-C4F4-495C-B262-F7F9E490B85F}" Directory_="js_Dir" Attributes="0" KeyPath="all.js" Type="0"/>
-    <ROW Component="bootstrap.bundle.js" ComponentId="{ABCE0F63-9FAF-45DE-B6B6-8DBCBE4058F5}" Directory_="js_1_Dir" Attributes="0" KeyPath="bootstrap.bundle.js" Type="0"/>
-    <ROW Component="bootstrapgrid.css" ComponentId="{9945AB16-6082-40E4-8D2D-4C664032EEE4}" Directory_="css_Dir" Attributes="0" KeyPath="bootstrapgrid.css" Type="0"/>
-    <ROW Component="brands.less" ComponentId="{BCAE103C-83AC-40A2-9634-7F310A8C8014}" Directory_="less_Dir" Attributes="0" KeyPath="brands.less" Type="0"/>
-    <ROW Component="brands.scss" ComponentId="{A1AEF5A0-D302-4A0B-93BD-201722A8541E}" Directory_="scss_Dir" Attributes="0" KeyPath="brands.scss" Type="0"/>
-    <ROW Component="brands.svg" ComponentId="{55DBD40A-4AC5-49BB-AE58-D6329D069AAA}" Directory_="sprites_Dir" Attributes="0" KeyPath="brands.svg" Type="0"/>
-    <ROW Component="cabecera1.png" ComponentId="{31BB24F5-69A0-496C-BAB8-96A771B741C2}" Directory_="img_Dir" Attributes="0" KeyPath="cabecera1.png" Type="0"/>
-    <ROW Component="categories.yml" ComponentId="{B9C0B1B8-262E-44F5-AD09-0C796EA06652}" Directory_="metadata_Dir" Attributes="0" KeyPath="categories.yml" Type="0"/>
-    <ROW Component="csc.exe" ComponentId="{78246E9C-B061-4529-BC37-FB107CA8AE76}" Directory_="roslyn_Dir" Attributes="0" KeyPath="csc.exe"/>
-    <ROW Component="csc.rsp" ComponentId="{DD5F9CEC-17D5-4427-8789-87933D4B3109}" Directory_="roslyn_Dir" Attributes="0" KeyPath="csc.rsp" Type="0"/>
-    <ROW Component="csi.exe" ComponentId="{B421DB2C-BD89-42EB-8D22-77655ADA56FE}" Directory_="roslyn_Dir" Attributes="0" KeyPath="csi.exe"/>
-    <ROW Component="dataTables.bootstrap4.css" ComponentId="{6EF98210-BA51-4DE6-B2C2-F7651D8D74FA}" Directory_="datatables_Dir" Attributes="0" KeyPath="dataTables.bootstrap4.css" Type="0"/>
-    <ROW Component="fabrands400.eot" ComponentId="{108956B5-7AA8-4623-AB09-3F3B5D77E770}" Directory_="webfonts_Dir" Attributes="0" KeyPath="fabrands400.eot" Type="0"/>
-    <ROW Component="jquery.easing.compatibility.js" ComponentId="{1387FF2C-E956-444E-9F95-DFAAD7AE65FF}" Directory_="jqueryeasing_Dir" Attributes="0" KeyPath="jquery.easing.compatibility.js" Type="0"/>
-    <ROW Component="jquery.js" ComponentId="{85CBC441-DAEB-46B0-9877-3616FC65CDD4}" Directory_="jquery_Dir" Attributes="0" KeyPath="jquery.js" Type="0"/>
-    <ROW Component="jquery1.6.3.js" ComponentId="{5FF2C936-116E-4AB0-A776-2729F8224EC9}" Directory_="Scripts_Dir" Attributes="0" KeyPath="jquery1.6.3.js" Type="0"/>
-    <ROW Component="msvcr120.dll" ComponentId="{61660C0F-D383-4B6C-AB62-439F1B1AA7D0}" Directory_="x64_Dir" Attributes="256" KeyPath="msvcr120.dll"/>
-    <ROW Component="msvcr120.dll_1" ComponentId="{8CA7D9AD-BBBE-4084-A857-349F66F3EF1C}" Directory_="x86_Dir" Attributes="0" KeyPath="msvcr120.dll_1"/>
-    <ROW Component="png" ComponentId="{F8C22D1A-C9E1-4D2C-A471-7D09303AB6A7}" Directory_="anteojos_Dir" Attributes="0" KeyPath="png" Type="0"/>
-    <ROW Component="px.svg" ComponentId="{D9ED64FD-154C-4871-AAEB-B3580493196C}" Directory_="brands_Dir" Attributes="0" KeyPath="px.svg" Type="0"/>
-    <ROW Component="vbc.exe" ComponentId="{A6ED6A86-7300-4A67-9AE5-ABA402BDE4F7}" Directory_="roslyn_Dir" Attributes="0" KeyPath="vbc.exe"/>
+    <ROW Component="SqlServerSpatial140.dll" ComponentId="{0BAEA85C-AFC1-4A9A-9D4E-28BD3944E116}" Directory_="x64_Dir" Attributes="256" KeyPath="SqlServerSpatial140.dll"/>
+    <ROW Component="SqlServerSpatial140.dll_1" ComponentId="{F5A7D3D8-F40A-4915-A29D-0CD82C70015C}" Directory_="x86_Dir" Attributes="0" KeyPath="SqlServerSpatial140.dll_1"/>
+    <ROW Component="System.Buffers.dll" ComponentId="{9328A900-B422-41DE-A1BD-FCD6B18C4CD1}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Buffers.dll"/>
+    <ROW Component="System.Collections.Immutable.dll" ComponentId="{FC553FB5-A816-493E-8ABF-D0488454E543}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Collections.Immutable.dll"/>
+    <ROW Component="System.Memory.dll" ComponentId="{8C885918-C6C8-402D-8246-75CF9C71BDBB}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Memory.dll"/>
+    <ROW Component="System.Numerics.Vectors.dll" ComponentId="{D78E7D78-7CE6-418B-B0EB-2BB23168F98F}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll"/>
+    <ROW Component="System.Reflection.Metadata.dll" ComponentId="{32AF990B-1B46-453A-A28D-5CACD15D95AE}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Reflection.Metadata.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Unsafe.dll" ComponentId="{A366DA13-DFC8-4BE1-A6A0-E3366EE10D2F}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Unsafe.dll_1" ComponentId="{92A83144-AEEF-42FC-961E-B73BBF98928D}" Directory_="bin_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsafe.dll_1"/>
+    <ROW Component="System.Text.Encoding.CodePages.dll" ComponentId="{9BC7C479-934A-4F22-B15B-54D9E3C05E9D}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Text.Encoding.CodePages.dll"/>
+    <ROW Component="System.Threading.Tasks.Extensions.dll" ComponentId="{CF1E5C4D-04C8-4263-BE81-065C9801C6A7}" Directory_="roslyn_Dir" Attributes="0" KeyPath="System.Threading.Tasks.Extensions.dll"/>
+    <ROW Component="System.Threading.Tasks.Extensions.dll_1" ComponentId="{93C68BA5-C00D-4D3E-A57F-05168067C653}" Directory_="bin_Dir" Attributes="0" KeyPath="System.Threading.Tasks.Extensions.dll_1"/>
+    <ROW Component="VBCSCompiler.exe" ComponentId="{6CAE2673-2C4F-411D-9953-45D7C9B8EF21}" Directory_="roslyn_Dir" Attributes="0" KeyPath="VBCSCompiler.exe"/>
+    <ROW Component="Veo3D.dll" ComponentId="{BEAA46D2-6E51-4427-9F71-FF13124C08F5}" Directory_="bin_Dir" Attributes="0" KeyPath="Veo3D.dll"/>
+    <ROW Component="ad.svg" ComponentId="{A19EB7D4-BDED-40A4-B3F2-AF279B351E8B}" Directory_="solid_Dir" Attributes="0" KeyPath="ad.svg" Type="0"/>
+    <ROW Component="addressbook.svg" ComponentId="{904B0A28-8BAB-4002-835D-C0AF86EDD6B4}" Directory_="regular_Dir" Attributes="0" KeyPath="addressbook.svg" Type="0"/>
+    <ROW Component="all.css" ComponentId="{6075CC2B-2D50-43E9-B338-818C09657E17}" Directory_="css_1_Dir" Attributes="0" KeyPath="all.css" Type="0"/>
+    <ROW Component="all.js" ComponentId="{274B6DCF-4D10-4C48-8E6D-C91D61145B00}" Directory_="js_Dir" Attributes="0" KeyPath="all.js" Type="0"/>
+    <ROW Component="bootstrap.bundle.js" ComponentId="{DC5C0546-B3BD-40CF-85C4-76D63569B2AE}" Directory_="js_1_Dir" Attributes="0" KeyPath="bootstrap.bundle.js" Type="0"/>
+    <ROW Component="bootstrapgrid.css" ComponentId="{DBBF478E-BAF5-4CA8-8F50-963AAE7AA299}" Directory_="css_Dir" Attributes="0" KeyPath="bootstrapgrid.css" Type="0"/>
+    <ROW Component="brands.less" ComponentId="{0DEC0914-3F52-4394-B19D-FAB3E6307286}" Directory_="less_Dir" Attributes="0" KeyPath="brands.less" Type="0"/>
+    <ROW Component="brands.scss" ComponentId="{56E2DE2E-1B99-4204-B501-CC739B8B6292}" Directory_="scss_Dir" Attributes="0" KeyPath="brands.scss" Type="0"/>
+    <ROW Component="brands.svg" ComponentId="{B991EAE4-53FA-457B-9D3C-99E336513812}" Directory_="sprites_Dir" Attributes="0" KeyPath="brands.svg" Type="0"/>
+    <ROW Component="cabecera1.png" ComponentId="{B0115E18-DF53-4922-ABF3-033D74C6EB3E}" Directory_="img_Dir" Attributes="0" KeyPath="cabecera1.png" Type="0"/>
+    <ROW Component="categories.yml" ComponentId="{F2BA7DA1-0F7E-4A73-9FB3-C3BAEC759569}" Directory_="metadata_Dir" Attributes="0" KeyPath="categories.yml" Type="0"/>
+    <ROW Component="csc.exe" ComponentId="{1164FF9B-428B-4E79-A317-4E60F6C308C6}" Directory_="roslyn_Dir" Attributes="0" KeyPath="csc.exe"/>
+    <ROW Component="csc.rsp" ComponentId="{036F6B72-0464-47F5-85D1-4B2BE0C93317}" Directory_="roslyn_Dir" Attributes="0" KeyPath="csc.rsp" Type="0"/>
+    <ROW Component="csi.exe" ComponentId="{B98FEF2C-AB42-40D1-8504-EEBF10E120EB}" Directory_="roslyn_Dir" Attributes="0" KeyPath="csi.exe"/>
+    <ROW Component="dataTables.bootstrap4.css" ComponentId="{BE68D447-BC5B-4ADA-A469-F776870FF07C}" Directory_="datatables_Dir" Attributes="0" KeyPath="dataTables.bootstrap4.css" Type="0"/>
+    <ROW Component="fabrands400.eot" ComponentId="{A12096F6-7A5F-4917-97D2-447C49077186}" Directory_="webfonts_Dir" Attributes="0" KeyPath="fabrands400.eot" Type="0"/>
+    <ROW Component="jquery.easing.compatibility.js" ComponentId="{E32D70D2-5CAB-4D47-9C11-615A592839EE}" Directory_="jqueryeasing_Dir" Attributes="0" KeyPath="jquery.easing.compatibility.js" Type="0"/>
+    <ROW Component="jquery.js" ComponentId="{25367F2C-5FB4-45C0-90EC-446BF4CDB00B}" Directory_="jquery_Dir" Attributes="0" KeyPath="jquery.js" Type="0"/>
+    <ROW Component="jquery1.6.3.js" ComponentId="{8999AA7F-6247-40D9-BFAA-57F4830CCAB7}" Directory_="Scripts_Dir" Attributes="0" KeyPath="jquery1.6.3.js" Type="0"/>
+    <ROW Component="msvcr120.dll" ComponentId="{ECFB3289-7CCC-4C02-8DFF-D80856A8307B}" Directory_="x64_Dir" Attributes="256" KeyPath="msvcr120.dll"/>
+    <ROW Component="msvcr120.dll_1" ComponentId="{812C9998-9CF6-4652-888E-CB459650334E}" Directory_="x86_Dir" Attributes="0" KeyPath="msvcr120.dll_1"/>
+    <ROW Component="png" ComponentId="{D78381BE-3C2D-4F72-B8DA-5F3358C4339C}" Directory_="anteojos_Dir" Attributes="0" KeyPath="png" Type="0"/>
+    <ROW Component="px.svg" ComponentId="{00CE75AA-1125-43D9-AEB6-42280BAAA64B}" Directory_="brands_Dir" Attributes="0" KeyPath="px.svg" Type="0"/>
+    <ROW Component="vbc.exe" ComponentId="{1CB4C05A-A344-4CE9-9121-95D99A84B655}" Directory_="roslyn_Dir" Attributes="0" KeyPath="vbc.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -2004,6 +2004,7 @@
     <ROW File="Historial.rdlc" Component_="Etiqueta.rdlc" FileName="HISTOR~1.RDL|Historial.rdlc" Attributes="0" SourcePath="..\..\..\www\veo3d\Reportes\Historial.rdlc" SelfReg="false"/>
     <ROW File="Impresoras.rdlc" Component_="Etiqueta.rdlc" FileName="IMPRES~1.RDL|Impresoras.rdlc" Attributes="0" SourcePath="..\..\..\www\veo3d\Reportes\Impresoras.rdlc" SelfReg="false"/>
     <ROW File="Material.rdlc" Component_="Etiqueta.rdlc" FileName="MATERI~1.RDL|Material.rdlc" Attributes="0" SourcePath="..\..\..\www\veo3d\Reportes\Material.rdlc" SelfReg="false"/>
+    <ROW File="OrdenImpresion.rdlc" Component_="Etiqueta.rdlc" FileName="ORDENI~1.RDL|OrdenImpresion.rdlc" Attributes="0" SourcePath="..\..\..\www\veo3d\Reportes\OrdenImpresion.rdlc" SelfReg="false"/>
     <ROW File="Productos.rdlc" Component_="Etiqueta.rdlc" FileName="PRODUC~1.RDL|Productos.rdlc" Attributes="0" SourcePath="..\..\..\www\veo3d\Reportes\Productos.rdlc" SelfReg="false"/>
     <ROW File="jquery1.6.3.js" Component_="jquery1.6.3.js" FileName="JQUERY~1.JS|jquery-1.6.3.js" Attributes="0" SourcePath="..\..\..\www\veo3d\Scripts\jquery-1.6.3.js" SelfReg="false"/>
     <ROW File="jquery1.6.3.min.js" Component_="jquery1.6.3.js" FileName="JQUERY~2.JS|jquery-1.6.3.min.js" Attributes="0" SourcePath="..\..\..\www\veo3d\Scripts\jquery-1.6.3.min.js" SelfReg="false"/>
@@ -2403,13 +2404,13 @@
     <ROW Feature_="MainFeature" Component_="jquery.js"/>
     <ROW Feature_="MainFeature" Component_="jquery.easing.compatibility.js"/>
     <ROW Feature_="MainFeature" Component_="ImagenProducto.ascx"/>
+    <ROW Feature_="MainFeature" Component_="AI_CustomARPName"/>
     <ROW Feature_="MainFeature" Component_="cabecera1.png"/>
     <ROW Feature_="MainFeature" Component_="Produccion.Master"/>
     <ROW Feature_="MainFeature" Component_="Envios.aspx"/>
-    <ROW Feature_="MainFeature" Component_="Compra.aspx"/>
     <ROW Feature_="MainFeature" Component_="Etiqueta.rdlc"/>
+    <ROW Feature_="MainFeature" Component_="Compra.aspx"/>
     <ROW Feature_="MainFeature" Component_="jquery1.6.3.js"/>
-    <ROW Feature_="MainFeature" Component_="AI_CustomARPName"/>
     <ROW Feature_="MainFeature" Component_="Bitacora.aspx"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
