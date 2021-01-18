@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Veo3D")]
-[assembly: AssemblyCopyright("Copyright ©  Roberto Piombi 2020")]
+[assembly: AssemblyCopyright("Copyright ©  Roberto 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -23,7 +23,7 @@
     <ROW Property="ARPNOREPAIR" Value="1" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
     <ROW Property="CTRLS" Value="2"/>
-    <ROW Property="Manufacturer" Value="Roberto Piombi"/>
+    <ROW Property="Manufacturer" Value="Roberto P"/>
     <ROW Property="ProductCode" Value="3082:{5071EF43-9B0C-4ED2-8206-0955DD6AB207} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Veo3d"/>
